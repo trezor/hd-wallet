@@ -578,6 +578,12 @@ base-x@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/base-x/-/base-x-1.1.0.tgz#42d3d717474f9ea02207f6d1aa1f426913eeb7ac"
 
+base-x@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/base-x/-/base-x-3.0.2.tgz#bf873861b7514279b7969f340929eab87c11d130"
+  dependencies:
+    safe-buffer "^5.0.1"
+
 base64-arraybuffer@0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/base64-arraybuffer/-/base64-arraybuffer-0.1.5.tgz#73926771923b5a19747ad666aa5cd4bf9c6e9ce8"
@@ -610,18 +616,23 @@ bip66@^1.1.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/bip66/-/bip66-1.1.4.tgz#8a59f8ae16eccb94681c3c2a7b224774605aadfb"
 
-bitcoinjs-lib-zcash@^2.3.4:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/bitcoinjs-lib-zcash/-/bitcoinjs-lib-zcash-2.3.4.tgz#98f2898b9153fb314a089080d69bc705323b74a8"
+bitcoin-ops@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/bitcoin-ops/-/bitcoin-ops-1.3.0.tgz#6b126b585537bc679b02ed499f14450cffc37e13"
+
+bitcoinjs-lib-zcash@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/bitcoinjs-lib-zcash/-/bitcoinjs-lib-zcash-3.0.0.tgz#0a36cc2145977d3861a9c859719916638e85a86c"
   dependencies:
     bigi "^1.4.0"
     bip66 "^1.1.0"
-    bs58check "^1.0.5"
-    buffer-reverse "^1.0.0"
+    bitcoin-ops "^1.3.0"
+    bs58check "^2.0.0"
     create-hash "^1.1.0"
     create-hmac "^1.1.3"
     ecurve "^1.0.0"
     merkle-lib "^1.0.0"
+    pushdata-bitcoin "^1.0.1"
     randombytes "^2.0.1"
     typeforce "^1.8.7"
     varuint-bitcoin "^1.0.4"
@@ -795,22 +806,17 @@ browserify@12.0.1, browserify@^12.0.1:
     vm-browserify "~0.0.1"
     xtend "^4.0.0"
 
-bs58@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/bs58/-/bs58-2.0.1.tgz#55908d58f1982aba2008fa1bed8f91998a29bf8d"
-
 bs58@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/bs58/-/bs58-3.1.0.tgz#d4c26388bf4804cac714141b1945aa47e5eb248e"
   dependencies:
     base-x "^1.1.0"
 
-bs58check@^1.0.5:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/bs58check/-/bs58check-1.0.8.tgz#5a5142369e66f3fcb5e507f0daafc1310edff472"
+bs58@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/bs58/-/bs58-4.0.1.tgz#be161e76c354f6f788ae4071f63f34e8c4f0a42a"
   dependencies:
-    bs58 "^2.0.1"
-    create-hash "^1.1.0"
+    base-x "^3.0.2"
 
 bs58check@^1.3.1:
   version "1.3.4"
@@ -819,9 +825,12 @@ bs58check@^1.3.1:
     bs58 "^3.1.0"
     create-hash "^1.1.0"
 
-buffer-reverse@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/buffer-reverse/-/buffer-reverse-1.0.1.tgz#49283c8efa6f901bc01fa3304d06027971ae2f60"
+bs58check@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/bs58check/-/bs58check-2.0.2.tgz#06f63b01c2fa6173033c90eb87f1fe3d2e13d89a"
+  dependencies:
+    bs58 "^4.0.0"
+    create-hash "^1.1.0"
 
 buffer-shims@^1.0.0:
   version "1.0.0"
@@ -2162,6 +2171,12 @@ punycode@^1.3.2:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
+pushdata-bitcoin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/pushdata-bitcoin/-/pushdata-bitcoin-1.0.1.tgz#15931d3cd967ade52206f523aa7331aef7d43af7"
+  dependencies:
+    bitcoin-ops "^1.3.0"
+
 qs@~6.2.0:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
@@ -2330,6 +2345,10 @@ rimraf@2, rimraf@~2.5.0, rimraf@~2.5.1:
 ripemd160@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-1.0.1.tgz#93a4bbd4942bc574b69a8fa57c71de10ecca7d6e"
+
+safe-buffer@^5.0.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
 semver@~5.3.0:
   version "5.3.0"
