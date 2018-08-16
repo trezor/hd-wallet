@@ -74,7 +74,7 @@ export default function tryConfirmed(algorithm, options) {
             const trial = trials[i];
 
             // since the restrictions are always loosening, we can just filter the unusable so far
-            const filterResult = filterUtxos(unusable, trial.own, trial.other, coinbase);
+            const filterResult = filterUtxos(unusable, trial.own, trial.other);
 
             // and we can try the algorithm only if there are some newly usable utxos
             if (filterResult.usable.length > 0) {
