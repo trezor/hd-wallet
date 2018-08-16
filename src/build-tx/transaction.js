@@ -139,7 +139,6 @@ function convertOpReturnOutput(
     const output = {
         opReturnData: opReturnDataBuffer,
     };
-    // $FlowIssue
     const script = BitcoinJsScript.nullData.output.encode(opReturnDataBuffer);
     return {
         output,

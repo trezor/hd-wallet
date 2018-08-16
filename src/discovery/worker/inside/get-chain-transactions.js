@@ -252,13 +252,9 @@ export class GetChainTransactions {
                         }
                     }
                 } catch (e) {
-                    // TODO add to flowdef
-                    // $FlowIssue
-                    const type = BitcoinJsScript.classifyOutput(output.script);
+                    const isOpReturn = BitcoinJsScript.nullData.output.check(output.script);
 
-                    if (type === 'nulldata') {
-                        // TODO add to flowdef
-                        // $FlowIssue
+                    if (isOpReturn) {
                         const buffer = BitcoinJsScript.nullData.output.decode(output.script);
 
                         let text = '';

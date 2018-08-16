@@ -95,8 +95,8 @@ export class WorkerDiscovery {
             Promise.all([
                 this.deriveXpub(xpub, network, 0),
                 this.deriveXpub(xpub, network, 1)]).then(([externalXpub, internalXpub]) => {
-                const internal = BitcoinJsHDNode.fromBase58(internalXpub, network, true);
-                const external = BitcoinJsHDNode.fromBase58(externalXpub, network, true);
+                const internal = BitcoinJsHDNode.fromBase58(internalXpub, network);
+                const external = BitcoinJsHDNode.fromBase58(externalXpub, network);
 
                 const sources = [
                     this.createWorkerAddressSource(external, network, segwit),
@@ -139,8 +139,8 @@ export class WorkerDiscovery {
                 this.deriveXpub(xpub, network, 0),
                 this.deriveXpub(xpub, network, 1),
             ]).then(([externalXpub, internalXpub]) => {
-                const internal = BitcoinJsHDNode.fromBase58(internalXpub, network, true);
-                const external = BitcoinJsHDNode.fromBase58(externalXpub, network, true);
+                const internal = BitcoinJsHDNode.fromBase58(internalXpub, network);
+                const external = BitcoinJsHDNode.fromBase58(externalXpub, network);
 
                 const sources = [
                     this.createWorkerAddressSource(external, network, segwit),
@@ -226,7 +226,7 @@ export class WorkerDiscovery {
         if (this.addressWorkerChannel == null) {
             return Promise.resolve(
                 BitcoinJsHDNode
-                    .fromBase58(xpub, network, true)
+                    .fromBase58(xpub, network)
                     .derive(index)
                     .toBase58(),
             );
@@ -242,10 +242,7 @@ export class WorkerDiscovery {
 
 function tryHDNode(xpub: string, network: BitcoinJsNetwork): BitcoinJsHDNode | Error {
     try {
-        const node = BitcoinJsHDNode.fromBase58(xpub, network, true);
-        if (!node.isNeutered()) {
-            throw new Error('XPRV entrered instead of XPUB. Exiting.');
-        }
+        const node = BitcoinJsHDNode.fromBase58(xpub, network);
         return node;
     } catch (e) {
         return e;

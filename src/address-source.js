@@ -81,7 +81,7 @@ export class WorkerAddressSource {
             child_num: node.index,
             fingerprint: node.parentFingerprint,
             chain_code: Array.prototype.slice.call(node.chainCode),
-            public_key: Array.prototype.slice.call(node.keyPair.getPublicKeyBuffer()),
+            public_key: Array.prototype.slice.call(node.getPublicKeyBuffer()),
         };
         this.version = version;
         this.segwit = segwit;
