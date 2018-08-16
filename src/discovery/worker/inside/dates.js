@@ -5,11 +5,11 @@ import type { TransactionInfo } from '../../index';
 export function deriveDateFormats(
     t: ?number,
     wantedOffset: number, // what (new Date().getTimezoneOffset()) returns
-): {
+): {|
     timestamp: ?number,
     dateInfoDayFormat: ?string,
     dateInfoTimeFormat: ?string,
-} {
+|} {
     if (t == null) {
         return {
             timestamp: null,

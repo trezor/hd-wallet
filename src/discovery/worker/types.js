@@ -199,9 +199,9 @@ export type TransactionInfoBalanceless = {
     vsize: number, // virtual size - segwit concept - same as size in non-segwit
 }
 
-export type TargetsType = {
+export type TargetsType = {|
     targets: Array<TargetInfo>,
     myOutputs: {[i: number]: TargetInfo},
     type: 'self' | 'recv' | 'sent',
     value: number,
-};
+|};
