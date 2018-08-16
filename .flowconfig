@@ -1,8 +1,12 @@
 [libs]
-../type
+./type
+
+[ignore]
+.*/lib/.*
 
 [options]
 suppress_comment=\\(.\\|\n\\)*\\$FlowIssue
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssueAnyType
 include_warnings=true
 
 [lints]

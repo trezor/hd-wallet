@@ -58,7 +58,7 @@ run-coverage:
 	NODE_ENV=test `npm bin`/nyc --check-coverage --lines 97 --branches 94 --babel-cache=true `npm bin`/mocha --compilers js:@babel/register
 
 flow:
-	`npm bin`/flow check src
+	`npm bin`/flow check
 
 eslint:
 	cd src && `npm bin`/eslint .
