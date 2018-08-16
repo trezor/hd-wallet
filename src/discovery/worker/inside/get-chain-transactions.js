@@ -33,7 +33,14 @@ import type {
     ChunkDiscoveryInfo,
 } from '../types';
 import { Stream } from '../../../utils/stream';
-import type { TransactionInfo } from '../../index';
+import {
+    Transaction as BitcoinJsTransaction,
+    address as BitcoinJsAddress,
+    HDNode as BitcoinJsHDNode,
+    script as BitcoinJsScript,
+} from 'bitcoinjs-trezor';
+import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor';
+import type {TransactionInfo} from '../../index';
 import { BrowserAddressSource } from '../../../address-source';
 
 export class GetChainTransactions {

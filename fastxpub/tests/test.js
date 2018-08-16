@@ -1,7 +1,7 @@
 var fastxpub = require('../build/fastxpub');
 var fs = require('fs');
 var file = fs.readFileSync('../build/fastxpub.wasm');
-var bitcoin  = require('bitcoinjs-lib');
+var bitcoin  = require('bitcoinjs-trezor');
 
 function test_derivation(xpub, version, addressFormat, filename) {
   var node = bitcoin.HDNode.fromBase58(xpub).derive(0);

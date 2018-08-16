@@ -2,7 +2,7 @@
 
 // This is the entry to the worker, doing account discovery + analysis
 
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
+import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor';
 
 import type { AccountInfo, TransactionInfo } from '../../index';
 import * as channel from './channel';

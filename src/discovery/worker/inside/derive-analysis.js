@@ -25,6 +25,9 @@ import {
     deriveDateFormats,
 } from './dates';
 
+import {
+    Transaction as BitcoinJsTransaction,
+} from 'bitcoinjs-trezor';
 
 type OutputForAnalysis = ?{address: string, value: number};
 type OutputsForAnalysis = Array<OutputForAnalysis>;

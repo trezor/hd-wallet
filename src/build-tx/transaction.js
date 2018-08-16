@@ -3,11 +3,11 @@
 import {
     address as BitcoinJsAddress,
     script as BitcoinJsScript,
-} from 'bitcoinjs-lib-zcash';
+} from 'bitcoinjs-trezor';
 
 import type {
     Network as BitcoinJsNetwork,
-} from 'bitcoinjs-lib-zcash';
+} from 'bitcoinjs-trezor';
 import { Permutation } from './permutation';
 
 import type { UtxoInfo } from '../discovery';

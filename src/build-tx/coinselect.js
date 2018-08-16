@@ -6,14 +6,13 @@
 // to merge the changes back to upstream; it didn't work out so far
 import type {
     Network as BitcoinJsNetwork,
-} from 'bitcoinjs-lib-zcash';
+} from 'bitcoinjs-trezor';
 import {
     address as BitcoinJsAddress,
-} from 'bitcoinjs-lib-zcash';
+} from 'bitcoinjs-trezor';
 import bitcoinJsSplit from './coinselect-lib/outputs/split';
 import bitcoinJsCoinselect from './coinselect-lib';
 import { transactionBytes } from './coinselect-lib/utils';
-
 
 import type { UtxoInfo } from '../discovery';
 import * as request from './request';

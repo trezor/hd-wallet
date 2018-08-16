@@ -15,6 +15,11 @@ import type {
     TargetInfo,
 } from '../index';
 
+import type {
+    Transaction as BitcoinJsTransaction,
+} from 'bitcoinjs-trezor';
+
+import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor';
 
 /* ----- messages INTO into worker, from handler ------ */
 
