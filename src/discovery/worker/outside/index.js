@@ -65,7 +65,6 @@ export class WorkerDiscoveryHandler {
         // it's javascript, it's insane by default
         timeOffset: number,
     ): StreamWithEnding<AccountLoadStatus, AccountInfo> {
-        // $FlowIssue
         const webassembly = typeof WebAssembly !== 'undefined';
         this.workerChannel.postToWorker({
             type: 'init',

@@ -38,7 +38,6 @@ export class WorkerDiscovery {
         chain: Blockchain,
     ) {
         this.discoveryWorkerFactory = discoveryWorkerFactory;
-        // $FlowIssue
         this.addressWorkerChannel = (typeof WebAssembly === 'undefined') ? null : new AddressWorkerChannel(fastXpubWorker);
         fastXpubWasmPromise.then(
             (binary) => {
