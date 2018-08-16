@@ -24,6 +24,7 @@ export class Socket {
 
     _socketInited: Promise<void>;
 
+    // $FlowIssueAnyType
     streams: Array<Stream<any>> = [];
 
     destroyerOnInit: Emitter<void>;
@@ -39,6 +40,7 @@ export class Socket {
         this.destroyerOnInit = destroyerOnInit;
     }
 
+    // $FlowIssueAnyType
     send(message: Object): Promise<any> {
         return this._socketInited.then(() => this.socket.send(message));
     }
@@ -53,12 +55,14 @@ export class Socket {
         }, () => {});
     }
 
+    // $FlowIssueAnyType
     observe(event: string): Stream<any> {
         const res = Stream.fromPromise(this._socketInited.then(() => this.socket.observe(event)));
         this.streams.push(res);
         return res;
     }
 
+    // $FlowIssueAnyType
     subscribe(event: string, ...values: Array<any>) {
         return this._socketInited.then(
             () => this.socket.subscribe(event, ...values),
@@ -175,7 +179,8 @@ class SocketWorkerHandler {
         });
     }
 
-    send(imessage: Object): Promise<any> {
+    // $FlowIssueAnyType
+    send(message: Object): Promise<any> {
         this.counter++;
         const { counter } = this;
         this._sendMessage({
@@ -215,6 +220,7 @@ class SocketWorkerHandler {
 
     observers: {[name: string]: Stream<any>} = {}
 
+    // $FlowIssueAnyType
     observe(event: string): Stream<any> {
         if (this.observers[event] != null) {
             return this.observers[event];
@@ -253,6 +259,7 @@ class SocketWorkerHandler {
         return r;
     }
 
+    // $FlowIssueAnyType
     subscribe(event: string, ...values: Array<any>) {
         this._sendMessage({
             type: 'subscribe',

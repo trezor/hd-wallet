@@ -32,6 +32,7 @@ let lastId: number = 0;
 
 const messageEmitter: Emitter<InMessage> = new Emitter();
 
+// $FlowIssueAnyType
 function askPromise(request: PromiseRequestType): Promise<any> {
     const id = lastId + 1;
     lastId++;
@@ -56,6 +57,7 @@ function askPromise(request: PromiseRequestType): Promise<any> {
     return dfd.promise;
 }
 
+// $FlowIssueAnyType
 function askStream(request: StreamRequestType): Stream<any> {
     const id = lastId + 1;
     lastId++;

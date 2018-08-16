@@ -385,6 +385,7 @@ export class Stream<T> {
     // note: calling dispose IMMEDIATELY stops the streaming values
     mapPromise<U>(fn: (value: T) => Promise<U>): Stream<U | Error> {
         return new Stream((update, finish) => {
+            // $FlowIssueAnyType
             let previous: Promise<any> = Promise.resolve();
             let disposed = false;
             this.values.attach((value) => {

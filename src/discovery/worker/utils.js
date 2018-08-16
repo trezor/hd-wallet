@@ -11,6 +11,9 @@ export function getInputId(
     return res;
 }
 
+// I am using this instead of Object.values because
+// for whatever reason, that has "mixed" in flowtype
+// $FlowIssueAnyType this is annoying
 export function objectValues<T>(k: {[k: any]: T}): Array<T> {
     return Object.keys(k).map(key => k[key]);
 }

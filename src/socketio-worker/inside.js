@@ -18,9 +18,11 @@ export type InMessage = {
 } | {
     type: 'subscribe',
     event: string,
+    // $FlowIssueAnyType
     values: Array<any>,
 } | {
     type: 'send',
+    // $FlowIssueAnyType
     message: Object,
     id: number,
 } | {
@@ -30,9 +32,11 @@ export type InMessage = {
 export type OutMessage = {
     type: 'emit',
     event: string,
+    // $FlowIssueAnyType
     data: any,
 } | {
     type: 'sendReply',
+    // $FlowIssueAnyType
     reply: any,
     id: number,
 } | {
@@ -42,6 +46,7 @@ export type OutMessage = {
 }
 
 let socket: socketIO = null;
+// $FlowIssueAnyType
 const events: {[key: number]: Function} = {};
 
 // eslint-disable-next-line no-undef
@@ -120,6 +125,7 @@ onmessage = (event: {data: string}) => {
     }
 };
 
+// $FlowIssueAnyType
 function doPostMessage(data: Object) {
     /* $FlowIssue worker postMessage missing */ // eslint-disable-next-line no-undef
     postMessage(
