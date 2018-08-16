@@ -1,3 +1,5 @@
+/* @flow weak */
+
 // baseline estimates, used to improve performance
 const TX_EMPTY_SIZE = 4 + 1 + 1 + 4 + 1;
 // 8 bytes start, 2 times 1 byte count in/out, 1 extra byte for segwit start

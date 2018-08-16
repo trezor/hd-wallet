@@ -1,3 +1,4 @@
+/* @flow weak */
 import * as utils from '../utils';
 
 const maxTries = 1000000;

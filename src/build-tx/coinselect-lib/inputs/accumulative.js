@@ -1,3 +1,5 @@
+/* @flow weak */
+
 import * as utils from '../utils';
 
 // add inputs until we reach or surpass the target value (or deplete)

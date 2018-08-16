@@ -1,3 +1,5 @@
+/* @flow weak */
+
 function filterCoinbase(utxos, minConfCoinbase) {
     return utxos.filter((utxo) => {
         if (utxo.coinbase) {

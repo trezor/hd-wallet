@@ -1,3 +1,5 @@
+/* @flow weak */
+
 // I am using coinselect like this; the end-goal is, however, to merge all the changes
 // back into the upstream and use coinselect from npm
 
