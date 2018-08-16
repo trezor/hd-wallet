@@ -96,7 +96,7 @@ type BcTransactionInfo = {
     confirmations: number, // 0 if no
     satoshis: number, // not sure what this means
 };
-type BcHistory = { addresses: { [address: string]: Object } } & BcTransactionInfo;
+type BcHistory = { addresses: { [address: string]: {} } } & BcTransactionInfo;
 type BcHistories = { items: Array<BcHistory>, totalCount: number };
 
 // eslint-disable-next-line no-undef
@@ -523,7 +523,7 @@ function lookupAddressHistories(
 }
 
 // https://github.com/bitpay/bitcore-node/issues/423
-function lookupDetailedTransaction(socket: Socket, hash: string): Promise<Object> {
+function lookupDetailedTransaction(socket: Socket, hash: string): Promise<BcDetailedTransaction> {
     const method = 'getDetailedTransaction';
     const params = [
         hash,
