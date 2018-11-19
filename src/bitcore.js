@@ -18,6 +18,7 @@ export type TransactionWithHeight = {
     zcash: boolean,
     height: ?number,
     timestamp: ?number,
+    time: ?number,
     hash: string,
     inputAddresses: Array<?string>,
     outputAddresses: Array<?string>,
@@ -78,6 +79,7 @@ type BcDetailedOutput = {
 
 type BcDetailedTransaction = {
     blockTimestamp: ?number, // undef on unconfirmed
+    time: ?number,
     hash: string,
     height: number, // -1 on unconfirmed
     hex: string,
@@ -146,6 +148,7 @@ export class BitcoreBlockchain {
         this.socketWorkerFactory = socketWorkerFactory;
         this.endpoints = endpoints;
         this.zcash = false;
+        this.hasTimestamp = false;
 
         const lookupTM = (socket: Socket): Stream<TransactionWithHeight> => {
             return socket.observe('bitcoind/addresstxid').mapPromise(
@@ -587,6 +590,7 @@ function convertTx(zcash: boolean, bcTx: BcDetailedTransaction): TransactionWith
         hex: bcTx.hex,
         height: bcTx.height === -1 ? null : bcTx.height,
         timestamp: bcTx.blockTimestamp,
+        time: bcTx.time,
         hash: bcTx.hash,
         inputAddresses: bcTx.inputs.map(input => input.address),
         outputAddresses: bcTx.outputs.map(output => output.address),
