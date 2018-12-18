@@ -1,5 +1,5 @@
 var fastxpub = require('../build/fastxpub');
-var bitcoin  = require('bitcoinjs-trezor');
+var bitcoin  = require('bitcoinjs-trezor-alpha');
 
 var XPUB =
     'xpub6BiVtCpG9fQPxnPmHXG8PhtzQdWC2Su4qWu6XW9tpWFYhxydCLJGrWBJZ5H6qTAHdPQ7pQhtpjiYZVZARo14qHiay2fvrX996oEP42u8wZy';

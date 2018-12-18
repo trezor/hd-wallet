@@ -6,10 +6,10 @@
 // to merge the changes back to upstream; it didn't work out so far
 import type {
     Network as BitcoinJsNetwork,
-} from 'bitcoinjs-trezor';
+} from 'bitcoinjs-trezor-alpha';
 import {
     address as BitcoinJsAddress,
-} from 'bitcoinjs-trezor';
+} from 'bitcoinjs-trezor-alpha';
 import bitcoinJsSplit from './coinselect-lib/outputs/split';
 import bitcoinJsCoinselect from './coinselect-lib';
 import { transactionBytes } from './coinselect-lib/utils';

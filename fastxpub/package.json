@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "bitcoinjs-trezor": "^0.0.0",
+    "bitcoinjs-trezor-alpha": "^0.0.0-alpha",
     "browserify": "^14.5.0"
   }
 }

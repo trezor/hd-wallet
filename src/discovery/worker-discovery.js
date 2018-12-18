@@ -11,8 +11,8 @@ import type {
 import { Emitter, Stream, StreamWithEnding } from '../utils/stream';
 
 import {WorkerDiscoveryHandler} from './worker/outside';
-import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor';
-import {HDNode as BitcoinJsHDNode} from 'bitcoinjs-trezor';
+import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor-alpha';
+import {HDNode as BitcoinJsHDNode} from 'bitcoinjs-trezor-alpha';
 
 import {WorkerChannel as AddressWorkerChannel} from '../utils/simple-worker-channel';
 

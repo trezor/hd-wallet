@@ -38,8 +38,8 @@ import {
     address as BitcoinJsAddress,
     HDNode as BitcoinJsHDNode,
     script as BitcoinJsScript,
-} from 'bitcoinjs-trezor';
-import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor';
+} from 'bitcoinjs-trezor-alpha';
+import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor-alpha';
 import type {TransactionInfo} from '../../index';
 import { BrowserAddressSource } from '../../../address-source';
 

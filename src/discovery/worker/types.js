@@ -17,9 +17,9 @@ import type {
 
 import type {
     Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-trezor';
+} from 'bitcoinjs-trezor-alpha';
 
-import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor';
+import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor-alpha';
 
 /* ----- messages INTO into worker, from handler ------ */
 

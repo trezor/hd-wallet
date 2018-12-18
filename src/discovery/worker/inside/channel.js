@@ -14,7 +14,7 @@ import type {
 import type {
     AccountInfo,
 } from '../../index';
-import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor';
+import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor-alpha';
 
 // Code for all communication with outside
 

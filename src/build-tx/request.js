@@ -1,7 +1,7 @@
 /* @flow */
 import type {
     Network as BitcoinJsNetwork,
-} from 'bitcoinjs-trezor';
+} from 'bitcoinjs-trezor-alpha';
 
 import type { UtxoInfo } from '../discovery';
 // -------- Input to algoritm

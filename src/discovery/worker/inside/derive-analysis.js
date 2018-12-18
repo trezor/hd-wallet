@@ -27,7 +27,7 @@ import {
 
 import {
     Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-trezor';
+} from 'bitcoinjs-trezor-alpha';
 
 type OutputForAnalysis = ?{address: string, value: number};
 type OutputsForAnalysis = Array<OutputForAnalysis>;

@@ -1,5 +1,5 @@
 /* @flow */
-import type { Input as BitcoinJsInput } from 'bitcoinjs-trezor';
+import type { Input as BitcoinJsInput } from 'bitcoinjs-trezor-alpha';
 
 export function getInputId(
     i: BitcoinJsInput,
