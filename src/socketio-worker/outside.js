@@ -180,7 +180,7 @@ class SocketWorkerHandler {
     }
 
     // $FlowIssueAnyType
-    send(message: Object): Promise<any> {
+    send(imessage: Object): Promise<any> {
         this.counter++;
         const { counter } = this;
         this._sendMessage({
@@ -218,6 +218,7 @@ class SocketWorkerHandler {
         return dfd.promise;
     }
 
+    // $FlowIssueAnyType
     observers: {[name: string]: Stream<any>} = {}
 
     // $FlowIssueAnyType
@@ -230,6 +231,7 @@ class SocketWorkerHandler {
         return observer;
     }
 
+    // $FlowIssueAnyType
     _newObserve(event: string): Stream<any> {
         this.counter++;
         const { counter } = this;

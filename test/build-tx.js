@@ -1,10 +1,10 @@
 /* global it:false, describe:false */
 
 import assert from 'assert';
-import {buildTx} from '../src/build-tx';
-import {Permutation} from '../src/build-tx/permutation';
+import bitcoin from 'bitcoinjs-trezor-alpha';
+import { buildTx } from '../src/build-tx';
+import { Permutation } from '../src/build-tx/permutation';
 
-import bitcoin from 'bitcoinjs-trezor';
 
 import fixtures from './fixtures/build-tx.json';
 

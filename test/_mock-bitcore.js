@@ -73,12 +73,15 @@ export class MockBitcore {
 
     spec: Array<Spec>;
 
+    // $FlowIssueAnyType
     doneError: (f: Error) => any;
 
+    // $FlowIssueAnyType
     deepEqual: (a: any, b: any) => any;
 
     errored: boolean = false;
 
+    // $FlowIssueAnyType
     constructor(spec: Array<Spec>, doneError: (f: Error) => any) {
         this.spec = spec;
         this.doneError = (f: Error) => {

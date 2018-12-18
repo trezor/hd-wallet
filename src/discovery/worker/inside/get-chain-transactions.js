@@ -15,14 +15,14 @@
 //  so we have the logic of asking things out from the worker by requests,
 //  and the main thread returning things back
 
+import bchaddrjs from 'bchaddrjs';
 import {
     Transaction as BitcoinJsTransaction,
     address as BitcoinJsAddress,
     HDNode as BitcoinJsHDNode,
     script as BitcoinJsScript,
-} from 'bitcoinjs-lib-zcash';
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
-import bchaddrjs from 'bchaddrjs';
+} from 'bitcoinjs-trezor-alpha';
+import type { Network as BitcoinJsNetwork } from 'bitcoinjs-trezor-alpha';
 import { deferred } from '../../../utils/deferred';
 import type { Deferred } from '../../../utils/deferred';
 import type {
@@ -33,14 +33,7 @@ import type {
     ChunkDiscoveryInfo,
 } from '../types';
 import { Stream } from '../../../utils/stream';
-import {
-    Transaction as BitcoinJsTransaction,
-    address as BitcoinJsAddress,
-    HDNode as BitcoinJsHDNode,
-    script as BitcoinJsScript,
-} from 'bitcoinjs-trezor-alpha';
-import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor-alpha';
-import type {TransactionInfo} from '../../index';
+import type { TransactionInfo } from '../../index';
 import { BrowserAddressSource } from '../../../address-source';
 
 export class GetChainTransactions {

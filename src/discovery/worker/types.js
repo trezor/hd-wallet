@@ -5,7 +5,7 @@
 import type {
     Transaction as BitcoinJsTransaction,
     Network as BitcoinJsNetwork,
-} from 'bitcoinjs-lib-zcash';
+} from 'bitcoinjs-trezor-alpha';
 import type {
     TransactionWithHeight,
 } from '../../bitcore';
@@ -15,11 +15,6 @@ import type {
     TargetInfo,
 } from '../index';
 
-import type {
-    Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-trezor-alpha';
-
-import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor-alpha';
 
 /* ----- messages INTO into worker, from handler ------ */
 

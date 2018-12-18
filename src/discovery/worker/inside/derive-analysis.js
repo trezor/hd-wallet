@@ -1,7 +1,7 @@
 /* @flow */
 import {
     Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-lib-zcash';
+} from 'bitcoinjs-trezor-alpha';
 import type {
     ChainNewTransaction,
     ChainNewTransactions,
@@ -25,9 +25,6 @@ import {
     deriveDateFormats,
 } from './dates';
 
-import {
-    Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-trezor-alpha';
 
 type OutputForAnalysis = ?{address: string, value: number};
 type OutputsForAnalysis = Array<OutputForAnalysis>;

@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
+import type { Network as BitcoinJsNetwork } from 'bitcoinjs-trezor-alpha';
 import { deferred } from '../../../utils/deferred';
 import { Emitter, Stream } from '../../../utils/stream';
 import type {
@@ -14,7 +14,6 @@ import type {
 import type {
     AccountInfo,
 } from '../../index';
-import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor-alpha';
 
 // Code for all communication with outside
 

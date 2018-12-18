@@ -1,8 +1,8 @@
 /* @flow */
 
 /* global Worker:false */
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
-import { HDNode as BitcoinJsHDNode } from 'bitcoinjs-lib-zcash';
+import type { Network as BitcoinJsNetwork } from 'bitcoinjs-trezor-alpha';
+import { HDNode as BitcoinJsHDNode } from 'bitcoinjs-trezor-alpha';
 import type {
     AccountInfo,
     AccountLoadStatus,
@@ -10,11 +10,7 @@ import type {
 } from './index';
 import { Emitter, Stream, StreamWithEnding } from '../utils/stream';
 
-import {WorkerDiscoveryHandler} from './worker/outside';
-import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor-alpha';
-import {HDNode as BitcoinJsHDNode} from 'bitcoinjs-trezor-alpha';
-
-import {WorkerChannel as AddressWorkerChannel} from '../utils/simple-worker-channel';
+import { WorkerDiscoveryHandler } from './worker/outside';
 
 import { WorkerChannel as AddressWorkerChannel } from '../utils/simple-worker-channel';
 

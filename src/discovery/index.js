@@ -13,12 +13,11 @@
 // identification, not actual hash.
 // Actual hash is not used anywhere in the API.
 
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
+import type { Network as BitcoinJsNetwork } from 'bitcoinjs-trezor-alpha';
 import {
     Stream,
     StreamWithEnding,
 } from '../utils/stream';
-import type {Network as BitcoinJsNetwork} from 'bitcoinjs-trezor-alpha';
 
 // First, we describe all the types that go out of discovery
 // and that are directly used in web wallet.

@@ -21,11 +21,7 @@
       "import/prefer-default-export": 0,
       "new-cap": 0
   },
-  "settings": {
-      "import/resolver": {
-          "babel-module": {}
-      }
-  },
+  
   "parser": "babel-eslint",
   "parserOptions": {
       "ecmaVersion": 7,

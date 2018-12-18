@@ -1,9 +1,9 @@
 /* @flow */
 
-import type { Input as BitcoinJsInput } from 'bitcoinjs-lib-zcash';
+import type { Input as BitcoinJsInput } from 'bitcoinjs-trezor-alpha';
 import {
     Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-lib-zcash';
+} from 'bitcoinjs-trezor-alpha';
 import type {
     ChainNewTransactions,
     AddressToPath,
@@ -20,10 +20,6 @@ import {
     getInputId,
 } from '../utils';
 
-import type { Input as BitcoinJsInput } from 'bitcoinjs-trezor-alpha';
-import {
-    Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-trezor-alpha';
 
 // what is hapenning here:
 // I have a state with old utxo set
