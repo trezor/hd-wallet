@@ -51,7 +51,7 @@
   "browserslist": "> 5%, IE > 9, last 10 versions",
   "dependencies": {
     "bchaddrjs": "^0.2.1",
-    "bitcoinjs-trezor": "^0.0.0",
+    "bitcoinjs-trezor-alpha": "0.0.0-alpha",
     "queue": "^4.4.2",
     "socket.io-client": "^1.7.3",
     "whatwg-fetch": "^0.11.0"
