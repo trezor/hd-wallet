@@ -3,7 +3,7 @@
 /* global it:false, describe:false */
 
 import assert from 'assert';
-import { networks } from 'bitcoinjs-lib-zcash';
+import { networks } from 'trezor-utxo-lib';
 
 import { BitcoreBlockchain } from '../src/bitcore';
 import { MockWorker } from './_mock-worker';

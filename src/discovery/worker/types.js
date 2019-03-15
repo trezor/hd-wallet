@@ -5,7 +5,7 @@
 import type {
     Transaction as BitcoinJsTransaction,
     Network as BitcoinJsNetwork,
-} from 'bitcoinjs-lib-zcash';
+} from 'trezor-utxo-lib';
 import type {
     TransactionWithHeight,
 } from '../../bitcore';
