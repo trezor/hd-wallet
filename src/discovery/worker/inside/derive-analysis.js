@@ -1,7 +1,7 @@
 /* @flow */
 import {
     Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-lib-zcash';
+} from 'trezor-utxo-lib';
 import type {
     ChainNewTransaction,
     ChainNewTransactions,
@@ -174,7 +174,7 @@ function analyzeTransaction(
         vsize: t.vsize,
     };
 
-    if (t.tx.invalidTransaction) {
+    if (typeof t.tx.invalidTransaction === 'boolean') {
         response.invalidTransaction = t.tx.invalidTransaction;
     }
 

@@ -1,9 +1,9 @@
 /* @flow */
 
-import type { Input as BitcoinJsInput } from 'bitcoinjs-lib-zcash';
+import type { Input as BitcoinJsInput } from 'trezor-utxo-lib';
 import {
     Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-lib-zcash';
+} from 'trezor-utxo-lib';
 import type {
     ChainNewTransactions,
     AddressToPath,

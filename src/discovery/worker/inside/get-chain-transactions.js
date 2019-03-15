@@ -20,8 +20,8 @@ import {
     address as BitcoinJsAddress,
     HDNode as BitcoinJsHDNode,
     script as BitcoinJsScript,
-} from 'bitcoinjs-lib-zcash';
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
+} from 'trezor-utxo-lib';
+import type { Network as BitcoinJsNetwork } from 'trezor-utxo-lib';
 import bchaddrjs from 'bchaddrjs';
 import { deferred } from '../../../utils/deferred';
 import type { Deferred } from '../../../utils/deferred';

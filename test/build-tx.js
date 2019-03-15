@@ -1,7 +1,7 @@
 /* global it:false, describe:false */
 
 import assert from 'assert';
-import bitcoin from 'bitcoinjs-lib-zcash';
+import bitcoin from 'trezor-utxo-lib';
 import { buildTx } from '../src/build-tx';
 import { Permutation } from '../src/build-tx/permutation';
 

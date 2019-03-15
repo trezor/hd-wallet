@@ -4,8 +4,8 @@
 
 import 'whatwg-fetch';
 
-import { networks } from 'bitcoinjs-lib-zcash';
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
+import { networks } from 'trezor-utxo-lib';
+import type { Network as BitcoinJsNetwork } from 'trezor-utxo-lib';
 
 import { Emitter, Stream } from './utils/stream';
 import { Socket } from './socketio-worker/outside';
