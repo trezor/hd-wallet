@@ -15,7 +15,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "0000000000001b3afd3d78092bfa239e212585aaf99cce5f39c407989ff6352f",
         "height": 100
@@ -107,7 +107,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "0000000000001b3afd3d78092bfa239e212585aaf99cce5f39c407989ff6352f",
         "height": 100
@@ -134,7 +134,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "0000000000001b3afd3d78092bfa239e212585aaf99cce5f39c407989ff6352f",
         "height": 100
@@ -235,7 +235,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "0000000000001b3afd3d78092bfa239e212585aaf99cce5f39c407989ff6352f",
         "height": 100
@@ -262,7 +262,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "000000000000deadbeef",
         "height": 101
@@ -363,7 +363,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "0000000000001b3afd3d78092bfa239e212585aaf99cce5f39c407989ff6352f",
         "height": 100
@@ -382,7 +382,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -407,16 +407,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -428,13 +428,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -444,7 +444,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000deadbeef",
         "height": 101
@@ -557,7 +557,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -582,16 +582,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -603,13 +603,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -619,7 +619,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000deadbeef",
         "height": 101
@@ -721,7 +721,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -746,16 +746,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -767,13 +767,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -783,7 +783,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000deadbeef",
         "height": 101
@@ -802,7 +802,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -827,16 +827,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -848,13 +848,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -864,7 +864,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000deadbeef",
         "height": 101
@@ -975,7 +975,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -1000,16 +1000,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -1021,13 +1021,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -1037,7 +1037,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "00000000000deadc0ffee",
         "height": 101
@@ -1056,7 +1056,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -1081,16 +1081,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -1102,13 +1102,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -1118,7 +1118,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000deadbeef",
         "height": 101
@@ -1229,7 +1229,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -1254,16 +1254,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -1275,13 +1275,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -1291,7 +1291,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "00000000000deadc0ffee",
         "height": 102
@@ -1310,7 +1310,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -1335,16 +1335,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -1356,13 +1356,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -1372,7 +1372,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000deadbeef",
         "height": 101
@@ -1484,7 +1484,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -1509,16 +1509,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -1530,13 +1530,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -1546,7 +1546,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "00000000000deadc0ffee",
         "height": 102
@@ -1573,7 +1573,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "000000000000deadbeef",
         "height": 101
@@ -1669,7 +1669,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -1694,16 +1694,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -1715,13 +1715,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -1732,7 +1732,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -1846,7 +1846,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -1871,16 +1871,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -1892,13 +1892,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -1909,7 +1909,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -1928,7 +1928,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -1953,16 +1953,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -1974,13 +1974,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -1991,7 +1991,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead202",
         "height": 202
@@ -2096,7 +2096,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -2121,16 +2121,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -2142,13 +2142,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -2158,7 +2158,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead101",
         "height": 101
@@ -2177,7 +2177,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -2202,16 +2202,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -2223,13 +2223,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -2240,7 +2240,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead202",
         "height": 202
@@ -2364,7 +2364,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -2389,16 +2389,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -2410,13 +2410,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -2427,7 +2427,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead202",
         "height": 202
@@ -2446,7 +2446,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -2471,16 +2471,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -2492,7 +2492,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -2505,16 +2505,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -2526,13 +2526,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -2543,7 +2543,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -2688,7 +2688,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -2713,16 +2713,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -2734,7 +2734,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -2747,16 +2747,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -2768,13 +2768,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -2785,7 +2785,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -2938,7 +2938,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -2963,16 +2963,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -2984,7 +2984,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -2997,16 +2997,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -3018,13 +3018,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -3035,7 +3035,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -3186,7 +3186,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -3211,16 +3211,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -3232,7 +3232,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -3245,16 +3245,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -3266,13 +3266,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -3283,7 +3283,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -3304,7 +3304,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -3329,16 +3329,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -3350,7 +3350,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -3363,16 +3363,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -3384,13 +3384,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -3401,7 +3401,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -3544,7 +3544,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -3569,16 +3569,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -3590,7 +3590,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -3603,16 +3603,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -3624,13 +3624,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -3641,7 +3641,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -3662,7 +3662,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -3687,16 +3687,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -3708,13 +3708,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -3725,7 +3725,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -3830,7 +3830,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -3855,16 +3855,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -3876,7 +3876,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -3889,16 +3889,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -3910,13 +3910,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -3926,7 +3926,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -3947,7 +3947,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -3972,16 +3972,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -3993,13 +3993,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -4009,7 +4009,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -4120,7 +4120,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -4134,7 +4134,7 @@
         },
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fbb",
           "height": 150,
           "coinbase": false,
@@ -4159,16 +4159,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -4180,7 +4180,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -4193,16 +4193,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -4214,7 +4214,7 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         },
         {
           "isCoinbase": false,
@@ -4227,16 +4227,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -4248,13 +4248,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 260000000
+          "received": "260000000"
         }
       ],
       "unusedAddresses": [
@@ -4265,7 +4265,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 293333333,
+      "balance": "293333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -4286,7 +4286,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fbb",
           "height": 150,
           "coinbase": false,
@@ -4300,7 +4300,7 @@
         },
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -4325,16 +4325,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -4346,7 +4346,7 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 260000000
+          "balance": "260000000"
         },
         {
           "isCoinbase": false,
@@ -4359,16 +4359,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -4380,13 +4380,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 260000000
+          "received": "260000000"
         }
       ],
       "unusedAddresses": [
@@ -4397,7 +4397,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 260000000,
+      "balance": "260000000",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -4512,12 +4512,12 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 100000000,
+              "value": "100000000",
               "i": 1
             }
           ],
           "type": "sent",
-          "value": -100000000,
+          "value": "-100000000",
           "myOutputs": {},
           "inputs": [
             {
@@ -4527,7 +4527,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 0
+          "balance": "0"
         },
         {
           "isCoinbase": false,
@@ -4540,12 +4540,12 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -30000000,
+          "value": "-30000000",
           "myOutputs": {},
           "inputs": [
             {
@@ -4555,7 +4555,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 100000000
+          "balance": "100000000"
         },
         {
           "isCoinbase": false,
@@ -4568,12 +4568,12 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -30000000,
+          "value": "-30000000",
           "myOutputs": {},
           "inputs": [
             {
@@ -4583,7 +4583,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 100000000
+          "balance": "100000000"
         },
         {
           "isCoinbase": false,
@@ -4596,26 +4596,26 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             },
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             },
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 1
             }
           },
@@ -4627,13 +4627,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -4644,7 +4644,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -4665,7 +4665,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 100000000,
+          "value": "100000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -4679,7 +4679,7 @@
         },
         {
           "index": 0,
-          "value": 30000000,
+          "value": "30000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -4704,26 +4704,26 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             },
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             },
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 1
             }
           },
@@ -4735,13 +4735,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -4752,7 +4752,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -4867,12 +4867,12 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 120000000,
+              "value": "120000000",
               "i": 1
             }
           ],
           "type": "sent",
-          "value": -100000000,
+          "value": "-100000000",
           "myOutputs": {},
           "inputs": [
             {
@@ -4886,7 +4886,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 0
+          "balance": "0"
         },
         {
           "isCoinbase": false,
@@ -4899,12 +4899,12 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -30000000,
+          "value": "-30000000",
           "myOutputs": {},
           "inputs": [
             {
@@ -4914,7 +4914,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 100000000
+          "balance": "100000000"
         },
         {
           "isCoinbase": false,
@@ -4927,12 +4927,12 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -30000000,
+          "value": "-30000000",
           "myOutputs": {},
           "inputs": [
             {
@@ -4942,7 +4942,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 100000000
+          "balance": "100000000"
         },
         {
           "isCoinbase": false,
@@ -4955,26 +4955,26 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             },
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             },
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 1
             }
           },
@@ -4986,13 +4986,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -5003,7 +5003,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -5024,7 +5024,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 100000000,
+          "value": "100000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -5038,7 +5038,7 @@
         },
         {
           "index": 0,
-          "value": 30000000,
+          "value": "30000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -5063,26 +5063,26 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             },
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 30000000,
+              "value": "30000000",
               "i": 0
             },
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 1
             }
           },
@@ -5094,13 +5094,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -5111,7 +5111,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -5226,12 +5226,12 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 100,
+              "value": "100",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -33333333,
+          "value": "-33333333",
           "myOutputs": {},
           "inputs": [
             {
@@ -5241,7 +5241,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 0
+          "balance": "0"
         },
         {
           "isCoinbase": false,
@@ -5254,16 +5254,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -5275,7 +5275,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -5288,16 +5288,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -5309,13 +5309,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -5326,7 +5326,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": 0,
       "changeIndex": 3,
-      "balance": 163333333,
+      "balance": "163333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -5348,7 +5348,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": 222,
           "coinbase": false,
@@ -5373,16 +5373,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -5394,7 +5394,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -5407,16 +5407,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -5428,13 +5428,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -5445,7 +5445,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": 0,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -5565,7 +5565,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -5590,16 +5590,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -5611,7 +5611,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -5624,16 +5624,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -5645,13 +5645,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -5661,7 +5661,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -5682,7 +5682,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": null,
           "coinbase": false,
@@ -5707,16 +5707,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -5728,7 +5728,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -5741,16 +5741,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -5762,13 +5762,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -5779,7 +5779,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -5930,7 +5930,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -5955,16 +5955,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -5976,13 +5976,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -5993,7 +5993,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead202",
         "height": 202
@@ -6012,7 +6012,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": 222,
           "coinbase": false,
@@ -6026,7 +6026,7 @@
         },
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "befed550371854379ae4e9675e798082d1023cd380a8f1257a9f0b07b0bf3425",
           "height": null,
           "coinbase": false,
@@ -6051,16 +6051,16 @@
           "targets": [
             {
               "address": "mvukVu96xM1QJ971w4Z5cdX4tsJwDyQy2L",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvukVu96xM1QJ971w4Z5cdX4tsJwDyQy2L",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -6072,7 +6072,7 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 163333333
+          "balance": "163333333"
         },
         {
           "isCoinbase": false,
@@ -6085,16 +6085,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -6106,7 +6106,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -6119,16 +6119,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -6140,13 +6140,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -6157,7 +6157,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": 0,
       "changeIndex": 3,
-      "balance": 163333333,
+      "balance": "163333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -6330,7 +6330,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": 222,
           "coinbase": false,
@@ -6344,7 +6344,7 @@
         },
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "befed550371854379ae4e9675e798082d1023cd380a8f1257a9f0b07b0bf3425",
           "height": null,
           "coinbase": false,
@@ -6369,16 +6369,16 @@
           "targets": [
             {
               "address": "mvukVu96xM1QJ971w4Z5cdX4tsJwDyQy2L",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvukVu96xM1QJ971w4Z5cdX4tsJwDyQy2L",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -6390,7 +6390,7 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 163333333
+          "balance": "163333333"
         },
         {
           "isCoinbase": false,
@@ -6403,16 +6403,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -6424,7 +6424,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -6437,16 +6437,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -6458,13 +6458,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -6475,7 +6475,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": 0,
       "changeIndex": 3,
-      "balance": 163333333,
+      "balance": "163333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -6497,7 +6497,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": 222,
           "coinbase": false,
@@ -6511,7 +6511,7 @@
         },
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "befed550371854379ae4e9675e798082d1023cd380a8f1257a9f0b07b0bf3425",
           "height": null,
           "coinbase": false,
@@ -6536,16 +6536,16 @@
           "targets": [
             {
               "address": "mvukVu96xM1QJ971w4Z5cdX4tsJwDyQy2L",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvukVu96xM1QJ971w4Z5cdX4tsJwDyQy2L",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -6557,7 +6557,7 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 163333333
+          "balance": "163333333"
         },
         {
           "isCoinbase": false,
@@ -6570,16 +6570,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -6591,7 +6591,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -6604,16 +6604,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -6625,13 +6625,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -6642,7 +6642,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": 0,
       "changeIndex": 3,
-      "balance": 163333333,
+      "balance": "163333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -6782,7 +6782,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 300000000,
+          "value": "300000000",
           "transactionHash": "e3820602226974b1dd87b7113cc8aea8c63e5ae29293991e7bfa80c126930368",
           "height": 150,
           "coinbase": false,
@@ -6807,16 +6807,16 @@
           "targets": [
             {
               "address": "tmQoJ3PTXgQLaRRZZYT6xk8XtjRbr2kCqwu",
-              "value": 300000000,
+              "value": "300000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 300000000,
+          "value": "300000000",
           "myOutputs": {
             "0": {
               "address": "tmQoJ3PTXgQLaRRZZYT6xk8XtjRbr2kCqwu",
-              "value": 300000000,
+              "value": "300000000",
               "i": 0
             }
           },
@@ -6832,13 +6832,13 @@
           ],
           "tsize": 381,
           "vsize": 381,
-          "balance": 300000000
+          "balance": "300000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "tmQoJ3PTXgQLaRRZZYT6xk8XtjRbr2kCqwu",
-          "received": 300000000
+          "received": "300000000"
         }
       ],
       "unusedAddresses": [
@@ -6849,7 +6849,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 300000000,
+      "balance": "300000000",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -6972,7 +6972,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 300000000,
+          "value": "300000000",
           "transactionHash": "e3820602226974b1dd87b7113cc8aea8c63e5ae29293991e7bfa80c126930368",
           "height": 150,
           "coinbase": false,
@@ -6986,7 +6986,7 @@
         },
         {
           "index": 0,
-          "value": 10000000000,
+          "value": "10000000000",
           "transactionHash": "54030da65e71760b7ce18755955afd701b33c1e432db33b43b54c53d39ee52f4",
           "height": 150,
           "coinbase": false,
@@ -7011,16 +7011,16 @@
           "targets": [
             {
               "address": "tmQoJ3PTXgQLaRRZZYT6xk8XtjRbr2kCqwu",
-              "value": 300000000,
+              "value": "300000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 300000000,
+          "value": "300000000",
           "myOutputs": {
             "0": {
               "address": "tmQoJ3PTXgQLaRRZZYT6xk8XtjRbr2kCqwu",
-              "value": 300000000,
+              "value": "300000000",
               "i": 0
             }
           },
@@ -7036,7 +7036,7 @@
           ],
           "tsize": 381,
           "vsize": 381,
-          "balance": 10300000000
+          "balance": "10300000000"
         },
         {
           "isCoinbase": false,
@@ -7049,41 +7049,41 @@
           "targets": [
             {
               "address": "tmHyHq7Ec5oPXBDdyfDHAuqWphwEXxK5yZ9",
-              "value": 10000000000,
+              "value": "10000000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 10000000000,
+          "value": "10000000000",
           "myOutputs": {
             "0": {
               "address": "tmHyHq7Ec5oPXBDdyfDHAuqWphwEXxK5yZ9",
-              "value": 10000000000,
+              "value": "10000000000",
               "i": 0
             }
           },
           "inputs": [],
           "tsize": 1951,
           "vsize": 1951,
-          "balance": 10000000000
+          "balance": "10000000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "tmQoJ3PTXgQLaRRZZYT6xk8XtjRbr2kCqwu",
-          "received": 300000000
+          "received": "300000000"
         },
         {
           "address": "tmJ1xYxP8XNTtCoDgvdmQPSrxh5qZJgy65Z",
-          "received": 0
+          "received": "0"
         },
         {
           "address": "tmB5LZ6oSKTaCoKYVy7PDBP4L7WAfzxu882",
-          "received": 0
+          "received": "0"
         },
         {
           "address": "tmHyHq7Ec5oPXBDdyfDHAuqWphwEXxK5yZ9",
-          "received": 10000000000
+          "received": "10000000000"
         }
       ],
       "unusedAddresses": [
@@ -7094,7 +7094,7 @@
       "lastConfirmedMain": 3,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 10300000000,
+      "balance": "10300000000",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -7252,7 +7252,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 300000000,
+          "value": "300000000",
           "transactionHash": "e3820602226974b1dd87b7113cc8aea8c63e5ae29293991e7bfa80c126930368",
           "height": 150,
           "coinbase": false,
@@ -7277,12 +7277,12 @@
           "targets": [
             {
               "address": "tmGoFQfi3XHMq7TihKADcMTMMeX54C7tdqH",
-              "value": 99990000,
+              "value": "99990000",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -10000000000,
+          "value": "-10000000000",
           "myOutputs": {},
           "inputs": [
             {
@@ -7292,7 +7292,7 @@
           ],
           "tsize": 2099,
           "vsize": 2099,
-          "balance": 300000000
+          "balance": "300000000"
         },
         {
           "isCoinbase": false,
@@ -7305,16 +7305,16 @@
           "targets": [
             {
               "address": "tmQoJ3PTXgQLaRRZZYT6xk8XtjRbr2kCqwu",
-              "value": 300000000,
+              "value": "300000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 300000000,
+          "value": "300000000",
           "myOutputs": {
             "0": {
               "address": "tmQoJ3PTXgQLaRRZZYT6xk8XtjRbr2kCqwu",
-              "value": 300000000,
+              "value": "300000000",
               "i": 0
             }
           },
@@ -7330,7 +7330,7 @@
           ],
           "tsize": 381,
           "vsize": 381,
-          "balance": 10300000000
+          "balance": "10300000000"
         },
         {
           "isCoinbase": false,
@@ -7343,41 +7343,41 @@
           "targets": [
             {
               "address": "tmHyHq7Ec5oPXBDdyfDHAuqWphwEXxK5yZ9",
-              "value": 10000000000,
+              "value": "10000000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 10000000000,
+          "value": "10000000000",
           "myOutputs": {
             "0": {
               "address": "tmHyHq7Ec5oPXBDdyfDHAuqWphwEXxK5yZ9",
-              "value": 10000000000,
+              "value": "10000000000",
               "i": 0
             }
           },
           "inputs": [],
           "tsize": 1951,
           "vsize": 1951,
-          "balance": 10000000000
+          "balance": "10000000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "tmQoJ3PTXgQLaRRZZYT6xk8XtjRbr2kCqwu",
-          "received": 300000000
+          "received": "300000000"
         },
         {
           "address": "tmJ1xYxP8XNTtCoDgvdmQPSrxh5qZJgy65Z",
-          "received": 0
+          "received": "0"
         },
         {
           "address": "tmB5LZ6oSKTaCoKYVy7PDBP4L7WAfzxu882",
-          "received": 0
+          "received": "0"
         },
         {
           "address": "tmHyHq7Ec5oPXBDdyfDHAuqWphwEXxK5yZ9",
-          "received": 10000000000
+          "received": "10000000000"
         }
       ],
       "unusedAddresses": [
@@ -7388,7 +7388,7 @@
       "lastConfirmedMain": 3,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 300000000,
+      "balance": "300000000",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -7570,7 +7570,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 49870130,
+          "value": "49870130",
           "transactionHash": "45d093731ae556580da86dfc0924fdbb12fb60386b7c6e91699316a9fe49e562",
           "height": 150,
           "coinbase": false,
@@ -7595,16 +7595,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 49870130,
+          "value": "49870130",
           "myOutputs": {
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           },
@@ -7616,13 +7616,13 @@
           ],
           "tsize": 166,
           "vsize": 166,
-          "balance": 49870130
+          "balance": "49870130"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 49870130
+          "received": "49870130"
         }
       ],
       "unusedAddresses": [
@@ -7633,7 +7633,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 49870130,
+      "balance": "49870130",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -7761,17 +7761,17 @@
           "targets": [
             {
               "address": "OP_RETURN (kokos!)",
-              "value": 0,
+              "value": "0",
               "i": 0
             },
             {
               "address": "mpaXJ6yWNAeJuEVuFReoTfMGn4VyPSiEbK",
-              "value": 49867600,
+              "value": "49867600",
               "i": 1
             }
           ],
           "type": "sent",
-          "value": -49870130,
+          "value": "-49870130",
           "myOutputs": {},
           "inputs": [
             {
@@ -7781,7 +7781,7 @@
           ],
           "tsize": 208,
           "vsize": 208,
-          "balance": 0
+          "balance": "0"
         },
         {
           "isCoinbase": false,
@@ -7794,16 +7794,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 49870130,
+          "value": "49870130",
           "myOutputs": {
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           },
@@ -7815,13 +7815,13 @@
           ],
           "tsize": 166,
           "vsize": 166,
-          "balance": 49870130
+          "balance": "49870130"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 49870130
+          "received": "49870130"
         }
       ],
       "unusedAddresses": [
@@ -7832,7 +7832,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -7970,7 +7970,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 55000000,
+          "value": "55000000",
           "transactionHash": "add909c0e446573eefdff6fd8b50ba9b11f5102c124e7362e170f63f0a5df1cb",
           "height": 150,
           "coinbase": false,
@@ -7995,16 +7995,16 @@
           "targets": [
             {
               "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-              "value": 55000000,
+              "value": "55000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 25157095,
+          "value": "25157095",
           "myOutputs": {
             "0": {
               "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-              "value": 55000000,
+              "value": "55000000",
               "i": 0
             }
           },
@@ -8020,7 +8020,7 @@
           ],
           "tsize": 340,
           "vsize": 340,
-          "balance": 55000000
+          "balance": "55000000"
         },
         {
           "isCoinbase": false,
@@ -8033,16 +8033,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 29842905,
+              "value": "29842905",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 29842905,
+          "value": "29842905",
           "myOutputs": {
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 29842905,
+              "value": "29842905",
               "i": 1
             }
           },
@@ -8054,21 +8054,21 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 29842905
+          "balance": "29842905"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 29842905
+          "received": "29842905"
         },
         {
           "address": "mopZWqZZyQc3F2Sy33cvDtJchSAMsnLi7b",
-          "received": 0
+          "received": "0"
         },
         {
           "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-          "received": 55000000
+          "received": "55000000"
         }
       ],
       "unusedAddresses": [
@@ -8079,7 +8079,7 @@
       "lastConfirmedMain": 2,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 55000000,
+      "balance": "55000000",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -8212,7 +8212,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 55000000,
+          "value": "55000000",
           "transactionHash": "add909c0e446573eefdff6fd8b50ba9b11f5102c124e7362e170f63f0a5df1cb",
           "height": 150,
           "coinbase": false,
@@ -8237,16 +8237,16 @@
           "targets": [
             {
               "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-              "value": 55000000,
+              "value": "55000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 25157095,
+          "value": "25157095",
           "myOutputs": {
             "0": {
               "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-              "value": 55000000,
+              "value": "55000000",
               "i": 0
             }
           },
@@ -8262,7 +8262,7 @@
           ],
           "tsize": 340,
           "vsize": 340,
-          "balance": 55000000
+          "balance": "55000000"
         },
         {
           "isCoinbase": false,
@@ -8275,16 +8275,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 29842905,
+              "value": "29842905",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 29842905,
+          "value": "29842905",
           "myOutputs": {
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 29842905,
+              "value": "29842905",
               "i": 1
             }
           },
@@ -8296,21 +8296,21 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 29842905
+          "balance": "29842905"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 29842905
+          "received": "29842905"
         },
         {
           "address": "mopZWqZZyQc3F2Sy33cvDtJchSAMsnLi7b",
-          "received": 0
+          "received": "0"
         },
         {
           "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-          "received": 55000000
+          "received": "55000000"
         }
       ],
       "unusedAddresses": [
@@ -8321,7 +8321,7 @@
       "lastConfirmedMain": 2,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 55000000,
+      "balance": "55000000",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -8340,7 +8340,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 55000000,
+          "value": "55000000",
           "transactionHash": "add909c0e446573eefdff6fd8b50ba9b11f5102c124e7362e170f63f0a5df1cb",
           "height": 150,
           "coinbase": false,
@@ -8365,16 +8365,16 @@
           "targets": [
             {
               "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-              "value": 55000000,
+              "value": "55000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 25157095,
+          "value": "25157095",
           "myOutputs": {
             "0": {
               "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-              "value": 55000000,
+              "value": "55000000",
               "i": 0
             }
           },
@@ -8390,7 +8390,7 @@
           ],
           "tsize": 340,
           "vsize": 340,
-          "balance": 55000000
+          "balance": "55000000"
         },
         {
           "isCoinbase": false,
@@ -8403,16 +8403,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 29842905,
+              "value": "29842905",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 29842905,
+          "value": "29842905",
           "myOutputs": {
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 29842905,
+              "value": "29842905",
               "i": 1
             }
           },
@@ -8424,21 +8424,21 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 29842905
+          "balance": "29842905"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 29842905
+          "received": "29842905"
         },
         {
           "address": "mopZWqZZyQc3F2Sy33cvDtJchSAMsnLi7b",
-          "received": 0
+          "received": "0"
         },
         {
           "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-          "received": 55000000
+          "received": "55000000"
         }
       ],
       "unusedAddresses": [
@@ -8449,7 +8449,7 @@
       "lastConfirmedMain": 2,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 55000000,
+      "balance": "55000000",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -8557,7 +8557,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 100000000,
+          "value": "100000000",
           "transactionHash": "05fa57d2bf09aaf270b41011e2b0ae944e43ccb64ce42d1f1f7767da336b7516",
           "height": 150,
           "coinbase": false,
@@ -8582,16 +8582,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 100000000,
+          "value": "100000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 0
             }
           },
@@ -8603,13 +8603,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 100000000
+          "balance": "100000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 100000000
+          "received": "100000000"
         }
       ],
       "unusedAddresses": [
@@ -8620,7 +8620,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 100000000,
+      "balance": "100000000",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -8639,7 +8639,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 100000000,
+          "value": "100000000",
           "transactionHash": "05fa57d2bf09aaf270b41011e2b0ae944e43ccb64ce42d1f1f7767da336b7516",
           "height": 150,
           "coinbase": false,
@@ -8653,7 +8653,7 @@
         },
         {
           "index": 0,
-          "value": 100000000,
+          "value": "100000000",
           "transactionHash": "b9d775bd2094ba881803838ca6e51115115b0b35d426ea34b375681854065eee",
           "height": 201,
           "coinbase": false,
@@ -8678,16 +8678,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 100000000,
+          "value": "100000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 0
             }
           },
@@ -8699,7 +8699,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 200000000
+          "balance": "200000000"
         },
         {
           "isCoinbase": false,
@@ -8712,16 +8712,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 100000000,
+          "value": "100000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 100000000,
+              "value": "100000000",
               "i": 0
             }
           },
@@ -8733,13 +8733,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 100000000
+          "balance": "100000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 200000000
+          "received": "200000000"
         }
       ],
       "unusedAddresses": [
@@ -8750,7 +8750,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 200000000,
+      "balance": "200000000",
       "lastBlock": {
         "hash": "000000000000dead201",
         "height": 201
@@ -8947,7 +8947,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": 150,
           "coinbase": false,
@@ -8972,16 +8972,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -8993,13 +8993,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -9010,7 +9010,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000dead202",
         "height": 202
@@ -9029,7 +9029,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "d60a6f33aa816323d8d7aa8cfa464ee226ab01c31e8e6afb6136543837d3981b",
           "height": null,
           "coinbase": false,
@@ -9043,7 +9043,7 @@
         },
         {
           "index": 1,
-          "value": 33333333,
+          "value": "33333333",
           "transactionHash": "d60a6f33aa816323d8d7aa8cfa464ee226ab01c31e8e6afb6136543837d3981b",
           "height": null,
           "coinbase": false,
@@ -9067,16 +9067,16 @@
           "hash": "d60a6f33aa816323d8d7aa8cfa464ee226ab01c31e8e6afb6136543837d3981b",
           "targets": [],
           "type": "self",
-          "value": -63333334,
+          "value": "-63333334",
           "myOutputs": {
             "0": {
               "address": "momtnzR3XqXgDSsFmd8gkGxUiHZLde3RmA",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             },
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -9088,7 +9088,7 @@
           ],
           "tsize": 226,
           "vsize": 225,
-          "balance": 66666666
+          "balance": "66666666"
         },
         {
           "isCoinbase": false,
@@ -9101,16 +9101,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -9122,32 +9122,32 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         },
         {
           "address": "mopZWqZZyQc3F2Sy33cvDtJchSAMsnLi7b",
-          "received": 0
+          "received": "0"
         },
         {
           "address": "mgswWyysmViMqYmn5XEj1pVz7rVUftVEBP",
-          "received": 0
+          "received": "0"
         },
         {
           "address": "momtnzR3XqXgDSsFmd8gkGxUiHZLde3RmA",
-          "received": 33333333
+          "received": "33333333"
         }
       ],
       "unusedAddresses": [],
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 1,
-      "balance": 66666666,
+      "balance": "66666666",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -9289,7 +9289,7 @@
       "utxos": [
         {
           "index": 1,
-          "value": 33333335,
+          "value": "33333335",
           "transactionHash": "7fefacd62d75e857c826437904b2e5d514280c72cc7b02c1b67252533158a928",
           "height": 222,
           "coinbase": false,
@@ -9314,16 +9314,16 @@
           "targets": [
             {
               "address": "mvGnbHiYbYbpuwBhTHRXfZHjjcmSWKn5nm",
-              "value": 33333333,
+              "value": "33333333",
               "i": 0
             }
           ],
           "type": "sent",
-          "value": -96666667,
+          "value": "-96666667",
           "myOutputs": {
             "1": {
               "address": "mm6kLYbGEL1tGe4ZA8xacfgRPdW1NLjCbZ",
-              "value": 33333333,
+              "value": "33333333",
               "i": 1
             }
           },
@@ -9335,7 +9335,7 @@
           ],
           "tsize": 225,
           "vsize": 225,
-          "balance": 33333333
+          "balance": "33333333"
         },
         {
           "isCoinbase": false,
@@ -9348,16 +9348,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -9369,13 +9369,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -9386,7 +9386,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": 0,
       "changeIndex": 1,
-      "balance": 33333333,
+      "balance": "33333333",
       "lastBlock": {
         "hash": "000000000000dead250",
         "height": 250
@@ -9625,7 +9625,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "0000000000001b3afd3d78092bfa239e212585aaf99cce5f39c407989ff6352f",
         "height": 100
@@ -9719,7 +9719,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "0000000000001b3afd3d78092bfa239e212585aaf99cce5f39c407989ff6352f",
         "height": 100
@@ -9811,7 +9811,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "0000000000001b3afd3d78092bfa239e212585aaf99cce5f39c407989ff6352f",
         "height": 100
@@ -9830,7 +9830,7 @@
       "utxos": [
         {
           "index": 0,
-          "value": 130000000,
+          "value": "130000000",
           "transactionHash": "778a2656159c9542d3c3d8182e866e08c58bde08a9acd188de6cc450b2d48fb7",
           "height": null,
           "coinbase": false,
@@ -9855,16 +9855,16 @@
           "targets": [
             {
               "address": "bchtest:qzjhjwyzykp8m8e0ayq54htygjrcprrft5n3kq6p7f",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           ],
           "type": "recv",
-          "value": 130000000,
+          "value": "130000000",
           "myOutputs": {
             "0": {
               "address": "bchtest:qzjhjwyzykp8m8e0ayq54htygjrcprrft5n3kq6p7f",
-              "value": 130000000,
+              "value": "130000000",
               "i": 0
             }
           },
@@ -9876,13 +9876,13 @@
           ],
           "tsize": 226,
           "vsize": 226,
-          "balance": 130000000
+          "balance": "130000000"
         }
       ],
       "usedAddresses": [
         {
           "address": "bchtest:qzjhjwyzykp8m8e0ayq54htygjrcprrft5n3kq6p7f",
-          "received": 130000000
+          "received": "130000000"
         }
       ],
       "unusedAddresses": [
@@ -9892,7 +9892,7 @@
       "lastConfirmedMain": -1,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 130000000,
+      "balance": "130000000",
       "lastBlock": {
         "hash": "000000000000deadbeef",
         "height": 101
@@ -10015,17 +10015,17 @@
           "targets": [
             {
               "address": "OP_RETURN ()",
-              "value": 0,
+              "value": "0",
               "i": 0
             },
             {
               "address": "mpaXJ6yWNAeJuEVuFReoTfMGn4VyPSiEbK",
-              "value": 49867600,
+              "value": "49867600",
               "i": 1
             }
           ],
           "type": "sent",
-          "value": -49870130,
+          "value": "-49870130",
           "myOutputs": {},
           "inputs": [
             {
@@ -10035,7 +10035,7 @@
           ],
           "tsize": 202,
           "vsize": 208,
-          "balance": 0
+          "balance": "0"
         },
         {
           "isCoinbase": false,
@@ -10048,16 +10048,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 49870130,
+          "value": "49870130",
           "myOutputs": {
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           },
@@ -10069,13 +10069,13 @@
           ],
           "tsize": 166,
           "vsize": 166,
-          "balance": 49870130
+          "balance": "49870130"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 49870130
+          "received": "49870130"
         }
       ],
       "unusedAddresses": [
@@ -10086,7 +10086,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -10233,17 +10233,17 @@
           "targets": [
             {
               "address": "OP_RETURN (0x62c3ba2063e1bab763)",
-              "value": 0,
+              "value": "0",
               "i": 0
             },
             {
               "address": "mpaXJ6yWNAeJuEVuFReoTfMGn4VyPSiEbK",
-              "value": 49867600,
+              "value": "49867600",
               "i": 1
             }
           ],
           "type": "sent",
-          "value": -49870130,
+          "value": "-49870130",
           "myOutputs": {},
           "inputs": [
             {
@@ -10253,7 +10253,7 @@
           ],
           "tsize": 211,
           "vsize": 208,
-          "balance": 0
+          "balance": "0"
         },
         {
           "isCoinbase": false,
@@ -10266,16 +10266,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 49870130,
+          "value": "49870130",
           "myOutputs": {
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           },
@@ -10287,13 +10287,13 @@
           ],
           "tsize": 166,
           "vsize": 166,
-          "balance": 49870130
+          "balance": "49870130"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 49870130
+          "received": "49870130"
         }
       ],
       "unusedAddresses": [
@@ -10304,7 +10304,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
@@ -10451,17 +10451,17 @@
           "targets": [
             {
               "address": "UNKNOWN",
-              "value": 0,
+              "value": "0",
               "i": 0
             },
             {
               "address": "mpaXJ6yWNAeJuEVuFReoTfMGn4VyPSiEbK",
-              "value": 49867600,
+              "value": "49867600",
               "i": 1
             }
           ],
           "type": "sent",
-          "value": -49870130,
+          "value": "-49870130",
           "myOutputs": {},
           "inputs": [
             {
@@ -10471,7 +10471,7 @@
           ],
           "tsize": 210,
           "vsize": 208,
-          "balance": 0
+          "balance": "0"
         },
         {
           "isCoinbase": false,
@@ -10484,16 +10484,16 @@
           "targets": [
             {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           ],
           "type": "recv",
-          "value": 49870130,
+          "value": "49870130",
           "myOutputs": {
             "1": {
               "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-              "value": 49870130,
+              "value": "49870130",
               "i": 1
             }
           },
@@ -10505,13 +10505,13 @@
           ],
           "tsize": 166,
           "vsize": 166,
-          "balance": 49870130
+          "balance": "49870130"
         }
       ],
       "usedAddresses": [
         {
           "address": "mvbu1Gdy8SUjTenqerxUaZyYjmveZvt33q",
-          "received": 49870130
+          "received": "49870130"
         }
       ],
       "unusedAddresses": [
@@ -10522,7 +10522,7 @@
       "lastConfirmedMain": 0,
       "lastConfirmedChange": -1,
       "changeIndex": 0,
-      "balance": 0,
+      "balance": "0",
       "lastBlock": {
         "hash": "000000000000dead200",
         "height": 200
