@@ -31,7 +31,7 @@ const defaultInfo: AccountInfo = {
     usedAddresses: [],
     unusedAddresses: [],
     changeIndex: 0,
-    balance: 0,
+    balance: '0',
     sentAddresses: {},
     lastBlock: { height: 0, hash: 'abcd' },
     transactionHashes: {},

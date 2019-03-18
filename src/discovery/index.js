@@ -27,7 +27,7 @@ import {
 export type UtxoInfo = {
     index: number, // index of output IN THE TRANSACTION
     transactionHash: string, // hash of the transaction
-    value: number, // how much money sent
+    value: string, // how much money sent
     addressPath: [number, number], // path
     height: ?number, // null == unconfirmed
     coinbase: boolean,
@@ -39,7 +39,7 @@ export type UtxoInfo = {
 // Some info about output
 export type TargetInfo = {
     address: string,
-    value: number,
+    value: string,
     i: number, // index in the transaction
 }
 
@@ -75,8 +75,8 @@ export type TransactionInfo = {
     // value - tx itself
     // balance - balance on account after this tx
     // both are little heuristics! it is "relevant" value/balance
-    value: number,
-    balance: number,
+    value: string,
+    balance: string,
 
     inputs: Array<{id: string, index: number}>, // needing this for later analysis
 
@@ -94,7 +94,7 @@ export type AddressWithReceived = {
     // regular base58check address
     address: string,
     // received, in satoshis
-    received: number,
+    received: string,
 };
 
 // Complete info about one account.
@@ -126,7 +126,7 @@ export type AccountInfo = {
     allowChange: boolean,
 
     // balance (== all utxos added)
-    balance: number,
+    balance: string,
 
     // index for outgoing addresses; not including mine self-sents
     sentAddresses: {[txPlusIndex: string]: string},

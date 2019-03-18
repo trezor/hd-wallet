@@ -22,6 +22,9 @@ declare class $npm$bigi$BigInteger {
     shiftLeft(o: number): $npm$bigi$BigInteger,
     shiftRight(o: number): $npm$bigi$BigInteger,
     isProbablePrime(): boolean,
+    min(i: $npm$bigi$BigInteger): $npm$bigi$BigInteger,
+    max(i: $npm$bigi$BigInteger): $npm$bigi$BigInteger,
+    compareTo(i: $npm$bigi$BigInteger): number,
 
     static fromByteArrayUnsigned(array: Array<number>): $npm$bigi$BigInteger,
     static fromBuffer(buffer: Buffer): $npm$bigi$BigInteger,
@@ -119,7 +122,7 @@ declare module 'trezor-utxo-lib' {
 
     declare type Output = {
         script: Buffer,
-        value: number,
+        value: number | string,
     };
 
     declare type Input = {
