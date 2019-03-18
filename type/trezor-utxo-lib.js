@@ -102,7 +102,7 @@ declare module 'ecurve' {
 }
 // ---------- copypasta end ----
 
-declare module 'bitcoinjs-lib-zcash' {
+declare module 'trezor-utxo-lib' {
     declare type Network = {
         messagePrefix: string,
         bip32: {
