@@ -1,4 +1,5 @@
 /* @flow */
+import BigInteger from 'bigi';
 import {
     Transaction as BitcoinJsTransaction,
 } from 'trezor-utxo-lib';
@@ -15,6 +16,7 @@ import type {
     TargetInfo,
 } from '../../index';
 
+
 import {
     objectValues,
     getInputId,
@@ -26,7 +28,7 @@ import {
 } from './dates';
 
 
-type OutputForAnalysis = ?{address: string, value: number};
+type OutputForAnalysis = ?{address: string, value: string};
 type OutputsForAnalysis = Array<OutputForAnalysis>;
 type OutputsForAnalysisMap = {[txid: string]: OutputsForAnalysis};
 
@@ -98,7 +100,7 @@ function deriveOutputsForAnalysisMap(
         for (let i = 0; i < t.tx.outs.length; i++) {
             const output = t.tx.outs[i];
             const address = t.outputAddresses[i];
-            outputs.push({ address, value: output.value });
+            outputs.push({ address, value: typeof output.value === 'string' ? output.value : output.value.toString() });
         }
         const txid = t.hash;
         return { txid, outputs };
@@ -197,7 +199,7 @@ function getTargetsFromTransaction(
 
     let nCredit = 0;
     let nDebit = 0;
-    let value = 0;
+    let value: BigInteger = new BigInteger('0');
 
     // testing if address is mine / change / not change / ...
     function isExternal(a: ?string): boolean {
@@ -228,7 +230,7 @@ function getTargetsFromTransaction(
             const output = info[index];
             if (output) {
                 if (isCredit(output.address)) {
-                    value -= output.value;
+                    value = value.subtract(new BigInteger(output.value));
                     nDebit++;
                 }
             }
@@ -243,7 +245,7 @@ function getTargetsFromTransaction(
     // if its output has address that is mine. (On any chain.)
     currentOutputs.forEach((output, i) => {
         if (isCredit(output.address)) {
-            value += output.value;
+            value = value.add(new BigInteger(output.value));
             nCredit++;
             myOutputs[i] = { address: output.address, value: output.value, i };
         }
@@ -274,7 +276,7 @@ function getTargetsFromTransaction(
         // within the same account
         type = 'self';
         targets = [];
-    } else if (value > 0) {
+    } else if (value.compareTo(new BigInteger('0')) > 0) {
         // incoming transaction, targets are either external or internal outputs
         type = 'recv';
         targets = filterTargets(address => isExternal(address));
@@ -291,7 +293,7 @@ function getTargetsFromTransaction(
     // makes sense - even "sent to self" transactions are negative - cost fee
 
     return {
-        targets, type, value, myOutputs,
+        targets, type, value: value.toString(), myOutputs,
     };
 }
 
@@ -304,7 +306,7 @@ function deriveFullInfo(
     let prev = null;
     const impacts = sortedAnalysis.map((info: TransactionInfoBalanceless): TransactionInfo => {
         const balance = (prev != null)
-            ? prev.balance + info.value
+            ? new BigInteger(prev.balance).add(new BigInteger(info.value)).toString()
             : info.value;
         prev = {
             ...info,

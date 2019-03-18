@@ -234,7 +234,7 @@ export class GetChainTransactions {
                 if (transaction.rawTx) {
                     parsed.outs = transaction.rawTx.outputs.map(out => ({
                         script: Buffer.from(out.script, 'hex'),
-                        value: 0,
+                        value: '0',
                     }));
                 }
             }

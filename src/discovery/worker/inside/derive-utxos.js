@@ -175,7 +175,7 @@ function _deriveUtxos(
             const addressPath = addressToPath[address];
             const resIx: UtxoInfo = {
                 index,
-                value: o.value,
+                value: typeof o.value === 'string' ? o.value : o.value.toString(),
                 transactionHash: hash,
                 height,
                 coinbase,

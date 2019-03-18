@@ -186,7 +186,7 @@ export type TransactionInfoBalanceless = {
 
     type: 'self' | 'recv' | 'sent',
 
-    value: number,
+    value: string,
 
     inputs: Array<{id: string, index: number}>, // needing this for analysis
 
@@ -199,5 +199,5 @@ export type TargetsType = {
     targets: Array<TargetInfo>,
     myOutputs: {[i: number]: TargetInfo},
     type: 'self' | 'recv' | 'sent',
-    value: number,
+    value: string,
 };
