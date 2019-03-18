@@ -4,6 +4,7 @@
 // because it behaves unpredictably + is slow
 // (I don't like socket.io.)
 import socketIO from 'socket.io-client';
+import type { Socket as SocketIO } from 'socket.io-client';
 
 export type InMessage = {
     type: 'init',
@@ -41,7 +42,7 @@ export type OutMessage = {
     type: 'initError',
 }
 
-let socket: socketIO = null;
+let socket: ?SocketIO;
 const events: {[key: number]: Function} = {};
 
 // eslint-disable-next-line no-undef
@@ -77,8 +78,8 @@ onmessage = (event: {data: string}) => {
             // intentionally empty - thread is closing anyway
         }
 
-        if (socket != null) {
-            socket.disconnect(true);
+        if (socket) {
+            socket.disconnect();
         }
         socket = null;
         // eslint-disable-next-line no-restricted-globals,no-undef
@@ -94,7 +95,9 @@ onmessage = (event: {data: string}) => {
             });
         };
         events[data.id] = eventFunction;
-        socket.on(data.event, eventFunction);
+        if (socket) {
+            socket.on(data.event, eventFunction);
+        }
     }
 
     if (data.type === 'unobserve') {
@@ -106,10 +109,12 @@ onmessage = (event: {data: string}) => {
     }
 
     if (data.type === 'subscribe') {
-        socket.emit('subscribe', data.event, ...data.values);
+        if (socket) {
+            socket.emit('subscribe', data.event, ...data.values);
+        }
     }
 
-    if (data.type === 'send') {
+    if (data.type === 'send' && socket) {
         socket.send(data.message, (reply) => {
             doPostMessage({
                 type: 'sendReply',
