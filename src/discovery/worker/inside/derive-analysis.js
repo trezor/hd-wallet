@@ -144,7 +144,7 @@ function analyzeTransaction(
     wantedOffset: number, // what (new Date().getTimezoneOffset()) returns
 ): TransactionInfoBalanceless {
     const inputIds = t.tx.ins.map(input => ({ id: getInputId(input), index: input.index }));
-    const hasJoinsplits = t.tx.joinsplits.length > 0;
+    const hasJoinsplits = Array.isArray(t.tx.joinsplits) && t.tx.joinsplits.length > 0;
 
     const isCoinbase = t.tx.ins.some(i => BitcoinJsTransaction.isCoinbaseHash(i.hash));
 
@@ -172,10 +172,12 @@ function analyzeTransaction(
         inputs: inputIds,
         tsize: t.tx.byteLength(),
         vsize: t.vsize,
+        invalidTransaction: t.tx.invalidTransaction,
     };
 
-    if (typeof t.tx.invalidTransaction === 'boolean') {
-        response.invalidTransaction = t.tx.invalidTransaction;
+    if (typeof response.invalidTransaction !== 'boolean') {
+        // delete this field if not set to avoid tests failure
+        delete response.invalidTransaction;
     }
 
     return response;
