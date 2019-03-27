@@ -37,7 +37,7 @@ export function addScriptLengthToExpected(expected, inputLength, outputLength) {
 export function expand(values, indices, scriptLength) {
     if (indices) {
         return addScriptLength(values.map((x, i) => {
-            if (typeof x === 'number') return { i, value: x };
+            if (typeof x === 'string') return { i, value: x };
 
             const y = { i };
             Object.keys(x).forEach((k) => { y[k] = x[k]; });
