@@ -199,7 +199,7 @@ function getTargetsFromTransaction(
 
     let nCredit = 0;
     let nDebit = 0;
-    let value: BigInteger = new BigInteger('0');
+    let value = BigInteger.ZERO;
 
     // testing if address is mine / change / not change / ...
     function isExternal(a: ?string): boolean {
@@ -276,7 +276,7 @@ function getTargetsFromTransaction(
         // within the same account
         type = 'self';
         targets = [];
-    } else if (value.compareTo(new BigInteger('0')) > 0) {
+    } else if (value.compareTo(BigInteger.ZERO) > 0) {
         // incoming transaction, targets are either external or internal outputs
         type = 'recv';
         targets = filterTargets(address => isExternal(address));

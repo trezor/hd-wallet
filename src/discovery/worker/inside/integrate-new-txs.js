@@ -171,7 +171,7 @@ export function integrateNewTxs(
     );
 
     const balance: string = transactions.length > 0 ? transactions[0].balance : '0';
-    const utxoBalance: string = utxos.reduce((prev, a) => new BigInteger(a.value).add(new BigInteger(prev)).toString(), '0');
+    const utxoBalance: string = utxos.reduce((prev, a) => new BigInteger(a.value).add(prev), BigInteger.ZERO).toString();
     if (balance !== utxoBalance) {
         throw new Error('Inconsistent info.');
     }
