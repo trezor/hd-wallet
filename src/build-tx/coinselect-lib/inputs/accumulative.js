@@ -6,7 +6,9 @@ import * as utils from '../utils';
 export default function accumulative(utxos, outputs, feeRate, options) {
     const { changeOutputLength, dustThreshold: explicitDustThreshold, inputLength } = options;
 
-    if (!Number.isFinite(utils.uintOrNaN(feeRate))) return {};
+    const feeRateBigInt = utils.bigIntOrNaN(feeRate);
+    if (Number.isNaN(feeRateBigInt)) return {};
+    const feeRateNumber = feeRateBigInt.intValue();
     let bytesAccum = utils.transactionBytes([], outputs);
 
     let inAccum = BigInteger.ZERO;
@@ -16,18 +18,18 @@ export default function accumulative(utxos, outputs, feeRate, options) {
     for (let i = 0; i < utxos.length; ++i) {
         const utxo = utxos[i];
         const utxoBytes = utils.inputBytes(utxo);
-        const utxoFee = feeRate * utxoBytes;
+        const utxoFee = feeRateNumber * utxoBytes;
         const utxoValue = utils.bigIntOrNaN(utxo.value);
 
         // skip detrimental input
         if (Number.isNaN(utxoValue) || utxoValue.compareTo(BigInteger.valueOf(utxoFee)) < 0) {
-            if (i === utxos.length - 1) return { fee: feeRate * (bytesAccum + utxoBytes) };
+            if (i === utxos.length - 1) return { fee: feeRateNumber * (bytesAccum + utxoBytes) };
         } else {
             bytesAccum += utxoBytes;
             inAccum = inAccum.add(utxoValue);
             inputs.push(utxo);
 
-            const fee = feeRate * bytesAccum;
+            const fee = feeRateNumber * bytesAccum;
             const outAccumWithFee = Number.isNaN(outAccum)
                 ? BigInteger.ZERO : outAccum.add(BigInteger.valueOf(fee));
 
@@ -36,7 +38,7 @@ export default function accumulative(utxos, outputs, feeRate, options) {
                 return utils.finalize(
                     inputs,
                     outputs,
-                    feeRate,
+                    feeRateNumber,
                     inputLength,
                     changeOutputLength,
                     explicitDustThreshold,
@@ -45,5 +47,5 @@ export default function accumulative(utxos, outputs, feeRate, options) {
         }
     }
 
-    return { fee: feeRate * bytesAccum };
+    return { fee: feeRateNumber * bytesAccum };
 }

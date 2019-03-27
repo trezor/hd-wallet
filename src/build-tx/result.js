@@ -14,15 +14,15 @@ export type Result = {
     type: 'nonfinal',
     max: string,
     totalSpent: string, // all the outputs, no fee, no change
-    fee: number,
-    feePerByte: number,
+    fee: string,
+    feePerByte: string,
     bytes: number,
 } | {
     type: 'final',
     max: string,
     totalSpent: string, // all the outputs, no fee, no change
-    fee: number,
-    feePerByte: number,
+    fee: string,
+    feePerByte: string,
     bytes: number,
     transaction: mtransaction.Transaction,
 };

@@ -33,7 +33,7 @@ export type Request = {
     utxos: Array<UtxoInfo>, // all inputs
     outputs: Array<OutputRequest>, // all output "requests"
     height: number,
-    feeRate: number, // in sat/byte, virtual size
+    feeRate: string, // in sat/byte, virtual size
     segwit: boolean,
     inputAmounts: boolean, // BIP 143 - not same as segwit (BCash)
     basePath: Array<number>, // for trezor inputs

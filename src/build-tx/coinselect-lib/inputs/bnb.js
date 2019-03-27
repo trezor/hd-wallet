@@ -26,29 +26,31 @@ export default function branchAndBound(factor) {
     return (utxos, outputs, feeRate, options) => {
         const { inputLength, changeOutputLength, dustThreshold: explicitDustThreshold } = options;
 
-        if (!Number.isFinite(utils.uintOrNaN(feeRate))) return {};
+        const feeRateBigInt = utils.bigIntOrNaN(feeRate);
+        if (Number.isNaN(feeRateBigInt)) return {};
+        const feeRateNumber = feeRateBigInt.intValue();
 
         const costPerChangeOutput = utils.outputBytes({
             script: {
                 length: changeOutputLength,
             },
-        }) * feeRate;
+        }) * feeRateNumber;
         const costPerInput = utils.inputBytes({
             script: {
                 length: inputLength,
             },
-        }) * feeRate;
+        }) * feeRateNumber;
         const costOfChange = Math.floor((costPerInput + costPerChangeOutput) * factor);
 
-        const bytesAndFee = BigInteger.valueOf(utils.transactionBytes([], outputs))
-            .multiply(BigInteger.valueOf(feeRate));
+        const bytesAndFee = BigInteger.valueOf(utils.transactionBytes([], outputs)).multiply(feeRateBigInt);
+
         const outSum = utils.sumOrNaN(outputs);
         if (Number.isNaN(outSum)) {
-            return { fee: 0 };
+            return { fee: '0' };
         }
         const outAccum = outSum.add(bytesAndFee);
 
-        const effectiveUtxos = calculateEffectiveValues(utxos, feeRate)
+        const effectiveUtxos = calculateEffectiveValues(utxos, feeRateNumber)
             .filter(x => x.effectiveValue.compareTo(BigInteger.ZERO) > 0)
             .sort((a, b) => {
                 const subtract = b.effectiveValue.subtract(a.effectiveValue).intValue();
@@ -71,15 +73,14 @@ export default function branchAndBound(factor) {
             return utils.finalize(
                 inputs,
                 outputs,
-                feeRate,
+                feeRateNumber,
                 inputLength,
                 changeOutputLength,
                 explicitDustThreshold,
             );
         }
-        return {
-            fee: 0,
-        };
+
+        return { fee: '0' };
     };
 }
 

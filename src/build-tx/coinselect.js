@@ -58,11 +58,11 @@ export type CompleteResult = {
     result: {
         inputs: Array<Input>,
         outputs: Array<OutputOut>,
-        fee: number,
-        feePerByte: number,
-        bytes: number,
-        totalSpent: string,
         max: string,
+        totalSpent: string,
+        fee: string,
+        feePerByte: string,
+        bytes: number,
     },
 }
 
@@ -74,7 +74,7 @@ export function coinselect(
     utxos: Array<UtxoInfo>,
     rOutputs: Array<request.OutputRequest>,
     height: number,
-    feeRate: number,
+    feeRate: string,
     segwit: boolean,
     countMax: boolean,
     countMaxId: number,
@@ -108,14 +108,16 @@ export function coinselect(
 
 
     const allSize = transactionBytes(result.inputs, result.outputs);
+    // javascript WTF: fee is a string, allSize is a number, therefore it's working
     const feePerByte = fee / allSize;
+
     return {
         type: 'true',
         result: {
             ...result,
             fee: result.fee.toString(),
 
-            feePerByte,
+            feePerByte: feePerByte.toString(),
             bytes: allSize,
             max,
             totalSpent: totalSpent.toString(),
