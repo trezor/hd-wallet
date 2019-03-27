@@ -228,6 +228,42 @@
     "dustThreshold": 546
   },
   {
+    "description": "1 output, no change, value > Number.MAX_SAFE_INTEGER (DOGE)",
+    "feeRate": "10",
+    "inputs": [
+      {
+        "value": "9007199254742000",
+        "coinbase": false,
+        "own": true,
+        "confirmations": 100
+      }
+    ],
+    "outputs": [
+      "9007199254740000"
+    ],
+    "expected": {
+      "inputs": [
+        {
+          "i": 0,
+          "value": "9007199254742000",
+          "coinbase": false,
+          "own": true,
+          "confirmations": 100
+        }
+      ],
+      "outputs": [
+        {
+          "value": "9007199254740000"
+        }
+      ],
+      "fee": "2000"
+    },
+    "inputLength": 107,
+    "outputLength": 25,
+    "dustThreshold": 546,
+    "factor": 0.5
+  },
+  {
     "description": "1 output, bnb change rejected, value > 2^32",
     "feeRate": "5",
     "inputs": [
