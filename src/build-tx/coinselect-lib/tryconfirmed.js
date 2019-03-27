@@ -92,7 +92,7 @@ export default function tryConfirmed(algorithm, options) {
             }
         }
 
-        // we should never end here
+        /* istanbul ignore next */ // we should never end here
         throw new Error('Unexpected unreturned result');
     };
 }
