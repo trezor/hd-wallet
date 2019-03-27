@@ -9,7 +9,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -27,7 +27,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -40,8 +40,8 @@
     },
     "result": {
       "bytes": 195,
-      "fee": 2001,
-      "feePerByte": 10.261538461538462,
+      "fee": "2001",
+      "feePerByte": "10.261538461538462",
       "max": -1,
       "totalSpent": "102001",
       "transaction": {
@@ -83,7 +83,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -100,7 +100,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -113,8 +113,8 @@
     },
     "result": {
       "bytes": 195,
-      "fee": 2001,
-      "feePerByte": 10.261538461538462,
+      "fee": "2001",
+      "feePerByte": "10.261538461538462",
       "max": -1,
       "totalSpent": "102001",
       "type": "nonfinal"
@@ -130,7 +130,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -147,7 +147,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -173,7 +173,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -190,7 +190,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -203,8 +203,8 @@
     },
     "result": {
       "bytes": 195,
-      "fee": 1950,
-      "feePerByte": 10,
+      "fee": "1950",
+      "feePerByte": "10",
       "max": "49999998050",
       "totalSpent": "50000000000",
       "transaction": {
@@ -246,7 +246,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -263,7 +263,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -276,8 +276,8 @@
     },
     "result": {
       "bytes": 195,
-      "fee": 1950,
-      "feePerByte": 10,
+      "fee": "1950",
+      "feePerByte": "10",
       "max": "100051",
       "totalSpent": "102001",
       "transaction": {
@@ -319,7 +319,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -335,7 +335,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -361,7 +361,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [],
@@ -383,7 +383,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [],
@@ -395,7 +395,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -421,7 +421,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -448,7 +448,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -471,7 +471,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -484,8 +484,8 @@
     },
     "result": {
       "bytes": 263,
-      "fee": 2630,
-      "feePerByte": 10,
+      "fee": "2630",
+      "feePerByte": "10",
       "max": -1,
       "totalSpent": "52630",
       "transaction": {
@@ -543,7 +543,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": true,
       "outputs": [
@@ -566,7 +566,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -580,7 +580,7 @@
     "result": {
       "bytes": 203,
       "fee": "2030",
-      "feePerByte": 10,
+      "feePerByte": "10",
       "max": -1,
       "totalSpent": "52030",
       "transaction": {
@@ -639,7 +639,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -657,7 +657,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 1,
           "own": true,
@@ -672,7 +672,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": null,
           "index": 2,
           "own": true,
@@ -685,8 +685,8 @@
     },
     "result": {
       "bytes": 195,
-      "fee": 2001,
-      "feePerByte": 10.261538461538462,
+      "fee": "2001",
+      "feePerByte": "10.261538461538462",
       "max": -1,
       "totalSpent": "102001",
       "transaction": {
@@ -728,7 +728,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -749,7 +749,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -775,7 +775,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -793,7 +793,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 1,
           "own": true,
@@ -808,7 +808,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 2,
           "own": true,
@@ -821,8 +821,8 @@
     },
     "result": {
       "bytes": 345,
-      "fee": 4002,
-      "feePerByte": 11.6,
+      "fee": "4002",
+      "feePerByte": "11.6",
       "max": -1,
       "totalSpent": "204002",
       "transaction": {
@@ -875,7 +875,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": true,
       "outputs": [
@@ -898,7 +898,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -912,7 +912,7 @@
     "result": {
       "bytes": 203,
       "fee": "2030",
-      "feePerByte": 10,
+      "feePerByte": "10",
       "max": -1,
       "totalSpent": "62030",
       "transaction": {
@@ -971,7 +971,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 54600,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -989,7 +989,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -1002,8 +1002,8 @@
     },
     "result": {
       "bytes": 137,
-      "fee": 43503,
-      "feePerByte": 317.54014598540147,
+      "fee": "43503",
+      "feePerByte": "317.54014598540147",
       "max": -1,
       "totalSpent": "972463",
       "transaction": {
@@ -1045,7 +1045,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1062,7 +1062,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -1075,8 +1075,8 @@
     },
     "result": {
       "bytes": 210,
-      "fee": 2100,
-      "feePerByte": 10,
+      "fee": "2100",
+      "feePerByte": "10",
       "max": -1,
       "totalSpent": "2100",
       "transaction": {
@@ -1136,7 +1136,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1157,7 +1157,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -1170,8 +1170,8 @@
     },
     "result": {
       "bytes": 224,
-      "fee": 2240,
-      "feePerByte": 10,
+      "fee": "2240",
+      "feePerByte": "10",
       "max": -1,
       "totalSpent": "2240",
       "transaction": {
@@ -1242,7 +1242,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1260,7 +1260,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -1273,8 +1273,8 @@
     },
     "result": {
       "bytes": 192,
-      "fee": 2001,
-      "feePerByte": 10.421875,
+      "fee": "2001",
+      "feePerByte": "10.421875",
       "max": -1,
       "totalSpent": "102001",
       "transaction": {
@@ -1316,7 +1316,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1334,7 +1334,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -1347,8 +1347,8 @@
     },
     "result": {
       "bytes": 193,
-      "fee": 2001,
-      "feePerByte": 10.367875647668393,
+      "fee": "2001",
+      "feePerByte": "10.367875647668393",
       "max": -1,
       "totalSpent": "102001",
       "transaction": {
@@ -1390,7 +1390,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1408,7 +1408,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -1421,8 +1421,8 @@
     },
     "result": {
       "bytes": 204,
-      "fee": 3001,
-      "feePerByte": 14.71078431372549,
+      "fee": "3001",
+      "feePerByte": "14.71078431372549",
       "max": -1,
       "totalSpent": "103001",
       "transaction": {
@@ -1464,7 +1464,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1480,7 +1480,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -1494,7 +1494,7 @@
     "result": {
       "bytes": 195,
       "fee": "1950",
-      "feePerByte": 10,
+      "feePerByte": "10",
       "max": "100051",
       "totalSpent": "102001",
       "type": "nonfinal"
@@ -1509,7 +1509,7 @@
       "changeAddress": "bitcoincash:qzppkat2v7xu9fr3yeuqdnggjqqltrs7pcg8swvhl0",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1527,7 +1527,7 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
@@ -1540,8 +1540,8 @@
     },
     "result": {
       "bytes": 195,
-      "fee": 2001,
-      "feePerByte": 10.261538461538462,
+      "fee": "2001",
+      "feePerByte": "10.261538461538462",
       "max": -1,
       "totalSpent": "102001",
       "transaction": {

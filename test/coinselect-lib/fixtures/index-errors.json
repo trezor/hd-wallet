@@ -1,7 +1,7 @@
 [
   {
     "description": "forgotten inputLength",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": 102001,
@@ -20,7 +20,7 @@
   },
   {
     "description": "forgotten outputLength",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": 102001,
@@ -38,7 +38,7 @@
   },
   {
     "description": "missing input info",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": 102001
