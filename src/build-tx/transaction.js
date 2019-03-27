@@ -1,5 +1,5 @@
 /* @flow */
-
+import BigInteger from 'bigi';
 import {
     address as BitcoinJsAddress,
     script as BitcoinJsScript,
@@ -19,8 +19,8 @@ function inputComparator(aHash: Buffer, aVout: number, bHash: Buffer, bVout: num
     return reverseBuffer(aHash).compare(reverseBuffer(bHash)) || aVout - bVout;
 }
 
-function outputComparator(aScript: Buffer, aValue: number, bScript: Buffer, bValue: number) {
-    return aValue - bValue || aScript.compare(bScript);
+function outputComparator(aScript: Buffer, aValue: string, bScript: Buffer, bValue: string) {
+    return new BigInteger(aValue).compareTo(new BigInteger(bValue)) || aScript.compare(bScript);
 }
 
 // types for building the transaction in trezor.js
@@ -96,10 +96,8 @@ export function createTransaction(
     });
     convertedInputs.sort((a, b) => inputComparator(a.hash, a.index, b.hash, b.index));
     const permutedOutputs = Permutation.fromFunction(convertedOutputs, (a, b) => {
-        // $FlowIssue
-        const aValue: number = a.output.value != null ? a.output.value : 0;
-        // $FlowIssue
-        const bValue: number = b.output.value != null ? b.output.value : 0;
+        const aValue: string = typeof a.output.value === 'string' ? a.output.value : '0';
+        const bValue: string = typeof b.output.value === 'string' ? b.output.value : '0';
         return outputComparator(a.script, aValue, b.script, bValue);
     }).map(o => o.output);
     return {
