@@ -93,7 +93,8 @@ export function finalize(
     const sumInputs = sumOrNaN(inputs);
     const sumOutputs = sumOrNaN(outputs);
     const sumIsNotNaN = (!Number.isNaN(sumInputs) && !Number.isNaN(sumOutputs));
-    const remainderAfterExtraOutput = sumIsNotNaN ? sumOrNaN(inputs).subtract(sumOrNaN(outputs).add(feeAfterExtraOutput)) : BigInteger.ZERO;
+    const remainderAfterExtraOutput = sumIsNotNaN
+        ? sumOrNaN(inputs).subtract(sumOrNaN(outputs).add(feeAfterExtraOutput)) : BigInteger.ZERO;
     const dust = dustThreshold(
         feeRate,
         inputLength,

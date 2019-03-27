@@ -28,7 +28,8 @@ export default function accumulative(utxos, outputs, feeRate, options) {
             inputs.push(utxo);
 
             const fee = feeRate * bytesAccum;
-            const outAccumWithFee = Number.isNaN(outAccum) ? BigInteger.ZERO : outAccum.add(BigInteger.valueOf(fee));
+            const outAccumWithFee = Number.isNaN(outAccum)
+                ? BigInteger.ZERO : outAccum.add(BigInteger.valueOf(fee));
 
             // go again?
             if (inAccum.compareTo(outAccumWithFee) >= 0) {

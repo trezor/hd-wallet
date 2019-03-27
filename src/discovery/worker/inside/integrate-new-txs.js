@@ -171,7 +171,11 @@ export function integrateNewTxs(
     );
 
     const balance: string = transactions.length > 0 ? transactions[0].balance : '0';
-    const utxoBalance: string = utxos.reduce((prev, a) => new BigInteger(a.value).add(prev), BigInteger.ZERO).toString();
+    const utxoBalance = utxos.reduce(
+        (prev, a) => new BigInteger(a.value).add(prev),
+        BigInteger.ZERO,
+    ).toString();
+
     if (balance !== utxoBalance) {
         throw new Error('Inconsistent info.');
     }
@@ -272,7 +276,8 @@ function deriveUsedAddresses(
                 if (allReceived[id] == null) {
                     allReceived[id] = value;
                 } else {
-                    allReceived[id] = new BigInteger(allReceived[id]).add(new BigInteger(value)).toString();
+                    allReceived[id] = new BigInteger(allReceived[id])
+                        .add(new BigInteger(value)).toString();
                 }
                 if (lastUsed < id) {
                     lastUsed = id;

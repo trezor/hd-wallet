@@ -33,13 +33,17 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     const remaining = inAccum.subtract(outAccum).subtract(BigInteger.valueOf(fee));
     if (remaining.compareTo(BigInteger.ZERO) < 0) return { fee };
 
-    const unspecified = outputs.reduce((a, x) => a + (Number.isNaN(utils.bigIntOrNaN(x.value)) ? 1 : 0), 0);
+    const unspecified = outputs.reduce(
+        (a, x) => a + (Number.isNaN(utils.bigIntOrNaN(x.value)) ? 1 : 0),
+        0,
+    );
 
     if (remaining.toString() === '0' && unspecified === 0) {
         return utils.finalize(utxos, outputs, feeRate, inputLength, changeOutputLength);
     }
 
-    // const splitOutputsCount = outputs.reduce((a, x) => a + !Number.isFinite(x.value), 0); // <-- this is the same as "unspecified"
+    // this is the same as "unspecified"
+    // const splitOutputsCount = outputs.reduce((a, x) => a + !Number.isFinite(x.value), 0);
     const splitValue = remaining.divide(BigInteger.valueOf(unspecified));
     const dustThreshold = utils.dustThreshold(
         feeRate,
