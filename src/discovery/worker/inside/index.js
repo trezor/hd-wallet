@@ -22,7 +22,9 @@ import { integrateNewTxs } from './integrate-new-txs';
 // so we have to re-download everything -> setting initial state as if nothing is known
 // v4 changed timestamp format
 // v5 is just to force re-download on forceAdded data corruption
-const LATEST_VERSION = 5;
+// v6 changed types (tx amounts/values, fee, balance ect) from number to string
+//      across the whole library (discovery and buildtx)
+const LATEST_VERSION = 6;
 
 // Default starting info being used, when there is null
 const defaultInfo: AccountInfo = {
