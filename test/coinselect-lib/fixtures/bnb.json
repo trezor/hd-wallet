@@ -28,7 +28,7 @@
     "factor": 0.5
   },
   {
-    "description": "1 output, no chang, value > 2^32",
+    "description": "1 output, no change, value > 2^32",
     "feeRate": "10",
     "inputs": [
       "5000002001"
@@ -49,6 +49,34 @@
         }
       ],
       "fee": "2001"
+    },
+    "inputLength": 107,
+    "outputLength": 25,
+    "dustThreshold": 546,
+    "factor": 0.5
+  },
+  {
+    "description": "1 output, no change, value > Number.MAX_SAFE_INTEGER (DOGE)",
+    "feeRate": "10",
+    "inputs": [
+      "9007199254742000"
+    ],
+    "outputs": [
+      "9007199254740000"
+    ],
+    "expected": {
+      "inputs": [
+        {
+          "i": 0,
+          "value": "9007199254742000"
+        }
+      ],
+      "outputs": [
+        {
+          "value": "9007199254740000"
+        }
+      ],
+      "fee": "2000"
     },
     "inputLength": 107,
     "outputLength": 25,

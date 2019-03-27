@@ -87,6 +87,36 @@
     "dustThreshold": 546
   },
   {
+    "description": "1 output, change expected, value > Number.MAX_SAFE_INTEGER (DOGE)",
+    "feeRate": "5",
+    "inputs": [
+      "9007199254742000"
+    ],
+    "outputs": [
+      "1"
+    ],
+    "expected": {
+      "inputs": [
+        {
+          "i": 0,
+          "value": "9007199254742000"
+        }
+      ],
+      "outputs": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "9007199254740864"
+        }
+      ],
+      "fee": "1135"
+    },
+    "inputLength": 107,
+    "outputLength": 25,
+    "dustThreshold": 546
+  },
+  {
     "description": "1 output, sub-optimal inputs (if re-ordered), direct possible",
     "feeRate": "10",
     "inputs": [

@@ -221,6 +221,46 @@
     "dustThreshold": 546
   },
   {
+    "description": "1 to 2, input value > Number.MAX_SAFE_INTEGER (DOGE)",
+    "feeRate": "10",
+    "inputs": [
+      "9007199254742000"
+    ],
+    "outputs": [
+      {},
+      {}
+    ],
+    "expected": {
+      "inputs": [
+        {
+          "i": 0,
+          "script": {
+            "length": 107
+          },
+          "value": "9007199254742000"
+        }
+      ],
+      "outputs": [
+        {
+          "script": {
+            "length": 25
+          },
+          "value": "4503599627369865"
+        },
+        {
+          "script": {
+            "length": 25
+          },
+          "value": "4503599627369865"
+        }
+      ],
+      "fee": "2270"
+    },
+    "inputLength": 107,
+    "outputLength": 25,
+    "dustThreshold": 546
+  },
+  {
     "description": "2 outputs, some with missing value (NaN)",
     "feeRate": "11",
     "inputs": [
