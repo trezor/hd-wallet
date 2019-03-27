@@ -1,7 +1,7 @@
 [
   {
     "description": "1 output, no change, 1 input is unspendable coinbase",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "2000001",
@@ -34,7 +34,7 @@
           "value": "100000"
         }
       ],
-      "fee": 2001
+      "fee": "2001"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -42,7 +42,7 @@
   },
   {
     "description": "1 output, no change, spendable coinbase",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "102001",
@@ -69,7 +69,7 @@
           "value": "100000"
         }
       ],
-      "fee": 2001
+      "fee": "2001"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -77,7 +77,7 @@
   },
   {
     "description": "1 output, no change, more confirmed given preference",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "102001",
@@ -110,7 +110,7 @@
           "value": "100000"
         }
       ],
-      "fee": 2001
+      "fee": "2001"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -118,7 +118,7 @@
   },
   {
     "description": "1 output, no change, little confirmed own given preference",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "102001",
@@ -151,7 +151,7 @@
           "value": "100000"
         }
       ],
-      "fee": 2001
+      "fee": "2001"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -159,7 +159,7 @@
   },
   {
     "description": "1 output, no change",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "102001",
@@ -186,7 +186,7 @@
           "value": "100000"
         }
       ],
-      "fee": 2001
+      "fee": "2001"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -194,7 +194,7 @@
   },
   {
     "description": "1 output, no change, value > 2^32",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "5000002001",
@@ -221,7 +221,7 @@
           "value": "5000000000"
         }
       ],
-      "fee": 2001
+      "fee": "2001"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -229,7 +229,7 @@
   },
   {
     "description": "1 output, bnb change rejected, value > 2^32",
-    "feeRate": 5,
+    "feeRate": "5",
     "inputs": [
       {
         "value": "5000000000",
@@ -259,7 +259,7 @@
           "value": "4999998864"
         }
       ],
-      "fee": 1135
+      "fee": "1135"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -267,7 +267,7 @@
   },
   {
     "description": "1 output, only possibility with change, bnb rejects",
-    "feeRate": 5,
+    "feeRate": "5",
     "inputs": [
       {
         "value": "106001",
@@ -300,7 +300,7 @@
           "value": "4866"
         }
       ],
-      "fee": 1135
+      "fee": "1135"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -308,7 +308,7 @@
   },
   {
     "description": "1 output, sub-optimal inputs (if re-ordered), direct possible",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "10000",
@@ -347,7 +347,7 @@
           "value": "7700"
         }
       ],
-      "fee": 2300
+      "fee": "2300"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -355,7 +355,7 @@
   },
   {
     "description": "1 output, sub-optimal inputs (if re-ordered), direct possible, but slightly higher fee, bnb rejects",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "10000",
@@ -400,7 +400,7 @@
           "value": "30930"
         }
       ],
-      "fee": 2270
+      "fee": "2270"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -408,7 +408,7 @@
   },
   {
     "description": "1 output, needs combination of conf + unconf",
-    "feeRate": 5,
+    "feeRate": "5",
     "inputs": [
       {
         "value": "3000",
@@ -456,7 +456,7 @@
   },
   {
     "description": "1 output, passes, skipped detrimental input",
-    "feeRate": 5,
+    "feeRate": "5",
     "inputs": [
       {
         "value": "3000",
@@ -513,7 +513,7 @@
   },
   {
     "description": "1 output, fails, skips (and finishes on) detrimental input",
-    "feeRate": 55,
+    "feeRate": "55",
     "inputs": [
       {
         "value": "44000",
@@ -532,7 +532,7 @@
       "38000"
     ],
     "expected": {
-      "fee": 18755
+      "fee": "18755"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -540,7 +540,7 @@
   },
   {
     "description": "1 output, passes, good match despite bad ordering",
-    "feeRate": 5,
+    "feeRate": "5",
     "inputs": [
       {
         "script": {
@@ -589,7 +589,7 @@
           "value": "4000"
         }
       ],
-      "fee": 2000
+      "fee": "2000"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -597,7 +597,7 @@
   },
   {
     "description": "1 output, optimal inputs, no change",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "10000",
@@ -624,7 +624,7 @@
           "value": "7700"
         }
       ],
-      "fee": 2300
+      "fee": "2300"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -632,7 +632,7 @@
   },
   {
     "description": "1 output, no fee, no bnb match",
-    "feeRate": 0,
+    "feeRate": "0",
     "inputs": [
       {
         "value": "5000",
@@ -745,7 +745,7 @@
           "value": "2000"
         }
       ],
-      "fee": 0
+      "fee": "0"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -753,7 +753,7 @@
   },
   {
     "description": "1 output, 2 inputs (related), no change",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "address": "a",
@@ -789,7 +789,7 @@
           "value": "98000"
         }
       ],
-      "fee": 2000
+      "fee": "2000"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -797,7 +797,7 @@
   },
   {
     "description": "many outputs, no change",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "30000",
@@ -862,7 +862,7 @@
           "value": "1000"
         }
       ],
-      "fee": 6221
+      "fee": "6221"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -870,7 +870,7 @@
   },
   {
     "description": "many outputs, bnb no match",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "30000",
@@ -947,7 +947,7 @@
           "value": "1971"
         }
       ],
-      "fee": 6250
+      "fee": "6250"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -955,7 +955,7 @@
   },
   {
     "description": "many outputs, no match",
-    "feeRate": 0,
+    "feeRate": "0",
     "inputs": [
       {
         "value": "5000",
@@ -1081,7 +1081,7 @@
           }
         }
       ],
-      "fee": 0
+      "fee": "0"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -1089,7 +1089,7 @@
   },
   {
     "description": "no outputs, no change",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "1900",
@@ -1110,7 +1110,7 @@
         }
       ],
       "outputs": [],
-      "fee": 1900
+      "fee": "1900"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -1118,7 +1118,7 @@
   },
   {
     "description": "no outputs, bnb no match",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "20000",
@@ -1149,7 +1149,7 @@
           }
         }
       ],
-      "fee": 1930
+      "fee": "1930"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -1157,7 +1157,7 @@
   },
   {
     "description": "not enough funds, bnb empty result",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "20000",
@@ -1170,7 +1170,7 @@
       "40000"
     ],
     "expected": {
-      "fee": 1930
+      "fee": "1930"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -1178,7 +1178,7 @@
   },
   {
     "description": "not enough funds (w/ fee), bnb empty result",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "40000",
@@ -1191,7 +1191,7 @@
       "40000"
     ],
     "expected": {
-      "fee": 1930
+      "fee": "1930"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -1199,7 +1199,7 @@
   },
   {
     "description": "not enough funds (no inputs), empty result",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [],
     "outputs": [],
     "expected": {},
@@ -1209,7 +1209,7 @@
   },
   {
     "description": "not enough funds (no inputs), empty result (>1KiB)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [],
     "outputs": [
       "1",
@@ -1249,7 +1249,7 @@
   },
   {
     "description": "2 outputs, some with missing value (NaN)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "20000",
@@ -1263,7 +1263,7 @@
       {}
     ],
     "expected": {
-      "fee": 2270
+      "fee": "2270"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -1271,7 +1271,7 @@
   },
   {
     "description": "input is unspendable coinbase",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "20000",
@@ -1291,7 +1291,7 @@
   },
   {
     "description": "input with float values (NaN)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": 20000.5,
@@ -1305,7 +1305,7 @@
       "1200"
     ],
     "expected": {
-      "fee": 2270
+      "fee": "2270"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -1313,7 +1313,7 @@
   },
   {
     "description": "2 outputs, with float values (NaN)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "20000",
@@ -1327,7 +1327,7 @@
       1200.5
     ],
     "expected": {
-      "fee": 2270
+      "fee": "2270"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -1335,7 +1335,7 @@
   },
   {
     "description": "2 outputs, number values (NaN)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "20000",
@@ -1353,15 +1353,15 @@
       }
     ],
     "expected": {
-      "fee": 2270
+      "fee": "2270"
     },
     "inputLength": 107,
     "outputLength": 25,
     "dustThreshold": 546
   },
   {
-    "description": "inputs and outputs, bad feeRate (NaN)",
-    "feeRate": "1",
+    "description": "inputs and outputs, bad feeRate - number (NaN)",
+    "feeRate": 1,
     "inputs": [
       {
         "value": "20000",
@@ -1379,8 +1379,8 @@
     "dustThreshold": 546
   },
   {
-    "description": "inputs and outputs, bad feeRate (NaN)",
-    "feeRate": 1.5,
+    "description": "inputs and outputs, bad feeRate - decimal (NaN)",
+    "feeRate": "1.5",
     "inputs": [
       {
         "value": "20000",
@@ -1399,7 +1399,7 @@
   },
   {
     "description": "exhausting BnB",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "value": "10000",

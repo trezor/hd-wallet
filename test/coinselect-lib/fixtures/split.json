@@ -1,7 +1,7 @@
 [
   {
     "description": "1 to 3",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       "18000"
     ],
@@ -28,7 +28,7 @@
           "value": "5130"
         }
       ],
-      "fee": 2610
+      "fee": "2610"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -36,7 +36,7 @@
   },
   {
     "description": "5 to 2",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       "10000",
       "10000",
@@ -79,7 +79,7 @@
          "value": "20905"
         }
       ],
-      "fee": 8190
+      "fee": "8190"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -87,7 +87,7 @@
   },
   {
     "description": "3 to 1",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       "10000",
       "10000",
@@ -116,7 +116,7 @@
          "value": "25110"
         }
       ],
-      "fee": 4890
+      "fee": "4890"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -124,7 +124,7 @@
   },
   {
     "description": "3 to 3 (1 output pre-defined)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       "10000",
       "10000",
@@ -168,7 +168,7 @@
          "value": "6215"
         }
       ],
-      "fee": 5570
+      "fee": "5570"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -176,14 +176,14 @@
   },
   {
     "description": "2 to 0 (no result)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       "10000",
       "10000"
     ],
     "outputs": [],
     "expected": {
-      "fee": 3070
+      "fee": "3070"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -191,14 +191,14 @@
   },
   {
     "description": "0 to 2 (no result)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [],
     "outputs": [
       {},
       {}
     ],
     "expected": {
-      "fee": 790
+      "fee": "790"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -206,7 +206,7 @@
   },
   {
     "description": "1 to 2, output is dust (no result)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       "2000"
     ],
@@ -214,7 +214,7 @@
       {}
     ],
     "expected": {
-      "fee": 1930
+      "fee": "1930"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -222,7 +222,7 @@
   },
   {
     "description": "2 outputs, some with missing value (NaN)",
-    "feeRate": 11,
+    "feeRate": "11",
     "inputs": [
       "20000"
     ],
@@ -247,7 +247,7 @@
          "value": "13503"
         }
       ],
-      "fee": 2497
+      "fee": "2497"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -255,7 +255,7 @@
   },
   {
     "description": "2 outputs, some with float values (NaN)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       "20000"
     ],
@@ -266,7 +266,7 @@
       {}
     ],
     "expected": {
-      "fee": 2270
+      "fee": "2270"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -274,7 +274,7 @@
   },
   {
     "description": "2 outputs, number values (NaN)",
-    "feeRate": 11,
+    "feeRate": "11",
     "inputs": [
       "20000"
     ],
@@ -287,7 +287,7 @@
       }
     ],
     "expected": {
-      "fee": 2497
+      "fee": "2497"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -295,7 +295,7 @@
   },
   {
     "description": "input with float values (NaN)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       "20000.5"
     ],
@@ -304,15 +304,15 @@
       {}
     ],
     "expected": {
-      "fee": 2270
+      "fee": "2270"
     },
     "inputLength": 107,
     "outputLength": 25,
     "dustThreshold": 546
   },
   {
-    "description": "inputs and outputs, bad feeRate (NaN)",
-    "feeRate": "1",
+    "description": "inputs and outputs, bad feeRate - number (NaN)",
+    "feeRate": 1,
     "inputs": [
       "20000"
     ],
@@ -325,8 +325,8 @@
     "dustThreshold": 546
   },
   {
-    "description": "inputs and outputs, bad feeRate (NaN)",
-    "feeRate": 1.5,
+    "description": "inputs and outputs, bad feeRate - decimal (NaN)",
+    "feeRate": "1.5",
     "inputs": [
       "20000"
     ],
@@ -340,7 +340,7 @@
   },
   {
     "description": "1 to 1, not enough funds",
-    "feeRate": 1000,
+    "feeRate": "1000",
     "inputs": [
       "5000"
     ],
@@ -348,7 +348,7 @@
       {}
     ],
     "expected": {
-      "fee": 193000
+      "fee": "193000"
     },
     "inputLength": 107,
     "outputLength": 25,
@@ -356,7 +356,7 @@
   },
   {
     "description": "1 to 1, not enough funds (coinbase)",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
         "i": 0,
@@ -368,7 +368,7 @@
       {}
     ],
     "expected": {
-      "fee": 450
+      "fee": "450"
     },
     "inputLength": 107,
     "outputLength": 25,
