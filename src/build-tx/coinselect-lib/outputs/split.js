@@ -19,12 +19,14 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     } = options;
     const coinbase = options.coinbase || 100;
 
-    if (!Number.isFinite(utils.uintOrNaN(feeRate))) return {};
+    const feeRateBigInt = utils.bigIntOrNaN(feeRate);
+    if (Number.isNaN(feeRateBigInt)) return {};
+    const feeRateNumber = feeRateBigInt.intValue();
 
     const utxos = filterCoinbase(utxosOrig, coinbase);
 
     const bytesAccum = utils.transactionBytes(utxos, outputs);
-    const fee = feeRate * bytesAccum;
+    const fee = feeRateNumber * bytesAccum;
     if (outputs.length === 0) return { fee };
 
     const inAccum = utils.sumOrNaN(utxos);
@@ -39,14 +41,14 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     );
 
     if (remaining.toString() === '0' && unspecified === 0) {
-        return utils.finalize(utxos, outputs, feeRate, inputLength, changeOutputLength);
+        return utils.finalize(utxos, outputs, feeRateNumber, inputLength, changeOutputLength);
     }
 
     // this is the same as "unspecified"
     // const splitOutputsCount = outputs.reduce((a, x) => a + !Number.isFinite(x.value), 0);
     const splitValue = remaining.divide(BigInteger.valueOf(unspecified));
     const dustThreshold = utils.dustThreshold(
-        feeRate,
+        feeRateNumber,
         inputLength,
         changeOutputLength,
         explicitDustThreshold,
@@ -72,7 +74,7 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     return utils.finalize(
         utxos,
         outputsSplit,
-        feeRate,
+        feeRateNumber,
         inputLength,
         changeOutputLength,
         explicitDustThreshold,
