@@ -1,18 +1,20 @@
+import BigInteger from 'bigi';
 import * as utils from '../utils';
 
 const maxTries = 1000000;
 
 function calculateEffectiveValues(utxos, feeRate) {
     return utxos.map((utxo) => {
-        if (Number.isNaN(utils.uintOrNaN(utxo.value))) {
+        const value = utils.bigIntOrNaN(utxo.value);
+        if (Number.isNaN(value)) {
             return {
                 utxo,
-                effectiveValue: 0,
+                effectiveValue: BigInteger.ZERO,
             };
         }
 
         const effectiveFee = utils.inputBytes(utxo) * feeRate;
-        const effectiveValue = utxo.value - effectiveFee;
+        const effectiveValue = value.subtract(BigInteger.valueOf(effectiveFee));
         return {
             utxo,
             effectiveValue,
@@ -38,25 +40,25 @@ export default function branchAndBound(factor) {
         }) * feeRate;
         const costOfChange = Math.floor((costPerInput + costPerChangeOutput) * factor);
 
-        const outAccum = utils.sumOrNaN(outputs) + utils.transactionBytes([], outputs) * feeRate;
-
-        if (Number.isNaN(outAccum)) {
-            return {
-                fee: 0,
-            };
+        const bytesAndFee = BigInteger.valueOf(utils.transactionBytes([], outputs)).multiply(BigInteger.valueOf(feeRate));
+        const outSum = utils.sumOrNaN(outputs);
+        if (Number.isNaN(outSum)) {
+            return { fee: 0 };
         }
+        const outAccum = outSum.add(bytesAndFee);
 
         const effectiveUtxos = calculateEffectiveValues(utxos, feeRate)
-            .filter(x => x.effectiveValue > 0)
+            .filter(x => x.effectiveValue.compareTo(BigInteger.ZERO) > 0)
             .sort((a, b) => {
-                if (b.effectiveValue - a.effectiveValue !== 0) {
-                    return b.effectiveValue - a.effectiveValue;
+                const subtract = b.effectiveValue.subtract(a.effectiveValue).intValue();
+                if (subtract !== 0) {
+                    return subtract;
                 }
                 return a.utxo.i - b.utxo.i;
             });
 
-        const selected = search(effectiveUtxos, outAccum, costOfChange);
-        if (selected != null) {
+        const selected = search(effectiveUtxos, outAccum, BigInteger.valueOf(costOfChange));
+        if (selected !== null) {
             const inputs = [];
 
             for (let i = 0; i < effectiveUtxos.length; i++) {
@@ -90,12 +92,13 @@ function search(effectiveUtxos, target, costOfChange) {
     let tries = maxTries;
 
     const selected = []; // true -> select the utxo at this index
-    let selectedAccum = 0; // sum of effective values
+    let selectedAccum = BigInteger.ZERO; // sum of effective values
 
     let done = false;
     let backtrack = false;
 
-    let remaining = effectiveUtxos.reduce((a, x) => a + x.effectiveValue, 0);
+    let remaining = effectiveUtxos.reduce((a, x) => a.add(x.effectiveValue), BigInteger.ZERO);
+    const costRange = target.add(costOfChange);
 
     let depth = 0;
     while (!done) {
@@ -103,16 +106,16 @@ function search(effectiveUtxos, target, costOfChange) {
             return null;
         }
 
-        if (selectedAccum > target + costOfChange) {
+        if (selectedAccum.compareTo(costRange) > 0) {
             // Selected value is out of range, go back and try other branch
             backtrack = true;
-        } else if (selectedAccum >= target) {
+        } else if (selectedAccum.compareTo(target) >= 0) {
             // Selected value is within range
             done = true;
         } else if (depth >= effectiveUtxos.length) {
             // Reached a leaf node, no solution here
             backtrack = true;
-        } else if (selectedAccum + remaining < target) {
+        } else if (selectedAccum.add(remaining).compareTo(target) < 0) {
             // Cannot possibly reach target with amount remaining
             if (depth === 0) {
                 // At the first utxo, no possible selections, so exit
@@ -121,10 +124,10 @@ function search(effectiveUtxos, target, costOfChange) {
             backtrack = true;
         } else { // Continue down this branch
             // Remove this utxo from the remaining utxo amount
-            remaining -= effectiveUtxos[depth].effectiveValue;
+            remaining = remaining.subtract(effectiveUtxos[depth].effectiveValue);
             // Inclusion branch first (Largest First Exploration)
             selected[depth] = true;
-            selectedAccum += effectiveUtxos[depth].effectiveValue;
+            selectedAccum = selectedAccum.add(effectiveUtxos[depth].effectiveValue);
             depth++;
         }
 
@@ -135,7 +138,7 @@ function search(effectiveUtxos, target, costOfChange) {
 
             // Walk backwards to find the first utxo which has not has its second branch traversed
             while (!selected[depth]) {
-                remaining += effectiveUtxos[depth].effectiveValue;
+                remaining = remaining.add(effectiveUtxos[depth].effectiveValue);
 
                 // Step back one
                 depth--;
@@ -149,7 +152,7 @@ function search(effectiveUtxos, target, costOfChange) {
 
             // Now traverse the second branch of the utxo we have arrived at.
             selected[depth] = false;
-            selectedAccum -= effectiveUtxos[depth].effectiveValue;
+            selectedAccum = selectedAccum.subtract(effectiveUtxos[depth].effectiveValue);
             depth++;
         }
         tries--;
