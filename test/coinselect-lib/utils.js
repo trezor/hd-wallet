@@ -20,6 +20,7 @@ describe('coinselect utils', () => {
         assert.deepEqual(bigIntOrNaN('1'), new BigInteger('1'));
         assert.deepEqual(Number.isNaN(bigIntOrNaN('')), true);
         assert.deepEqual(Number.isNaN(bigIntOrNaN('deadbeef')), true);
+        assert.deepEqual(Number.isNaN(bigIntOrNaN('0x dead beef')), true);
         assert.deepEqual(Number.isNaN(bigIntOrNaN(Infinity)), true);
         assert.deepEqual(Number.isNaN(bigIntOrNaN(NaN)), true);
         assert.deepEqual(Number.isNaN(bigIntOrNaN(1)), true);
