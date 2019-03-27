@@ -27,13 +27,14 @@ export default function split(utxosOrig, outputs, feeRate, options) {
 
     const bytesAccum = utils.transactionBytes(utxos, outputs);
     const fee = feeRateNumber * bytesAccum;
-    if (outputs.length === 0) return { fee };
+    const FEE_RESPONSE = { fee: fee.toString() };
+    if (outputs.length === 0) return FEE_RESPONSE;
 
     const inAccum = utils.sumOrNaN(utxos);
-    if (Number.isNaN(inAccum)) return { fee };
+    if (Number.isNaN(inAccum)) return FEE_RESPONSE;
     const outAccum = utils.sumOrNaN(outputs, true);
     const remaining = inAccum.subtract(outAccum).subtract(BigInteger.valueOf(fee));
-    if (remaining.compareTo(BigInteger.ZERO) < 0) return { fee };
+    if (remaining.compareTo(BigInteger.ZERO) < 0) return FEE_RESPONSE;
 
     const unspecified = outputs.reduce(
         (a, x) => a + (Number.isNaN(utils.bigIntOrNaN(x.value)) ? 1 : 0),
@@ -58,7 +59,7 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     if (!outputs.every(x => x.value !== undefined
         || (
             splitValue.compareTo(BigInteger.valueOf(dustThreshold)) > 0
-        ))) return { fee };
+        ))) return FEE_RESPONSE;
 
     // assign splitValue to outputs not user defined
     const outputsSplit = outputs.map((x) => {

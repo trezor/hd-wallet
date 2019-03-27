@@ -112,7 +112,7 @@ export function finalize(
         });
     }
 
-    if (!sumIsNotNaN) return { fee: feeRate * bytesAccum };
+    if (!sumIsNotNaN) return { fee: (feeRate * bytesAccum).toString() };
     const fee = sumOrNaN(inputs).subtract(sumOrNaN(outputs)).toString();
     return {
         inputs,

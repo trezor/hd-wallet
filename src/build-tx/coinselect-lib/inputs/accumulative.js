@@ -23,7 +23,11 @@ export default function accumulative(utxos, outputs, feeRate, options) {
 
         // skip detrimental input
         if (Number.isNaN(utxoValue) || utxoValue.compareTo(BigInteger.valueOf(utxoFee)) < 0) {
-            if (i === utxos.length - 1) return { fee: feeRateNumber * (bytesAccum + utxoBytes) };
+            if (i === utxos.length - 1) {
+                return {
+                    fee: (feeRateNumber * (bytesAccum + utxoBytes)).toString(),
+                };
+            }
         } else {
             bytesAccum += utxoBytes;
             inAccum = inAccum.add(utxoValue);
@@ -47,5 +51,5 @@ export default function accumulative(utxos, outputs, feeRate, options) {
         }
     }
 
-    return { fee: feeRateNumber * bytesAccum };
+    return { fee: (feeRateNumber * bytesAccum).toString() };
 }
