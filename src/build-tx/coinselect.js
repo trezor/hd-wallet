@@ -4,6 +4,7 @@
 //
 // I am using the coinselect format, since the end-goal is
 // to merge the changes back to upstream; it didn't work out so far
+import BigInteger from 'bigi';
 import type {
     Network as BitcoinJsNetwork,
 } from 'trezor-utxo-lib';
@@ -31,7 +32,7 @@ export type Input = {
     script: {
         length: number,
     },
-    value: number,
+    value: string,
 
     own: boolean,
     coinbase: boolean,
@@ -39,14 +40,14 @@ export type Input = {
 }
 
 type OutputIn = {
-    value?: number,
+    value?: string,
     script: {
         length: number,
     },
 }
 
 export type OutputOut = {
-    value: number,
+    value: string,
     script?: {
         length: number,
     },
@@ -60,8 +61,8 @@ export type CompleteResult = {
         fee: number,
         feePerByte: number,
         bytes: number,
-        totalSpent: number,
-        max: number,
+        totalSpent: string,
+        max: string,
     },
 }
 
@@ -95,14 +96,16 @@ export function coinselect(
             type: 'false',
         };
     }
+
     const { fee } = result;
     const max = countMaxId === -1 ? -1 : result.outputs[countMaxId].value;
 
     const totalSpent = (result.outputs
         .filter((output, i) => i !== rOutputs.length)
         .map(o => o.value)
-        .reduce((a, b) => a + b, 0)
-    ) + result.fee;
+        .reduce((a, b) => a.add(new BigInteger(b)), BigInteger.ZERO)
+    ).add(new BigInteger(result.fee));
+
 
     const allSize = transactionBytes(result.inputs, result.outputs);
     const feePerByte = fee / allSize;
@@ -110,10 +113,12 @@ export function coinselect(
         type: 'true',
         result: {
             ...result,
+            fee: result.fee.toString(),
+
             feePerByte,
             bytes: allSize,
             max,
-            totalSpent,
+            totalSpent: totalSpent.toString(),
         },
     };
 }
@@ -185,7 +190,7 @@ function convertOutputs(
         }
         if (output.type === 'opreturn') {
             return {
-                value: 0,
+                value: '0',
                 script: { length: 2 + (output.dataHex.length / 2) },
             };
         }

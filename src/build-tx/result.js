@@ -12,15 +12,15 @@ export type Result = {
     error: string,
 } | {
     type: 'nonfinal',
-    max: number,
-    totalSpent: number, // all the outputs, no fee, no change
+    max: string,
+    totalSpent: string, // all the outputs, no fee, no change
     fee: number,
     feePerByte: number,
     bytes: number,
 } | {
     type: 'final',
-    max: number,
-    totalSpent: number, // all the outputs, no fee, no change
+    max: string,
+    totalSpent: string, // all the outputs, no fee, no change
     fee: number,
     feePerByte: number,
     bytes: number,

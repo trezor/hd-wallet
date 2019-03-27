@@ -26,11 +26,11 @@ function outputComparator(aScript: Buffer, aValue: number, bScript: Buffer, bVal
 // types for building the transaction in trezor.js
 export type Output = {
     path: Array<number>,
-    value: number,
+    value: string,
     segwit: boolean,
 } | {
     address: string,
-    value: number,
+    value: string,
 } | {
     opReturnData: Buffer,
 };
@@ -40,7 +40,7 @@ export type Input = {
     index: number,
     path?: Array<number>, // necessary for trezor.js
     segwit: boolean,
-    amount?: number, // only with segwit
+    amount?: string, // only with segwit
 };
 
 export type Transaction = {
@@ -149,7 +149,7 @@ function convertOpReturnOutput(
 
 function convertOutput(
     address: string,
-    value: number,
+    value: string,
     network: BitcoinJsNetwork,
     basePath: Array<number>,
     changeId: number,

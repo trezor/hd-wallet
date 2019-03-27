@@ -1,3 +1,4 @@
+import BigInteger from 'bigi';
 // baseline estimates, used to improve performance
 const TX_EMPTY_SIZE = 4 + 1 + 1 + 4 + 1;
 // 8 bytes start, 2 times 1 byte count in/out, 1 extra byte for segwit start
@@ -57,12 +58,24 @@ export function uintOrNaN(v) {
     return v;
 }
 
-export function sumForgiving(range) {
-    return range.reduce((a, x) => a + (Number.isFinite(x.value) ? x.value : 0), 0);
+export function bigIntOrNaN(v): BigInteger | NaN {
+    if (v instanceof BigInteger) return v;
+    if (typeof v !== 'string') return NaN;
+    try {
+        const value = new BigInteger(v);
+        return value.toString() === v ? value : NaN;
+    } catch (error) {
+        return NaN;
+    }
 }
 
-export function sumOrNaN(range) {
-    return range.reduce((a, x) => a + uintOrNaN(x.value), 0);
+export function sumOrNaN(range, forgiving = false): BigInteger | NaN {
+    return range.reduce((a, x) => {
+        if (Number.isNaN(a)) return NaN;
+        const value = bigIntOrNaN(x.value);
+        if (Number.isNaN(value)) return forgiving ? a.add(BigInteger.ZERO) : NaN;
+        return a.add(value);
+    }, BigInteger.ZERO);
 }
 
 export function finalize(
@@ -76,26 +89,30 @@ export function finalize(
     let outputs = outputsO;
     const bytesAccum = transactionBytes(inputs, outputs);
     const blankOutputBytes = outputBytes({ script: { length: changeOutputLength } });
-    const feeAfterExtraOutput = feeRate * (bytesAccum + blankOutputBytes);
-    const remainderAfterExtraOutput = sumOrNaN(inputs) - (sumOrNaN(outputs) + feeAfterExtraOutput);
-
-    // is it worth a change output?
-    if (remainderAfterExtraOutput > dustThreshold(
+    const feeAfterExtraOutput = BigInteger.valueOf(feeRate * (bytesAccum + blankOutputBytes));
+    const sumInputs = sumOrNaN(inputs);
+    const sumOutputs = sumOrNaN(outputs);
+    const sumIsNotNaN = (!Number.isNaN(sumInputs) && !Number.isNaN(sumOutputs));
+    const remainderAfterExtraOutput = sumIsNotNaN ? sumOrNaN(inputs).subtract(sumOrNaN(outputs).add(feeAfterExtraOutput)) : BigInteger.ZERO;
+    const dust = dustThreshold(
         feeRate,
         inputLength,
         changeOutputLength,
         explicitDustThreshold,
-    )) {
+    );
+
+    // is it worth a change output?
+    if (remainderAfterExtraOutput.compareTo(BigInteger.valueOf(dust)) > 0) {
         outputs = outputs.concat({
-            value: remainderAfterExtraOutput,
+            value: remainderAfterExtraOutput.toString(),
             script: {
                 length: changeOutputLength,
             },
         });
     }
 
-    const fee = sumOrNaN(inputs) - sumOrNaN(outputs);
-    if (!Number.isFinite(fee)) return { fee: feeRate * bytesAccum };
+    if (!sumIsNotNaN) return { fee: feeRate * bytesAccum };
+    const fee = sumOrNaN(inputs).subtract(sumOrNaN(outputs)).toString();
     return {
         inputs,
         outputs,
@@ -120,5 +137,5 @@ export function anyOf(algorithms) {
 }
 
 export function utxoScore(x, feeRate) {
-    return x.value - (feeRate * inputBytes(x));
+    return new BigInteger(x.value).subtract(BigInteger.valueOf(feeRate * inputBytes(x)));
 }

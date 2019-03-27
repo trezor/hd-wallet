@@ -1,3 +1,4 @@
+import BigInteger from 'bigi';
 import * as utils from '../utils';
 
 // add inputs until we reach or surpass the target value (or deplete)
@@ -8,7 +9,7 @@ export default function accumulative(utxos, outputs, feeRate, options) {
     if (!Number.isFinite(utils.uintOrNaN(feeRate))) return {};
     let bytesAccum = utils.transactionBytes([], outputs);
 
-    let inAccum = 0;
+    let inAccum = BigInteger.ZERO;
     const inputs = [];
     const outAccum = utils.sumOrNaN(outputs);
 
@@ -16,20 +17,21 @@ export default function accumulative(utxos, outputs, feeRate, options) {
         const utxo = utxos[i];
         const utxoBytes = utils.inputBytes(utxo);
         const utxoFee = feeRate * utxoBytes;
-        const utxoValue = utils.uintOrNaN(utxo.value);
+        const utxoValue = utils.bigIntOrNaN(utxo.value);
 
         // skip detrimental input
-        if (utxoFee > utxo.value) {
+        if (Number.isNaN(utxoValue) || utxoValue.compareTo(BigInteger.valueOf(utxoFee)) < 0) {
             if (i === utxos.length - 1) return { fee: feeRate * (bytesAccum + utxoBytes) };
         } else {
             bytesAccum += utxoBytes;
-            inAccum += utxoValue;
+            inAccum = inAccum.add(utxoValue);
             inputs.push(utxo);
 
             const fee = feeRate * bytesAccum;
+            const outAccumWithFee = Number.isNaN(outAccum) ? BigInteger.ZERO : outAccum.add(BigInteger.valueOf(fee));
 
             // go again?
-            if (!(inAccum < outAccum + fee)) {
+            if (inAccum.compareTo(outAccumWithFee) >= 0) {
                 return utils.finalize(
                     inputs,
                     outputs,

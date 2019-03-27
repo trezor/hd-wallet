@@ -1,3 +1,4 @@
+import BigInteger from 'bigi';
 import * as utils from '../utils';
 
 function filterCoinbase(utxos, minConfCoinbase) {
@@ -27,28 +28,30 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     if (outputs.length === 0) return { fee };
 
     const inAccum = utils.sumOrNaN(utxos);
-    const outAccum = utils.sumForgiving(outputs);
-    const remaining = inAccum - outAccum - fee;
-    if (!Number.isFinite(remaining) || remaining < 0) return { fee };
+    if (Number.isNaN(inAccum)) return { fee };
+    const outAccum = utils.sumOrNaN(outputs, true);
+    const remaining = inAccum.subtract(outAccum).subtract(BigInteger.valueOf(fee));
+    if (remaining.compareTo(BigInteger.ZERO) < 0) return { fee };
 
-    const unspecified = outputs.reduce((a, x) => a + !Number.isFinite(x.value), 0);
+    const unspecified = outputs.reduce((a, x) => a + (Number.isNaN(utils.bigIntOrNaN(x.value)) ? 1 : 0), 0);
 
-    if (remaining === 0 && unspecified === 0) {
+    if (remaining.toString() === '0' && unspecified === 0) {
         return utils.finalize(utxos, outputs, feeRate, inputLength, changeOutputLength);
     }
 
-    const splitOutputsCount = outputs.reduce((a, x) => a + !Number.isFinite(x.value), 0);
-    const splitValue = Math.floor(remaining / splitOutputsCount);
+    // const splitOutputsCount = outputs.reduce((a, x) => a + !Number.isFinite(x.value), 0); // <-- this is the same as "unspecified"
+    const splitValue = remaining.divide(BigInteger.valueOf(unspecified));
+    const dustThreshold = utils.dustThreshold(
+        feeRate,
+        inputLength,
+        changeOutputLength,
+        explicitDustThreshold,
+    );
 
     // ensure every output is either user defined, or over the threshold
     if (!outputs.every(x => x.value !== undefined
         || (
-            splitValue > utils.dustThreshold(
-                feeRate,
-                inputLength,
-                changeOutputLength,
-                explicitDustThreshold,
-            )
+            splitValue.compareTo(BigInteger.valueOf(dustThreshold)) > 0
         ))) return { fee };
 
     // assign splitValue to outputs not user defined
@@ -58,7 +61,7 @@ export default function split(utxosOrig, outputs, feeRate, options) {
         // not user defined, but still copy over any non-value fields
         const y = {};
         Object.keys(x).forEach((k) => { y[k] = x[k]; });
-        y.value = splitValue;
+        y.value = splitValue.toString();
         return y;
     });
 

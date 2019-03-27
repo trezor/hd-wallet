@@ -13,7 +13,7 @@ import type { UtxoInfo } from '../discovery';
 export type OutputRequestWithAddress = { // TODO rename
     type: 'complete',
     address: string,
-    amount: number, // in satoshis
+    amount: string, // in satoshis
 } | {
     type: 'send-max', // only one in TX request
     address: string,
@@ -26,7 +26,7 @@ export type OutputRequest = {
     type: 'send-max-noaddress', // only one in TX request
 } | {
     type: 'noaddress',
-    amount: number,
+    amount: string,
 } | OutputRequestWithAddress;
 
 export type Request = {
