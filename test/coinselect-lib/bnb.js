@@ -24,7 +24,7 @@ describe('coinselect bnb', () => {
                 f.feeRate, { inputLength, changeOutputLength: outputLength, dustThreshold },
             );
 
-            assert.deepEqual(actual, expected);
+            assert.deepStrictEqual(actual, expected);
             if (actual.inputs) {
                 const feedback = coinAccum(
                     f.factor,
@@ -34,7 +34,7 @@ describe('coinselect bnb', () => {
                     f.feeRate,
                     { inputLength, changeOutputLength: outputLength, dustThreshold },
                 );
-                assert.deepEqual(feedback, expected);
+                assert.deepStrictEqual(feedback, expected);
             }
         });
     });

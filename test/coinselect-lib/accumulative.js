@@ -23,7 +23,7 @@ describe('coinselect accumulative', () => {
                 { inputLength, changeOutputLength: outputLength, dustThreshold },
             );
 
-            assert.deepEqual(actual, expected);
+            assert.deepStrictEqual(actual, expected);
             if (actual.inputs) {
                 const feedback = coinAccum(
                     actual.inputs,
@@ -31,7 +31,7 @@ describe('coinselect accumulative', () => {
                     f.feeRate,
                     { inputLength, changeOutputLength: outputLength, dustThreshold },
                 );
-                assert.deepEqual(feedback, expected);
+                assert.deepStrictEqual(feedback, expected);
             }
         });
     });
