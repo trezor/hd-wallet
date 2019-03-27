@@ -40,7 +40,8 @@ export default function branchAndBound(factor) {
         }) * feeRate;
         const costOfChange = Math.floor((costPerInput + costPerChangeOutput) * factor);
 
-        const bytesAndFee = BigInteger.valueOf(utils.transactionBytes([], outputs)).multiply(BigInteger.valueOf(feeRate));
+        const bytesAndFee = BigInteger.valueOf(utils.transactionBytes([], outputs))
+            .multiply(BigInteger.valueOf(feeRate));
         const outSum = utils.sumOrNaN(outputs);
         if (Number.isNaN(outSum)) {
             return { fee: 0 };
