@@ -35,6 +35,8 @@ declare class $npm$bigi$BigInteger {
     toBuffer(): Buffer,
     toDERInteger(): Buffer,
     toHex(): string,
+
+    static ZERO: $npm$bigi$BigInteger,
 }
 
 declare module 'bigi' {
