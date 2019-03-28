@@ -41,8 +41,8 @@ export default function branchAndBound(factor) {
             },
         }) * feeRateNumber;
         const costOfChange = Math.floor((costPerInput + costPerChangeOutput) * factor);
-
-        const bytesAndFee = BigInteger.valueOf(utils.transactionBytes([], outputs)).multiply(feeRateBigInt);
+        const txBytes = utils.transactionBytes([], outputs);
+        const bytesAndFee = BigInteger.valueOf(txBytes).multiply(feeRateBigInt);
 
         const outSum = utils.sumOrNaN(outputs);
         if (Number.isNaN(outSum)) {
