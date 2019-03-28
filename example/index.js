@@ -88,7 +88,7 @@ window.run = () => {
         'xpub6BiVtCpG9fQQGq7bXBjjf5zyguEXHrmxDu4t7pdTFUtDWD5epi4ecKmWBTMHvPQtRmQnby8gET7ArTzxjL4SNYdD2RYSdjk7fwYeEDMzkce',
     ];
 
-    const BITCORE_URLS = ['https://bitcore1.trezor.io', 'https://bitcore3.trezor.io'];
+    const BITCORE_URLS = ['https://btc1.trezor.io', 'https://btc2.trezor.io'];
 
     const blockchain = new BitcoreBlockchain(BITCORE_URLS, socketWorkerFactory);
 
