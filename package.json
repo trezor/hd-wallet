@@ -50,12 +50,11 @@
   },
   "browserslist": "> 5%, IE > 9, last 10 versions",
   "dependencies": {
-    "bchaddrjs": "^0.2.1",
+    "bchaddrjs": "^0.3.2",
     "bigi": "^1.4.0",
-    "queue": "^4.4.2",
+    "queue": "^6.0.1",
     "socket.io-client": "^2.2.0",
-    "trezor-utxo-lib": "https://github.com/trezor/trezor-utxo-lib#support/biginteger",
-    "whatwg-fetch": "^0.11.0"
+    "trezor-utxo-lib": "https://github.com/trezor/trezor-utxo-lib#support/biginteger"
   },
   "devDependencies": {
     "@babel/cli": "7.5.5",
@@ -69,7 +68,7 @@
     "babel-jest": "^23.6.0",
     "babel-plugin-istanbul": "^5.1.0",
     "babelify": "^10.0.0",
-    "browserify": "^14.0.0",
+    "browserify": "^16.2.3",
     "browserify-shim": "^3.8.14",
     "eslint": "^5.2.0",
     "eslint-config-airbnb-base": "^13.0.0",
@@ -92,7 +91,7 @@
     "mocha": "^3.1.0",
     "nyc": "^13",
     "tiny-worker": "^2.0.3",
-    "uglifyify": "3.0.1",
+    "uglifyify": "^5.0.1",
     "virtual-dom": "2.1.1",
     "watchify": "3.6.0",
     "workerify": "1.0.0"
