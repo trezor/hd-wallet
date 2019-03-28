@@ -2,8 +2,6 @@
  * Interface to bitcore-node blockchain backend
  */
 
-import 'whatwg-fetch';
-
 import { networks } from 'trezor-utxo-lib';
 import type { Network as BitcoinJsNetwork } from 'trezor-utxo-lib';
 
