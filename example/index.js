@@ -22,7 +22,8 @@ const socketWorkerFactory = () => new Worker('./socket-worker.js');
 const discoveryWorkerFactory = () => new Worker('./discovery-worker.js');
 
 function renderTx(tx) {
-    return h('tr', [
+    const className = tx.invalidTransaction ? 'invalid' : 'valid';
+    return h('tr', { className }, [
         h('td', tx.hash),
         h('td', tx.height ? tx.height.toString() : 'unconfirmed'),
         h('td', tx.value.toString()),
@@ -33,9 +34,16 @@ function renderTx(tx) {
 
 function renderAccount(account) {
     if (typeof account.info === 'number') {
-        return h('div', `${account.xpub} - Loading (${account.info} transactions)`);
+        return [
+            h('h3', `${account.xpub}`),
+            h('div', `Loading ${account.info} transactions)`),
+        ];
     }
-    return [h('div', `${account.xpub} - Balance: ${account.info.balance}`), h('table', account.info.transactions.map(renderTx))];
+    return [
+        h('h3', `${account.xpub}`),
+        h('div', `Balance: ${account.info.balance}`),
+        h('table', account.info.transactions.map(renderTx)),
+    ];
 }
 
 function render(state) {
@@ -56,10 +64,10 @@ function refresh() {
     tree = newTree;
 }
 
-function discover(xpubs, discovery, network) {
+function discover(xpubs, discovery, network, segwit, cashaddr) {
     let done = 0;
     xpubs.forEach((xpub, i) => {
-        const process = discovery.discoverAccount(null, xpub, network, 'off');
+        const process = discovery.discoverAccount(null, xpub, network, segwit ? 'p2sh' : 'off', cashaddr, 20, 0);
         appState[i] = { xpub, info: 0 };
 
         process.stream.values.attach((status) => {
@@ -80,17 +88,15 @@ function discover(xpubs, discovery, network) {
     console.time('portfolio');
 }
 
+
 window.run = () => {
-    const XPUBS = [
-        'xpub6BiVtCpG9fQQ8pVjVF7jm3kLahkNbQRkWGUvzsKQpXWYvhYD4d4UDADxZUL4xp9UwsDT5YgwNKofTWRtwJgnHkbNxuzLDho4mxfS9KLesGP',
-        'xpub6BiVtCpG9fQQCgxA541qm9qZ9VrGLScde4zsAMj2d15ewiMysCAnbgvSDSZXhFUdsyA2BfzzMrMFJbC4VSkXbzrXLZRitAmUVURmivxxqMJ',
-        'xpub6BiVtCpG9fQQDvwDNekCEzAr3gYcoGXEF27bMwSBsCVP3bJYdUZ6m3jhv9vSG7hVxff3VEfnfK4fcMr2YRwfTfHcJwM4ioS6Eiwnrm1wcuf',
-        'xpub6BiVtCpG9fQQGq7bXBjjf5zyguEXHrmxDu4t7pdTFUtDWD5epi4ecKmWBTMHvPQtRmQnby8gET7ArTzxjL4SNYdD2RYSdjk7fwYeEDMzkce',
-    ];
+    window.clear();
+    const XPUBS = document.getElementById('xpubs').value.split(';');
+    const BITCORE_URLS = document.getElementById('urls').value.split(';');
+    const selected = document.getElementById('network').value;
+    const d = window.data[selected];
 
-    const BITCORE_URLS = ['https://btc1.trezor.io', 'https://btc2.trezor.io'];
-
-    const blockchain = new BitcoreBlockchain(BITCORE_URLS, socketWorkerFactory);
+    const blockchain = new BitcoreBlockchain(BITCORE_URLS, socketWorkerFactory, d.network);
 
     const discovery = new WorkerDiscovery(
         discoveryWorkerFactory,
@@ -98,11 +104,17 @@ window.run = () => {
         fastXpubWasmFilePromise,
         blockchain,
     );
-    const network = networks.bitcoin;
-    discover(XPUBS, discovery, network);
+    const cashaddr = selected === 'bitcoincash';
+    const segwit = selected.indexOf('Segwit') >= 0;
+    discover(XPUBS, discovery, d.network, segwit, cashaddr);
 };
 
 window.stop = () => {
     processes.forEach(p => p.dispose());
     console.timeEnd('portfolio');
+};
+
+window.clear = () => {
+    appState.splice(0, appState.length);
+    refresh();
 };
