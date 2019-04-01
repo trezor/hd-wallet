@@ -1,6 +1,4 @@
 /* global Worker:false, fetch:false, window:false, document:false */
-import { networks } from 'trezor-utxo-lib';
-
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import h from 'virtual-dom/h';
