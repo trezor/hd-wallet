@@ -297,6 +297,8 @@ declare module 'trezor-utxo-lib' {
         getExtraData(): ?Buffer,
         isDashSpecialTransaction(): boolean,
         isZcashTransaction(): boolean,
+
+        static USE_STRING_VALUES: boolean,
     }
 
     declare class TransactionBuilder {
