@@ -36,6 +36,9 @@ import { Stream } from '../../../utils/stream';
 import type { TransactionInfo } from '../../index';
 import { BrowserAddressSource } from '../../../address-source';
 
+// request Transaction values as strings
+BitcoinJsTransaction.USE_STRING_VALUES = true;
+
 export class GetChainTransactions {
     // all seen addresses, including the gap addresses
     allAddresses: Array<string>;
