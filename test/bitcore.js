@@ -2546,7 +2546,7 @@ describe('bitcore', () => {
             let res;
             s.then((e) => { res = e; });
             setTimeout(() => {
-                assert.deepStrictEqual(res, { 5: 0.00020277, 6: -1 });
+                assert.deepStrictEqual(res, { 5: '0.00020277', 6: '-1' });
                 blockchain.destroy().then(() => done());
             }, 300);
         });
@@ -2608,7 +2608,7 @@ describe('bitcore', () => {
             let res;
             s.then((e) => { res = e; });
             setTimeout(() => {
-                assert.deepStrictEqual(res, { 5: 0.00020277 });
+                assert.deepStrictEqual(res, { 5: '0.00020277' });
                 blockchain.destroy().then(() => done());
             }, 300);
         });
@@ -2624,7 +2624,7 @@ describe('bitcore', () => {
             let res;
             s.then((e) => { res = e; });
             setTimeout(() => {
-                assert.deepStrictEqual(res, { 5: -1, 6: -1 });
+                assert.deepStrictEqual(res, { 5: '-1', 6: '-1' });
                 blockchain.destroy().then(() => done());
             }, 300);
         });
@@ -2799,7 +2799,7 @@ describe('bitcore', () => {
             let res;
             s.then((e) => { res = e; });
             setTimeout(() => {
-                assert.deepStrictEqual(res, { 5: 0.00020277 });
+                assert.deepStrictEqual(res, { 5: '0.00020277' });
                 blockchain.destroy().then(() => done());
             }, 300);
         });

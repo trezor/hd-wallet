@@ -27,7 +27,7 @@ export type TransactionWithHeight = {
     rawTx?: BcDetailedTransaction,
 }
 
-export type TxFees = {[blocks: number]: number};
+export type TxFees = {[blocks: number]: string};
 
 export type Blockchain = {
     errors: Stream<Error>,
@@ -374,10 +374,10 @@ export class BitcoreBlockchain {
                 res = res.then((previous: TxFees): TxFees => {
                     const feePromise = this.hasSmartTxFees
                         ? estimateSmartTxFee(socket, block, conservative)
-                        : Promise.resolve(-1);
+                        : Promise.resolve('-1');
                     return feePromise.then((fee) => {
                         const previousCopy = previous;
-                        previousCopy[block] = fee;
+                        previousCopy[block] = fee.toString();
                         return previousCopy;
                     });
                 });
@@ -394,7 +394,7 @@ export class BitcoreBlockchain {
                     const previousCopy = p;
                     const add = skipMissing ? fee !== -1 : true;
                     if (add) {
-                        previousCopy[block] = fee;
+                        previousCopy[block] = fee.toString();
                     }
                     return previousCopy;
                 }));
