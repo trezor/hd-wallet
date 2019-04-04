@@ -140,6 +140,7 @@ StreamRequestOutMessage | {
 // Info about transaction, with some derived information
 export type ChainNewTransaction = {
     tx: BitcoinJsTransaction,
+    invalidTransaction: boolean,
     height: ?number,
     inputAddresses: Array<?string>, // might be undecodable
     outputAddresses: Array<string>,
