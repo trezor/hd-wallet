@@ -227,13 +227,13 @@ export class GetChainTransactions {
         value.transactions.forEach((transaction) => {
             // parse txs (error in here is handled in iterate)
             let parsed: BitcoinJsTransaction;
+            let invalidTransaction = false;
             try {
                 parsed = BitcoinJsTransaction.fromHex(transaction.hex, transaction.network);
             } catch (error) {
                 // create invalid transaction with zero-valued outputs
+                invalidTransaction = true;
                 parsed = new BitcoinJsTransaction();
-                parsed.invalidTransaction = true;
-                parsed.timestamp = Number(transaction.timestamp);
                 if (transaction.rawTx) {
                     parsed.outs = transaction.rawTx.outputs.map(out => ({
                         script: Buffer.from(out.script, 'hex'),
@@ -267,8 +267,6 @@ export class GetChainTransactions {
                     const type = BitcoinJsScript.classifyOutput(output.script);
 
                     if (type === 'nulldata') {
-                        // TODO add to flowdef
-                        // $FlowIssue
                         const buffer = BitcoinJsScript.nullData.output.decode(output.script);
 
                         let text = '';
@@ -293,6 +291,7 @@ export class GetChainTransactions {
 
             const c: ChainNewTransaction = {
                 tx: parsed,
+                invalidTransaction,
                 outputAddresses,
                 height: transaction.height,
                 timestamp: transaction.timestamp,

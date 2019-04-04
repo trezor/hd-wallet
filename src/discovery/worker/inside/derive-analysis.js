@@ -174,10 +174,10 @@ function analyzeTransaction(
         inputs: inputIds,
         tsize: t.tx.byteLength(),
         vsize: t.vsize,
-        invalidTransaction: t.tx.invalidTransaction,
+        invalidTransaction: t.invalidTransaction,
     };
 
-    if (typeof response.invalidTransaction !== 'boolean') {
+    if (!response.invalidTransaction) {
         // delete this field if not set to avoid tests failure
         delete response.invalidTransaction;
     }
