@@ -134,6 +134,18 @@ declare module 'trezor-utxo-lib' {
         sequence: number,
     };
 
+    declare var coins: {
+        isBitcoin(network: Network): boolean,
+        isBitcoinCash(network: Network): boolean,
+        isBitcoinSV(network: Network): boolean,
+        isBitcoinGold(network: Network): boolean,
+        isDash(network: Network): boolean,
+        isLitecoin(network: Network): boolean,
+        isZcash(network: Network): boolean,
+        isKomodo(network: Network): boolean,
+        isCapricoin(network: Network): boolean,
+    }
+
     declare var address: {
         fromBase58Check(address: string): {hash: Buffer, version: number},
         fromBech32(address: string): {data: Buffer, version: number, prefix: string},
@@ -195,6 +207,13 @@ declare module 'trezor-utxo-lib' {
                 decode: (script: Buffer) => Buffer,
             },
         },
+        nullData: {
+            output: {
+                check: (script: Stack) => boolean,
+                encode: (scriptHash: string) => Buffer,
+                decode: (script: Buffer) => Buffer,
+            },
+        },
     };
 
     declare var crypto: {
@@ -234,10 +253,6 @@ declare module 'trezor-utxo-lib' {
         index: number,
         keyPair: ECPair,
         chainCode: Buffer,
-        static fromBase58(
-            str: string,
-            networks: ?(Array<Network> | Network)
-        ): HDNode,
         derive(index: number): HDNode,
         deriveHardened(index: number): HDNode,
         derivePath(path: string): HDNode,
@@ -262,6 +277,7 @@ declare module 'trezor-utxo-lib' {
     }
 
     declare class Transaction {
+        network: Network,
         version: number,
         locktime: number,
         timestamp?: number,
@@ -269,9 +285,8 @@ declare module 'trezor-utxo-lib' {
         outs: Array<Output>,
         versionGroupId: string,
         expiry: number,
-        dashType: number,
-        dashPayload: number,
-        invalidTransaction: boolean,
+        type: number,
+        extra_payload: number,
 
         constructor(network?: ?Network): void,
         static fromHex(hex: string, network: ?Network): Transaction,
