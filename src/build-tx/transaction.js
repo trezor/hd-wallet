@@ -24,21 +24,21 @@ function outputComparator(aScript: Buffer, aValue: string, bScript: Buffer, bVal
 }
 
 // types for building the transaction in trezor.js
-export type Output = {
+export type Output = {|
     path: Array<number>,
     value: string,
     segwit: boolean,
-} | {
+|} | {|
     address: string,
     value: string,
-} | {
+|} | {|
     opReturnData: Buffer,
-};
+|};
 
 export type Input = {
     hash: Buffer,
     index: number,
-    path?: Array<number>, // necessary for trezor.js
+    path: Array<number>, // necessary for trezor.js
     segwit: boolean,
     amount?: string, // only with segwit
 };
