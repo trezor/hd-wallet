@@ -153,7 +153,7 @@ export type ForceAddedTransaction = {
     inputAddresses: Array<?string>,
     outputAddresses: Array<?string>,
     vsize: number,
-    fee: number,
+    fee: string,
 };
 
 export type Discovery = {
