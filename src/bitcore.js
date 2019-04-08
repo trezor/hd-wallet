@@ -563,13 +563,13 @@ function estimateSmartTxFee(
     socket: Socket,
     blocks: number,
     conservative: boolean,
-): Promise<number> {
+): Promise<string> {
     const method = 'estimateSmartFee';
     const params = [blocks, conservative];
     return socket.send({ method, params });
 }
 
-function estimateTxFee(socket: Socket, blocks: number): Promise<number> {
+function estimateTxFee(socket: Socket, blocks: number): Promise<string> {
     const method = 'estimateFee';
     const params = [blocks];
     return socket.send({ method, params });
