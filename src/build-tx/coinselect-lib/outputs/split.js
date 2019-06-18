@@ -1,4 +1,4 @@
-import BigInteger from 'bigi';
+import BigNumber from 'bignumber.js';
 import * as utils from '../utils';
 
 function filterCoinbase(utxos, minConfCoinbase) {
@@ -19,9 +19,9 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     } = options;
     const coinbase = options.coinbase || 100;
 
-    const feeRateBigInt = utils.bigIntOrNaN(feeRate);
-    if (Number.isNaN(feeRateBigInt)) return {};
-    const feeRateNumber = feeRateBigInt.intValue();
+    const feeRateBigInt = utils.bignumberOrNaN(feeRate);
+    if (feeRateBigInt.isNaN() || !feeRateBigInt.isInteger()) return {};
+    const feeRateNumber = feeRateBigInt.toNumber();
 
     const utxos = filterCoinbase(utxosOrig, coinbase);
 
@@ -31,13 +31,13 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     if (outputs.length === 0) return FEE_RESPONSE;
 
     const inAccum = utils.sumOrNaN(utxos);
-    if (Number.isNaN(inAccum)) return FEE_RESPONSE;
+    if (inAccum.isNaN()) return FEE_RESPONSE;
     const outAccum = utils.sumOrNaN(outputs, true);
-    const remaining = inAccum.subtract(outAccum).subtract(BigInteger.valueOf(fee));
-    if (remaining.compareTo(BigInteger.ZERO) < 0) return FEE_RESPONSE;
+    const remaining = inAccum.minus(outAccum).minus(new BigNumber(fee));
+    if (remaining.comparedTo(new BigNumber(0)) < 0) return FEE_RESPONSE;
 
     const unspecified = outputs.reduce(
-        (a, x) => a + (Number.isNaN(utils.bigIntOrNaN(x.value)) ? 1 : 0),
+        (a, x) => a + (utils.bignumberOrNaN(x.value).isNaN() ? 1 : 0),
         0,
     );
 
@@ -47,7 +47,7 @@ export default function split(utxosOrig, outputs, feeRate, options) {
 
     // this is the same as "unspecified"
     // const splitOutputsCount = outputs.reduce((a, x) => a + !Number.isFinite(x.value), 0);
-    const splitValue = remaining.divide(BigInteger.valueOf(unspecified));
+    const splitValue = remaining.div(new BigNumber(unspecified));
     const dustThreshold = utils.dustThreshold(
         feeRateNumber,
         inputLength,
@@ -57,9 +57,7 @@ export default function split(utxosOrig, outputs, feeRate, options) {
 
     // ensure every output is either user defined, or over the threshold
     if (!outputs.every(x => x.value !== undefined
-        || (
-            splitValue.compareTo(BigInteger.valueOf(dustThreshold)) > 0
-        ))) return FEE_RESPONSE;
+        || (splitValue.comparedTo(new BigNumber(dustThreshold)) > 0))) return FEE_RESPONSE;
 
     // assign splitValue to outputs not user defined
     const outputsSplit = outputs.map((x) => {
