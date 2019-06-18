@@ -1,4 +1,4 @@
-import BigInteger from 'bigi';
+import BigNumber from 'bignumber.js';
 // baseline estimates, used to improve performance
 const TX_EMPTY_SIZE = 4 + 1 + 1 + 4 + 1;
 // 8 bytes start, 2 times 1 byte count in/out, 1 extra byte for segwit start
@@ -58,24 +58,24 @@ export function uintOrNaN(v) {
     return v;
 }
 
-export function bigIntOrNaN(v): BigInteger | NaN {
-    if (v instanceof BigInteger) return v;
-    if (typeof v !== 'string') return NaN;
+export function bignumberOrNaN(v): BigNumber {
+    if (v instanceof BigNumber) return v;
+    if (typeof v !== 'string') return new BigNumber(NaN);
     try {
-        const value = new BigInteger(v);
-        return value.toString() === v ? value : NaN;
+        const value = new BigNumber(v);
+        return (value.toFixed() === v && value.isInteger()) ? value : new BigNumber(NaN);
     } catch (error) {
-        return NaN;
+        return new BigNumber(NaN);
     }
 }
 
-export function sumOrNaN(range, forgiving = false): BigInteger | NaN {
+export function sumOrNaN(range, forgiving = false): BigNumber {
     return range.reduce((a, x) => {
-        if (Number.isNaN(a)) return NaN;
-        const value = bigIntOrNaN(x.value);
-        if (Number.isNaN(value)) return forgiving ? a.add(BigInteger.ZERO) : NaN;
-        return a.add(value);
-    }, BigInteger.ZERO);
+        if (Number.isNaN(a)) return new BigNumber(NaN);
+        const value = bignumberOrNaN(x.value);
+        if (value.isNaN()) return forgiving ? new BigNumber(0).plus(a) : new BigNumber(NaN);
+        return value.plus(a);
+    }, new BigNumber(0));
 }
 
 export function finalize(
@@ -89,12 +89,12 @@ export function finalize(
     let outputs = outputsO;
     const bytesAccum = transactionBytes(inputs, outputs);
     const blankOutputBytes = outputBytes({ script: { length: changeOutputLength } });
-    const feeAfterExtraOutput = BigInteger.valueOf(feeRate * (bytesAccum + blankOutputBytes));
+    const feeAfterExtraOutput = new BigNumber(feeRate * (bytesAccum + blankOutputBytes));
     const sumInputs = sumOrNaN(inputs);
     const sumOutputs = sumOrNaN(outputs);
-    const sumIsNotNaN = (!Number.isNaN(sumInputs) && !Number.isNaN(sumOutputs));
+    const sumIsNotNaN = (!sumInputs.isNaN() && !sumOutputs.isNaN());
     const remainderAfterExtraOutput = sumIsNotNaN
-        ? sumOrNaN(inputs).subtract(sumOrNaN(outputs).add(feeAfterExtraOutput)) : BigInteger.ZERO;
+        ? sumOrNaN(inputs).minus(sumOrNaN(outputs).plus(feeAfterExtraOutput)) : new BigNumber(0);
     const dust = dustThreshold(
         feeRate,
         inputLength,
@@ -103,7 +103,7 @@ export function finalize(
     );
 
     // is it worth a change output?
-    if (remainderAfterExtraOutput.compareTo(BigInteger.valueOf(dust)) > 0) {
+    if (remainderAfterExtraOutput.comparedTo(new BigNumber(dust)) > 0) {
         outputs = outputs.concat({
             value: remainderAfterExtraOutput.toString(),
             script: {
@@ -113,7 +113,7 @@ export function finalize(
     }
 
     if (!sumIsNotNaN) return { fee: (feeRate * bytesAccum).toString() };
-    const fee = sumOrNaN(inputs).subtract(sumOrNaN(outputs)).toString();
+    const fee = sumOrNaN(inputs).minus(sumOrNaN(outputs)).toString();
     return {
         inputs,
         outputs,
@@ -138,5 +138,5 @@ export function anyOf(algorithms) {
 }
 
 export function utxoScore(x, feeRate) {
-    return new BigInteger(x.value).subtract(BigInteger.valueOf(feeRate * inputBytes(x)));
+    return new BigNumber(x.value).minus(new BigNumber(feeRate * inputBytes(x)));
 }

@@ -4,13 +4,13 @@
 //
 // I am using the coinselect format, since the end-goal is
 // to merge the changes back to upstream; it didn't work out so far
-import BigInteger from 'bigi';
 import type {
     Network as BitcoinJsNetwork,
 } from 'trezor-utxo-lib';
 import {
     address as BitcoinJsAddress,
 } from 'trezor-utxo-lib';
+import BigNumber from 'bignumber.js';
 import bitcoinJsSplit from './coinselect-lib/outputs/split';
 import bitcoinJsCoinselect from './coinselect-lib';
 import { transactionBytes } from './coinselect-lib/utils';
@@ -103,8 +103,8 @@ export function coinselect(
     const totalSpent = (result.outputs
         .filter((output, i) => i !== rOutputs.length)
         .map(o => o.value)
-        .reduce((a, b) => a.add(new BigInteger(b)), BigInteger.ZERO)
-    ).add(new BigInteger(result.fee));
+        .reduce((a, b) => new BigNumber(a).plus(b), new BigNumber(0))
+    ).plus(new BigNumber(result.fee));
 
 
     const allSize = transactionBytes(result.inputs, result.outputs);

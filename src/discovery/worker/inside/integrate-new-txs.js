@@ -1,5 +1,5 @@
 /* @flow */
-import BigInteger from 'bigi';
+import BigNumber from 'bignumber.js';
 import type {
     AccountInfo,
     TransactionInfo,
@@ -172,8 +172,8 @@ export function integrateNewTxs(
 
     const balance: string = transactions.length > 0 ? transactions[0].balance : '0';
     const utxoBalance = utxos.reduce(
-        (prev, a) => new BigInteger(a.value).add(prev),
-        BigInteger.ZERO,
+        (prev, a) => new BigNumber(a.value).plus(prev),
+        new BigNumber(0),
     ).toString();
 
     if (balance !== utxoBalance) {
@@ -276,8 +276,8 @@ function deriveUsedAddresses(
                 if (allReceived[id] == null) {
                     allReceived[id] = value;
                 } else {
-                    allReceived[id] = new BigInteger(allReceived[id])
-                        .add(new BigInteger(value)).toString();
+                    allReceived[id] = new BigNumber(allReceived[id])
+                        .plus(new BigNumber(value)).toString();
                 }
                 if (lastUsed < id) {
                     lastUsed = id;

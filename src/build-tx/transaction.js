@@ -1,5 +1,4 @@
 /* @flow */
-import BigInteger from 'bigi';
 import {
     address as BitcoinJsAddress,
     script as BitcoinJsScript,
@@ -8,6 +7,7 @@ import {
 import type {
     Network as BitcoinJsNetwork,
 } from 'trezor-utxo-lib';
+import BigNumber from 'bignumber.js';
 import { Permutation } from './permutation';
 
 import type { UtxoInfo } from '../discovery';
@@ -20,7 +20,7 @@ function inputComparator(aHash: Buffer, aVout: number, bHash: Buffer, bVout: num
 }
 
 function outputComparator(aScript: Buffer, aValue: string, bScript: Buffer, bValue: string) {
-    return new BigInteger(aValue).compareTo(new BigInteger(bValue)) || aScript.compare(bScript);
+    return new BigNumber(aValue).comparedTo(new BigNumber(bValue)) || aScript.compare(bScript);
 }
 
 // types for building the transaction in trezor.js

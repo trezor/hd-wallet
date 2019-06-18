@@ -1,8 +1,8 @@
 /* @flow */
-import BigInteger from 'bigi';
 import {
     Transaction as BitcoinJsTransaction,
 } from 'trezor-utxo-lib';
+import BigNumber from 'bignumber.js';
 import type {
     ChainNewTransaction,
     ChainNewTransactions,
@@ -15,7 +15,6 @@ import type {
     TransactionInfo,
     TargetInfo,
 } from '../../index';
-
 
 import {
     objectValues,
@@ -199,7 +198,7 @@ function getTargetsFromTransaction(
 
     let nCredit = 0;
     let nDebit = 0;
-    let value = BigInteger.ZERO;
+    let value = new BigNumber(0);
 
     // testing if address is mine / change / not change / ...
     function isExternal(a: ?string): boolean {
@@ -230,7 +229,7 @@ function getTargetsFromTransaction(
             const output = info[index];
             if (output) {
                 if (isCredit(output.address)) {
-                    value = value.subtract(new BigInteger(output.value));
+                    value = value.minus(new BigNumber(output.value));
                     nDebit++;
                 }
             }
@@ -245,7 +244,7 @@ function getTargetsFromTransaction(
     // if its output has address that is mine. (On any chain.)
     currentOutputs.forEach((output, i) => {
         if (isCredit(output.address)) {
-            value = value.add(new BigInteger(output.value));
+            value = value.plus(new BigNumber(output.value));
             nCredit++;
             myOutputs[i] = { address: output.address, value: output.value, i };
         }
@@ -276,7 +275,7 @@ function getTargetsFromTransaction(
         // within the same account
         type = 'self';
         targets = [];
-    } else if (value.compareTo(BigInteger.ZERO) > 0) {
+    } else if (value.comparedTo(new BigNumber(0)) > 0) {
         // incoming transaction, targets are either external or internal outputs
         type = 'recv';
         targets = filterTargets(address => isExternal(address));
@@ -306,7 +305,7 @@ function deriveFullInfo(
     let prev = null;
     const impacts = sortedAnalysis.map((info: TransactionInfoBalanceless): TransactionInfo => {
         const balance = (prev != null)
-            ? new BigInteger(prev.balance).add(new BigInteger(info.value)).toString()
+            ? new BigNumber(prev.balance).plus(new BigNumber(info.value)).toString()
             : info.value;
         prev = {
             ...info,
