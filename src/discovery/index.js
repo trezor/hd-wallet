@@ -13,7 +13,7 @@
 // identification, not actual hash.
 // Actual hash is not used anywhere in the API.
 
-import type { Network as BitcoinJsNetwork } from 'trezor-utxo-lib';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
 import {
     Stream,
     StreamWithEnding,

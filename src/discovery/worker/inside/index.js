@@ -2,7 +2,7 @@
 
 // This is the entry to the worker, doing account discovery + analysis
 
-import type { Network as BitcoinJsNetwork } from 'trezor-utxo-lib';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
 
 import type { AccountInfo, TransactionInfo } from '../../index';
 import * as channel from './channel';

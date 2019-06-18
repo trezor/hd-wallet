@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Network as BitcoinJsNetwork } from 'trezor-utxo-lib';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
 import { deferred } from '../../../utils/deferred';
 import { Emitter, Stream } from '../../../utils/stream';
 import type {
