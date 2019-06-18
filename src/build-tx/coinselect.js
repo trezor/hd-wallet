@@ -6,10 +6,10 @@
 // to merge the changes back to upstream; it didn't work out so far
 import type {
     Network as BitcoinJsNetwork,
-} from 'trezor-utxo-lib';
+} from '@trezor/utxo-lib';
 import {
     address as BitcoinJsAddress,
-} from 'trezor-utxo-lib';
+} from '@trezor/utxo-lib';
 import BigNumber from 'bignumber.js';
 import bitcoinJsSplit from './coinselect-lib/outputs/split';
 import bitcoinJsCoinselect from './coinselect-lib';

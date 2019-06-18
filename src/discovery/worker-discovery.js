@@ -1,8 +1,8 @@
 /* @flow */
 
 /* global Worker:false */
-import type { Network as BitcoinJsNetwork } from 'trezor-utxo-lib';
-import { HDNode as BitcoinJsHDNode } from 'trezor-utxo-lib';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
+import { HDNode as BitcoinJsHDNode } from '@trezor/utxo-lib';
 import type {
     AccountInfo,
     AccountLoadStatus,

@@ -2,8 +2,8 @@
  * Interface to bitcore-node blockchain backend
  */
 
-import { networks } from 'trezor-utxo-lib';
-import type { Network as BitcoinJsNetwork } from 'trezor-utxo-lib';
+import { networks } from '@trezor/utxo-lib';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
 
 import { Emitter, Stream } from './utils/stream';
 import { Socket } from './socketio-worker/outside';

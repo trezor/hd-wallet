@@ -1,7 +1,7 @@
 /* @flow */
 import {
     Transaction as BitcoinJsTransaction,
-} from 'trezor-utxo-lib';
+} from '@trezor/utxo-lib';
 import BigNumber from 'bignumber.js';
 import type {
     ChainNewTransaction,

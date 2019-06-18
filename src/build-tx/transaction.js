@@ -2,11 +2,11 @@
 import {
     address as BitcoinJsAddress,
     script as BitcoinJsScript,
-} from 'trezor-utxo-lib';
+} from '@trezor/utxo-lib';
 
 import type {
     Network as BitcoinJsNetwork,
-} from 'trezor-utxo-lib';
+} from '@trezor/utxo-lib';
 import BigNumber from 'bignumber.js';
 import { Permutation } from './permutation';
 
