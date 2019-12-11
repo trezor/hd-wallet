@@ -6,10 +6,11 @@
 // to merge the changes back to upstream; it didn't work out so far
 import type {
     Network as BitcoinJsNetwork,
-} from 'bitcoinjs-lib-zcash';
+} from '@trezor/utxo-lib';
 import {
     address as BitcoinJsAddress,
-} from 'bitcoinjs-lib-zcash';
+} from '@trezor/utxo-lib';
+import BigNumber from 'bignumber.js';
 import bitcoinJsSplit from './coinselect-lib/outputs/split';
 import bitcoinJsCoinselect from './coinselect-lib';
 import { transactionBytes } from './coinselect-lib/utils';
@@ -31,7 +32,7 @@ export type Input = {
     script: {
         length: number,
     },
-    value: number,
+    value: string,
 
     own: boolean,
     coinbase: boolean,
@@ -39,14 +40,14 @@ export type Input = {
 }
 
 type OutputIn = {
-    value?: number,
+    value?: string,
     script: {
         length: number,
     },
 }
 
 export type OutputOut = {
-    value: number,
+    value: string,
     script?: {
         length: number,
     },
@@ -57,11 +58,11 @@ export type CompleteResult = {
     result: {
         inputs: Array<Input>,
         outputs: Array<OutputOut>,
-        fee: number,
-        feePerByte: number,
+        max: string,
+        totalSpent: string,
+        fee: string,
+        feePerByte: string,
         bytes: number,
-        totalSpent: number,
-        max: number,
     },
 }
 
@@ -73,7 +74,7 @@ export function coinselect(
     utxos: Array<UtxoInfo>,
     rOutputs: Array<request.OutputRequest>,
     height: number,
-    feeRate: number,
+    feeRate: string,
     segwit: boolean,
     countMax: boolean,
     countMaxId: number,
@@ -95,25 +96,31 @@ export function coinselect(
             type: 'false',
         };
     }
+
     const { fee } = result;
     const max = countMaxId === -1 ? -1 : result.outputs[countMaxId].value;
 
     const totalSpent = (result.outputs
         .filter((output, i) => i !== rOutputs.length)
         .map(o => o.value)
-        .reduce((a, b) => a + b, 0)
-    ) + result.fee;
+        .reduce((a, b) => new BigNumber(a).plus(b), new BigNumber(0))
+    ).plus(new BigNumber(result.fee));
+
 
     const allSize = transactionBytes(result.inputs, result.outputs);
+    // javascript WTF: fee is a string, allSize is a number, therefore it's working
     const feePerByte = fee / allSize;
+
     return {
         type: 'true',
         result: {
             ...result,
-            feePerByte,
+            fee: result.fee.toString(),
+
+            feePerByte: feePerByte.toString(),
             bytes: allSize,
             max,
-            totalSpent,
+            totalSpent: totalSpent.toString(),
         },
     };
 }
@@ -185,7 +192,7 @@ function convertOutputs(
         }
         if (output.type === 'opreturn') {
             return {
-                value: 0,
+                value: '0',
                 script: { length: 2 + (output.dataHex.length / 2) },
             };
         }

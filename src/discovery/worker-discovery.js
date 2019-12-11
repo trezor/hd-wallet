@@ -1,8 +1,8 @@
 /* @flow */
 
 /* global Worker:false */
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
-import { HDNode as BitcoinJsHDNode } from 'bitcoinjs-lib-zcash';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
+import { HDNode as BitcoinJsHDNode } from '@trezor/utxo-lib';
 import type {
     AccountInfo,
     AccountLoadStatus,
@@ -169,9 +169,7 @@ export class WorkerDiscovery {
                         }
                     });
                     return mine;
-                })
-                // flow thing
-                    .map((tx: TransactionWithHeight): ('block' | TransactionWithHeight) => tx);
+                }).map((tx: TransactionWithHeight): ('block' | TransactionWithHeight) => tx); // flow thing
 
                 // we need to do updates on blocks, if there are unconfs
                 const blockStream: Stream<'block' | TransactionWithHeight> = this.chain.blocks.map(() => 'block');

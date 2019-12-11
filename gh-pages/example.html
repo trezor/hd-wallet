@@ -4,14 +4,40 @@
   </head>
   <body>
     <style>
-      table, tr, td { border: 1px solid black; }
-      table { border-bottom: 10px solid red; }
+      table {
+        border-spacing: 0;
+        border: 0px;
+        border-collapse: collapse;
+      }
+      tr:nth-child(even) { 
+        background: #efefef; 
+      }
+      td, th {
+        border: 1px solid black;
+        padding: 4px;
+      }
+      label, textarea, select { display: block; margin-bottom: 10px; }
+      textarea { width: 100%; height: 50px; }
+      h3 {
+        margin: 10px 0 0 0;
+      }
+      .invalid { background: red; }
+      .balance { }
+      
     </style>
-    Library version 6.0.0
-    <center>
-      <button autofocus onclick="run()">discover</button><br><br>
-      <button onclick="stop()">stop</button>
-    </center>
+    hd-wallet Library version 9.0.0
+    <div>
+      <br/>
+      Xpubs, separated by ";"
+      <textarea id="xpubs"></textarea>
+      Backend urls, separated by ";"
+      <textarea id="urls"></textarea>
+      <select id="network"></select>
+      <button autofocus onclick="window.run()">discover</button>
+      <button onclick="window.stop()">stop</button>
+      <button onclick="window.clear()">clear</button>
+    </div>
     <script src="example.js"></script>
+    <script src="ui.js"></script>
   </body>
 </html>

@@ -12,17 +12,17 @@ export type Result = {
     error: string,
 } | {
     type: 'nonfinal',
-    max: number,
-    totalSpent: number, // all the outputs, no fee, no change
-    fee: number,
-    feePerByte: number,
+    max: string,
+    totalSpent: string, // all the outputs, no fee, no change
+    fee: string,
+    feePerByte: string,
     bytes: number,
 } | {
     type: 'final',
-    max: number,
-    totalSpent: number, // all the outputs, no fee, no change
-    fee: number,
-    feePerByte: number,
+    max: string,
+    totalSpent: string, // all the outputs, no fee, no change
+    fee: string,
+    feePerByte: string,
     bytes: number,
     transaction: mtransaction.Transaction,
 };

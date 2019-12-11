@@ -1,6 +1,6 @@
 /* @flow */
 
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
 import bchaddrjs from 'bchaddrjs';
 import type {
     PromiseRequestType,

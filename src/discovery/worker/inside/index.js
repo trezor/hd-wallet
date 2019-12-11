@@ -2,7 +2,7 @@
 
 // This is the entry to the worker, doing account discovery + analysis
 
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
 
 import type { AccountInfo, TransactionInfo } from '../../index';
 import * as channel from './channel';
@@ -22,7 +22,9 @@ import { integrateNewTxs } from './integrate-new-txs';
 // so we have to re-download everything -> setting initial state as if nothing is known
 // v4 changed timestamp format
 // v5 is just to force re-download on forceAdded data corruption
-const LATEST_VERSION = 5;
+// v6 changed types (tx amounts/values, fee, balance ect) from number to string
+//      across the whole library (discovery and buildtx)
+const LATEST_VERSION = 6;
 
 // Default starting info being used, when there is null
 const defaultInfo: AccountInfo = {
@@ -31,7 +33,7 @@ const defaultInfo: AccountInfo = {
     usedAddresses: [],
     unusedAddresses: [],
     changeIndex: 0,
-    balance: 0,
+    balance: '0',
     sentAddresses: {},
     lastBlock: { height: 0, hash: 'abcd' },
     transactionHashes: {},

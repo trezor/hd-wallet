@@ -1,17 +1,17 @@
 [
   {
     "description": "forgotten inputLength",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
-        "value": 102001,
+        "value": "102001",
         "coinbase": false,
         "own": true,
         "confirmations": 100
       }
     ],
     "outputs": [
-      100000
+      "100000"
     ],
     "expected": "Null script length",
     "inputLength": null,
@@ -20,17 +20,17 @@
   },
   {
     "description": "forgotten outputLength",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
-        "value": 102001,
+        "value": "102001",
         "coinbase": false,
         "own": true,
         "confirmations": 100
       }
     ],
     "outputs": [
-      100000
+      "100000"
     ],
     "expected": "Null script length",
     "inputLength": 25,
@@ -38,14 +38,14 @@
   },
   {
     "description": "missing input info",
-    "feeRate": 10,
+    "feeRate": "10",
     "inputs": [
       {
-        "value": 102001
+        "value": "102001"
       }
     ],
     "outputs": [
-      100000
+      "100000"
     ],
     "expected": "Missing information",
     "inputLength": 25,

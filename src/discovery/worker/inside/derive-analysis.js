@@ -1,7 +1,8 @@
 /* @flow */
 import {
     Transaction as BitcoinJsTransaction,
-} from 'bitcoinjs-lib-zcash';
+} from '@trezor/utxo-lib';
+import BigNumber from 'bignumber.js';
 import type {
     ChainNewTransaction,
     ChainNewTransactions,
@@ -26,7 +27,7 @@ import {
 } from './dates';
 
 
-type OutputForAnalysis = ?{address: string, value: number};
+type OutputForAnalysis = ?{address: string, value: string};
 type OutputsForAnalysis = Array<OutputForAnalysis>;
 type OutputsForAnalysisMap = {[txid: string]: OutputsForAnalysis};
 
@@ -98,7 +99,7 @@ function deriveOutputsForAnalysisMap(
         for (let i = 0; i < t.tx.outs.length; i++) {
             const output = t.tx.outs[i];
             const address = t.outputAddresses[i];
-            outputs.push({ address, value: output.value });
+            outputs.push({ address, value: typeof output.value === 'string' ? output.value : output.value.toString() });
         }
         const txid = t.hash;
         return { txid, outputs };
@@ -144,7 +145,7 @@ function analyzeTransaction(
     wantedOffset: number, // what (new Date().getTimezoneOffset()) returns
 ): TransactionInfoBalanceless {
     const inputIds = t.tx.ins.map(input => ({ id: getInputId(input), index: input.index }));
-    const hasJoinsplits = t.tx.joinsplits.length > 0;
+    const hasJoinsplits = Array.isArray(t.tx.joinsplits) && t.tx.joinsplits.length > 0;
 
     const isCoinbase = t.tx.ins.some(i => BitcoinJsTransaction.isCoinbaseHash(i.hash));
 
@@ -172,10 +173,12 @@ function analyzeTransaction(
         inputs: inputIds,
         tsize: t.tx.byteLength(),
         vsize: t.vsize,
+        invalidTransaction: t.invalidTransaction,
     };
 
-    if (t.tx.invalidTransaction) {
-        response.invalidTransaction = t.tx.invalidTransaction;
+    if (!response.invalidTransaction) {
+        // delete this field if not set to avoid tests failure
+        delete response.invalidTransaction;
     }
 
     return response;
@@ -195,7 +198,7 @@ function getTargetsFromTransaction(
 
     let nCredit = 0;
     let nDebit = 0;
-    let value = 0;
+    let value = new BigNumber(0);
 
     // testing if address is mine / change / not change / ...
     function isExternal(a: ?string): boolean {
@@ -226,7 +229,7 @@ function getTargetsFromTransaction(
             const output = info[index];
             if (output) {
                 if (isCredit(output.address)) {
-                    value -= output.value;
+                    value = value.minus(new BigNumber(output.value));
                     nDebit++;
                 }
             }
@@ -241,7 +244,7 @@ function getTargetsFromTransaction(
     // if its output has address that is mine. (On any chain.)
     currentOutputs.forEach((output, i) => {
         if (isCredit(output.address)) {
-            value += output.value;
+            value = value.plus(new BigNumber(output.value));
             nCredit++;
             myOutputs[i] = { address: output.address, value: output.value, i };
         }
@@ -272,7 +275,7 @@ function getTargetsFromTransaction(
         // within the same account
         type = 'self';
         targets = [];
-    } else if (value > 0) {
+    } else if (value.comparedTo(new BigNumber(0)) > 0) {
         // incoming transaction, targets are either external or internal outputs
         type = 'recv';
         targets = filterTargets(address => isExternal(address));
@@ -289,7 +292,7 @@ function getTargetsFromTransaction(
     // makes sense - even "sent to self" transactions are negative - cost fee
 
     return {
-        targets, type, value, myOutputs,
+        targets, type, value: value.toString(), myOutputs,
     };
 }
 
@@ -302,7 +305,7 @@ function deriveFullInfo(
     let prev = null;
     const impacts = sortedAnalysis.map((info: TransactionInfoBalanceless): TransactionInfo => {
         const balance = (prev != null)
-            ? prev.balance + info.value
+            ? new BigNumber(prev.balance).plus(new BigNumber(info.value)).toString()
             : info.value;
         prev = {
             ...info,

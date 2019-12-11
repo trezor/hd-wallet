@@ -9,13 +9,13 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
           "address": "1BitcoinEaterAddressDontSendf59kuE",
-          "amount": 100000,
+          "amount": "100000",
           "type": "complete"
         }
       ],
@@ -27,23 +27,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 195,
-      "fee": 2001,
-      "feePerByte": 10.261538461538462,
+      "fee": "2001",
+      "feePerByte": "10.261538461538462",
       "max": -1,
-      "totalSpent": 102001,
+      "totalSpent": "102001",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -52,7 +52,7 @@
           "sorted": [
             {
               "address": "1BitcoinEaterAddressDontSendf59kuE",
-              "value": 100000
+              "value": "100000"
             }
           ]
         },
@@ -83,12 +83,12 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
-          "amount": 100000,
+          "amount": "100000",
           "type": "noaddress"
         }
       ],
@@ -100,23 +100,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 195,
-      "fee": 2001,
-      "feePerByte": 10.261538461538462,
+      "fee": "2001",
+      "feePerByte": "10.261538461538462",
       "max": -1,
-      "totalSpent": 102001,
+      "totalSpent": "102001",
       "type": "nonfinal"
     }
   },
@@ -130,12 +130,12 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
-          "amount": 100000,
+          "amount": "100000",
           "type": "noaddress"
         }
       ],
@@ -147,13 +147,13 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 10,
+          "value": "10",
           "vsize": 0
         }
       ]
@@ -173,7 +173,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -190,23 +190,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 50000000000,
+          "value": "50000000000",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 195,
-      "fee": 1950,
-      "feePerByte": 10,
-      "max": 49999998050,
-      "totalSpent": 50000000000,
+      "fee": "1950",
+      "feePerByte": "10",
+      "max": "49999998050",
+      "totalSpent": "50000000000",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -215,7 +215,7 @@
           "sorted": [
             {
               "address": "1BitcoinEaterAddressDontSendf59kuE",
-              "value": 49999998050
+              "value": "49999998050"
             }
           ]
         },
@@ -246,7 +246,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -263,23 +263,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 195,
-      "fee": 1950,
-      "feePerByte": 10,
-      "max": 100051,
-      "totalSpent": 102001,
+      "fee": "1950",
+      "feePerByte": "10",
+      "max": "100051",
+      "totalSpent": "102001",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -288,7 +288,7 @@
           "sorted": [
             {
               "address": "1BitcoinEaterAddressDontSendf59kuE",
-              "value": 100051
+              "value": "100051"
             }
           ]
         },
@@ -319,7 +319,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -335,13 +335,13 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 10,
+          "value": "10",
           "vsize": 0
         }
       ]
@@ -361,7 +361,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [],
@@ -383,7 +383,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [],
@@ -395,13 +395,13 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
@@ -421,7 +421,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -448,18 +448,18 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
           "address": "1BitcoinEaterAddressDontSendf59kuE",
-          "amount": 30000,
+          "amount": "30000",
           "type": "complete"
         },
         {
           "address": "1LetUsDestroyBitcoinTogether398Nrg",
-          "amount": 20000,
+          "amount": "20000",
           "type": "complete"
         }
       ],
@@ -471,23 +471,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 263,
-      "fee": 2630,
-      "feePerByte": 10,
+      "fee": "2630",
+      "feePerByte": "10",
       "max": -1,
-      "totalSpent": 52630,
+      "totalSpent": "52630",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -498,11 +498,11 @@
           "sorted": [
             {
               "address": "1LetUsDestroyBitcoinTogether398Nrg",
-              "value": 20000
+              "value": "20000"
             },
             {
               "address": "1BitcoinEaterAddressDontSendf59kuE",
-              "value": 30000
+              "value": "30000"
             },
             {
               "path": [
@@ -512,7 +512,7 @@
                 0
               ],
               "segwit": false,
-              "value": 49371
+              "value": "49371"
             }
           ]
         },
@@ -543,18 +543,18 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": true,
       "outputs": [
         {
           "address": "1BitcoinEaterAddressDontSendf59kuE",
-          "amount": 30000,
+          "amount": "30000",
           "type": "complete"
         },
         {
           "address": "1LetUsDestroyBitcoinTogether398Nrg",
-          "amount": 20000,
+          "amount": "20000",
           "type": "complete"
         }
       ],
@@ -566,23 +566,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 203,
-      "fee": 2030,
-      "feePerByte": 10,
+      "fee": "2030",
+      "feePerByte": "10",
       "max": -1,
-      "totalSpent": 52030,
+      "totalSpent": "52030",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -593,11 +593,11 @@
           "sorted": [
             {
               "address": "1LetUsDestroyBitcoinTogether398Nrg",
-              "value": 20000
+              "value": "20000"
             },
             {
               "address": "1BitcoinEaterAddressDontSendf59kuE",
-              "value": 30000
+              "value": "30000"
             },
             {
               "path": [
@@ -607,14 +607,14 @@
                 0
               ],
               "segwit": true,
-              "value": 49971
+              "value": "49971"
             }
           ]
         },
         "inputs": [
           {
             "REV_hash": "b4dc0ffeee",
-            "amount": 102001,
+            "amount": "102001",
             "index": 0,
             "path": [
               44,
@@ -639,13 +639,13 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
           "address": "1BitcoinEaterAddressDontSendf59kuE",
-          "amount": 100000,
+          "amount": "100000",
           "type": "complete"
         }
       ],
@@ -657,13 +657,13 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 1,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         },
         {
@@ -672,23 +672,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": null,
           "index": 2,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 195,
-      "fee": 2001,
-      "feePerByte": 10.261538461538462,
+      "fee": "2001",
+      "feePerByte": "10.261538461538462",
       "max": -1,
-      "totalSpent": 102001,
+      "totalSpent": "102001",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -697,7 +697,7 @@
           "sorted": [
             {
               "address": "1BitcoinEaterAddressDontSendf59kuE",
-              "value": 100000
+              "value": "100000"
             }
           ]
         },
@@ -728,7 +728,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -749,13 +749,13 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
@@ -775,13 +775,13 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
           "address": "1BitcoinEaterAddressDontSendf59kuE",
-          "amount": 200000,
+          "amount": "200000",
           "type": "complete"
         }
       ],
@@ -793,13 +793,13 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 1,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         },
         {
@@ -808,23 +808,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
-          "height": null,
+          "fee": "0",
+          "height": 100,
           "index": 2,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 345,
-      "fee": 4002,
-      "feePerByte": 11.6,
+      "fee": "4002",
+      "feePerByte": "11.6",
       "max": -1,
-      "totalSpent": 204002,
+      "totalSpent": "204002",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -833,7 +833,7 @@
           "sorted": [
             {
               "address": "1BitcoinEaterAddressDontSendf59kuE",
-              "value": 200000
+              "value": "200000"
             }
           ]
         },
@@ -875,18 +875,18 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": true,
       "outputs": [
         {
           "address": "1BitcoinEaterAddressDontSendf59kuE",
-          "amount": 30000,
+          "amount": "30000",
           "type": "complete"
         },
         {
           "address": "1LetUsDestroyBitcoinTogether398Nrg",
-          "amount": 30000,
+          "amount": "30000",
           "type": "complete"
         }
       ],
@@ -898,23 +898,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 203,
-      "fee": 2030,
-      "feePerByte": 10,
+      "fee": "2030",
+      "feePerByte": "10",
       "max": -1,
-      "totalSpent": 62030,
+      "totalSpent": "62030",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -925,11 +925,11 @@
           "sorted": [
             {
               "address": "1BitcoinEaterAddressDontSendf59kuE",
-              "value": 30000
+              "value": "30000"
             },
             {
               "address": "1LetUsDestroyBitcoinTogether398Nrg",
-              "value": 30000
+              "value": "30000"
             },
             {
               "path": [
@@ -939,14 +939,14 @@
                 0
               ],
               "segwit": true,
-              "value": 39971
+              "value": "39971"
             }
           ]
         },
         "inputs": [
           {
             "REV_hash": "b4dc0ffeee",
-            "amount": 102001,
+            "amount": "102001",
             "index": 0,
             "path": [
               44,
@@ -971,13 +971,13 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 54600,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
           "address": "1BitcoinEaterAddressDontSendf59kuE",
-          "amount": 928960,
+          "amount": "928960",
           "type": "complete"
         }
       ],
@@ -989,23 +989,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 972463,
+          "value": "972463",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 137,
-      "fee": 43503,
-      "feePerByte": 317.54014598540147,
+      "fee": "43503",
+      "feePerByte": "317.54014598540147",
       "max": -1,
-      "totalSpent": 972463,
+      "totalSpent": "972463",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -1014,7 +1014,7 @@
           "sorted": [
             {
               "address": "1BitcoinEaterAddressDontSendf59kuE",
-              "value": 928960
+              "value": "928960"
             }
           ]
         },
@@ -1045,7 +1045,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1062,23 +1062,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 210,
-      "fee": 2100,
-      "feePerByte": 10,
+      "fee": "2100",
+      "feePerByte": "10",
       "max": -1,
-      "totalSpent": 2100,
+      "totalSpent": "2100",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -1105,7 +1105,7 @@
                 0
               ],
               "segwit": false,
-              "value": 99901
+              "value": "99901"
             }
           ]
         },
@@ -1136,7 +1136,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1157,23 +1157,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 224,
-      "fee": 2240,
-      "feePerByte": 10,
+      "fee": "2240",
+      "feePerByte": "10",
       "max": -1,
-      "totalSpent": 2240,
+      "totalSpent": "2240",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -1211,7 +1211,7 @@
                 0
               ],
               "segwit": false,
-              "value": 99761
+              "value": "99761"
             }
           ]
         },
@@ -1242,13 +1242,13 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
           "address": "bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq",
-          "amount": 100000,
+          "amount": "100000",
           "type": "complete"
         }
       ],
@@ -1260,23 +1260,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 192,
-      "fee": 2001,
-      "feePerByte": 10.421875,
+      "fee": "2001",
+      "feePerByte": "10.421875",
       "max": -1,
-      "totalSpent": 102001,
+      "totalSpent": "102001",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -1285,7 +1285,7 @@
           "sorted": [
             {
               "address": "bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq",
-              "value": 100000
+              "value": "100000"
             }
           ]
         },
@@ -1316,13 +1316,13 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
           "address": "3NukJ6fYZJ5Kk8bPjycAnruZkE5Q7UW7i8",
-          "amount": 100000,
+          "amount": "100000",
           "type": "complete"
         }
       ],
@@ -1334,23 +1334,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 193,
-      "fee": 2001,
-      "feePerByte": 10.367875647668393,
+      "fee": "2001",
+      "feePerByte": "10.367875647668393",
       "max": -1,
-      "totalSpent": 102001,
+      "totalSpent": "102001",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -1359,7 +1359,7 @@
           "sorted": [
             {
               "address": "3NukJ6fYZJ5Kk8bPjycAnruZkE5Q7UW7i8",
-              "value": 100000
+              "value": "100000"
             }
           ]
         },
@@ -1390,13 +1390,13 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
           "address": "bc1qc7slrfxkknqcq2jevvvkdgvrt8080852dfjewde450xdlk4ugp7szw5tk9",
-          "amount": 100000,
+          "amount": "100000",
           "type": "complete"
         }
       ],
@@ -1408,23 +1408,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 103001,
+          "value": "103001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 204,
-      "fee": 3001,
-      "feePerByte": 14.71078431372549,
+      "fee": "3001",
+      "feePerByte": "14.71078431372549",
       "max": -1,
-      "totalSpent": 103001,
+      "totalSpent": "103001",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -1433,7 +1433,7 @@
           "sorted": [
             {
               "address": "bc1qc7slrfxkknqcq2jevvvkdgvrt8080852dfjewde450xdlk4ugp7szw5tk9",
-              "value": 100000
+              "value": "100000"
             }
           ]
         },
@@ -1464,7 +1464,7 @@
       "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
@@ -1480,23 +1480,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 195,
-      "fee": 1950,
-      "feePerByte": 10,
-      "max": 100051,
-      "totalSpent": 102001,
+      "fee": "1950",
+      "feePerByte": "10",
+      "max": "100051",
+      "totalSpent": "102001",
       "type": "nonfinal"
     }
   }, {
@@ -1509,13 +1509,13 @@
       "changeAddress": "bitcoincash:qzppkat2v7xu9fr3yeuqdnggjqqltrs7pcg8swvhl0",
       "changeId": 0,
       "dustThreshold": 546,
-      "feeRate": 10,
+      "feeRate": "10",
       "height": 100,
       "inputAmounts": false,
       "outputs": [
         {
           "address": "bitcoincash:qp6e6enhpy0fwwu7nkvlr8rgl06ru0c9lywalz8st5",
-          "amount": 100000,
+          "amount": "100000",
           "type": "complete"
         }
       ],
@@ -1527,23 +1527,23 @@
             4
           ],
           "coinbase": false,
-          "fee": 0,
+          "fee": "0",
           "height": 100,
           "index": 0,
           "own": true,
           "transactionHash": "b4dc0ffeee",
           "tsize": 0,
-          "value": 102001,
+          "value": "102001",
           "vsize": 0
         }
       ]
     },
     "result": {
       "bytes": 195,
-      "fee": 2001,
-      "feePerByte": 10.261538461538462,
+      "fee": "2001",
+      "feePerByte": "10.261538461538462",
       "max": -1,
-      "totalSpent": 102001,
+      "totalSpent": "102001",
       "transaction": {
         "PERM_outputs": {
           "permutation": [
@@ -1552,7 +1552,7 @@
           "sorted": [
             {
               "address": "bitcoincash:qp6e6enhpy0fwwu7nkvlr8rgl06ru0c9lywalz8st5",
-              "value": 100000
+              "value": "100000"
             }
           ]
         },

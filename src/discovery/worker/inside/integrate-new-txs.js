@@ -1,5 +1,5 @@
 /* @flow */
-
+import BigNumber from 'bignumber.js';
 import type {
     AccountInfo,
     TransactionInfo,
@@ -170,8 +170,12 @@ export function integrateNewTxs(
         gap,
     );
 
-    const balance = transactions.length > 0 ? transactions[0].balance : 0;
-    const utxoBalance: number = utxos.reduce((prev, a) => a.value + prev, 0);
+    const balance: string = transactions.length > 0 ? transactions[0].balance : '0';
+    const utxoBalance = utxos.reduce(
+        (prev, a) => new BigNumber(a.value).plus(prev),
+        new BigNumber(0),
+    ).toString();
+
     if (balance !== utxoBalance) {
         throw new Error('Inconsistent info.');
     }
@@ -260,7 +264,7 @@ function deriveUsedAddresses(
     unusedAddresses: Array<string>,
     lastConfirmed: number,
 } {
-    const allReceived: Array<number> = [];
+    const allReceived: Array<string> = [];
     let lastUsed = -1;
     let lastConfirmed = -1;
 
@@ -272,7 +276,8 @@ function deriveUsedAddresses(
                 if (allReceived[id] == null) {
                     allReceived[id] = value;
                 } else {
-                    allReceived[id] += value;
+                    allReceived[id] = new BigNumber(allReceived[id])
+                        .plus(new BigNumber(value)).toString();
                 }
                 if (lastUsed < id) {
                     lastUsed = id;
@@ -289,7 +294,7 @@ function deriveUsedAddresses(
     const usedAddresses = [];
     for (let i = 0; i <= lastUsed; i++) {
         const address = allAddresses[i];
-        const received = allReceived[i] == null ? 0 : allReceived[i];
+        const received = allReceived[i] == null ? '0' : allReceived[i];
         usedAddresses.push({ address, received });
     }
     const unusedAddresses = [];

@@ -1,13 +1,13 @@
 /* @flow */
-
 import {
     address as BitcoinJsAddress,
     script as BitcoinJsScript,
-} from 'bitcoinjs-lib-zcash';
+} from '@trezor/utxo-lib';
 
 import type {
     Network as BitcoinJsNetwork,
-} from 'bitcoinjs-lib-zcash';
+} from '@trezor/utxo-lib';
+import BigNumber from 'bignumber.js';
 import { Permutation } from './permutation';
 
 import type { UtxoInfo } from '../discovery';
@@ -19,28 +19,28 @@ function inputComparator(aHash: Buffer, aVout: number, bHash: Buffer, bVout: num
     return reverseBuffer(aHash).compare(reverseBuffer(bHash)) || aVout - bVout;
 }
 
-function outputComparator(aScript: Buffer, aValue: number, bScript: Buffer, bValue: number) {
-    return aValue - bValue || aScript.compare(bScript);
+function outputComparator(aScript: Buffer, aValue: string, bScript: Buffer, bValue: string) {
+    return new BigNumber(aValue).comparedTo(new BigNumber(bValue)) || aScript.compare(bScript);
 }
 
 // types for building the transaction in trezor.js
-export type Output = {
+export type Output = {|
     path: Array<number>,
-    value: number,
+    value: string,
     segwit: boolean,
-} | {
+|} | {|
     address: string,
-    value: number,
-} | {
+    value: string,
+|} | {|
     opReturnData: Buffer,
-};
+|};
 
 export type Input = {
     hash: Buffer,
     index: number,
-    path?: Array<number>, // necessary for trezor.js
+    path: Array<number>, // necessary for trezor.js
     segwit: boolean,
-    amount?: number, // only with segwit
+    amount?: string, // only with segwit
 };
 
 export type Transaction = {
@@ -96,10 +96,8 @@ export function createTransaction(
     });
     convertedInputs.sort((a, b) => inputComparator(a.hash, a.index, b.hash, b.index));
     const permutedOutputs = Permutation.fromFunction(convertedOutputs, (a, b) => {
-        // $FlowIssue
-        const aValue: number = a.output.value != null ? a.output.value : 0;
-        // $FlowIssue
-        const bValue: number = b.output.value != null ? b.output.value : 0;
+        const aValue: string = typeof a.output.value === 'string' ? a.output.value : '0';
+        const bValue: string = typeof b.output.value === 'string' ? b.output.value : '0';
         return outputComparator(a.script, aValue, b.script, bValue);
     }).map(o => o.output);
     return {
@@ -139,7 +137,6 @@ function convertOpReturnOutput(
     const output = {
         opReturnData: opReturnDataBuffer,
     };
-    // $FlowIssue
     const script = BitcoinJsScript.nullData.output.encode(opReturnDataBuffer);
     return {
         output,
@@ -149,7 +146,7 @@ function convertOpReturnOutput(
 
 function convertOutput(
     address: string,
-    value: number,
+    value: string,
     network: BitcoinJsNetwork,
     basePath: Array<number>,
     changeId: number,

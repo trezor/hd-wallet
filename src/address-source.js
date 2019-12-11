@@ -2,11 +2,11 @@
  * Derivation of addresses from HD nodes
  */
 
-import type { HDNode, Network } from 'bitcoinjs-lib-zcash';
+import type { HDNode, Network } from '@trezor/utxo-lib';
 import {
     crypto,
     address,
-} from 'bitcoinjs-lib-zcash';
+} from '@trezor/utxo-lib';
 import type { WorkerChannel } from './utils/simple-worker-channel';
 
 export type AddressSource = {

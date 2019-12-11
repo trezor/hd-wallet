@@ -20,8 +20,8 @@ import {
     address as BitcoinJsAddress,
     HDNode as BitcoinJsHDNode,
     script as BitcoinJsScript,
-} from 'bitcoinjs-lib-zcash';
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
+} from '@trezor/utxo-lib';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
 import bchaddrjs from 'bchaddrjs';
 import { deferred } from '../../../utils/deferred';
 import type { Deferred } from '../../../utils/deferred';
@@ -35,6 +35,9 @@ import type {
 import { Stream } from '../../../utils/stream';
 import type { TransactionInfo } from '../../index';
 import { BrowserAddressSource } from '../../../address-source';
+
+// request Transaction values as strings
+BitcoinJsTransaction.USE_STRING_VALUES = true;
 
 export class GetChainTransactions {
     // all seen addresses, including the gap addresses
@@ -224,17 +227,17 @@ export class GetChainTransactions {
         value.transactions.forEach((transaction) => {
             // parse txs (error in here is handled in iterate)
             let parsed: BitcoinJsTransaction;
+            let invalidTransaction = false;
             try {
                 parsed = BitcoinJsTransaction.fromHex(transaction.hex, transaction.network);
             } catch (error) {
                 // create invalid transaction with zero-valued outputs
+                invalidTransaction = true;
                 parsed = new BitcoinJsTransaction();
-                parsed.invalidTransaction = true;
-                parsed.timestamp = Number(transaction.timestamp);
                 if (transaction.rawTx) {
                     parsed.outs = transaction.rawTx.outputs.map(out => ({
                         script: Buffer.from(out.script, 'hex'),
-                        value: 0,
+                        value: '0',
                     }));
                 }
             }
@@ -264,8 +267,6 @@ export class GetChainTransactions {
                     const type = BitcoinJsScript.classifyOutput(output.script);
 
                     if (type === 'nulldata') {
-                        // TODO add to flowdef
-                        // $FlowIssue
                         const buffer = BitcoinJsScript.nullData.output.decode(output.script);
 
                         let text = '';
@@ -290,6 +291,7 @@ export class GetChainTransactions {
 
             const c: ChainNewTransaction = {
                 tx: parsed,
+                invalidTransaction,
                 outputAddresses,
                 height: transaction.height,
                 timestamp: transaction.timestamp,

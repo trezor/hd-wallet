@@ -5,7 +5,7 @@
 import type {
     Transaction as BitcoinJsTransaction,
     Network as BitcoinJsNetwork,
-} from 'bitcoinjs-lib-zcash';
+} from '@trezor/utxo-lib';
 import type {
     TransactionWithHeight,
 } from '../../bitcore';
@@ -140,6 +140,7 @@ StreamRequestOutMessage | {
 // Info about transaction, with some derived information
 export type ChainNewTransaction = {
     tx: BitcoinJsTransaction,
+    invalidTransaction: boolean,
     height: ?number,
     inputAddresses: Array<?string>, // might be undecodable
     outputAddresses: Array<string>,
@@ -186,7 +187,7 @@ export type TransactionInfoBalanceless = {
 
     type: 'self' | 'recv' | 'sent',
 
-    value: number,
+    value: string,
 
     inputs: Array<{id: string, index: number}>, // needing this for analysis
 
@@ -199,5 +200,5 @@ export type TargetsType = {
     targets: Array<TargetInfo>,
     myOutputs: {[i: number]: TargetInfo},
     type: 'self' | 'recv' | 'sent',
-    value: number,
+    value: string,
 };

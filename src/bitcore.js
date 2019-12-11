@@ -2,10 +2,8 @@
  * Interface to bitcore-node blockchain backend
  */
 
-import 'whatwg-fetch';
-
-import { networks } from 'bitcoinjs-lib-zcash';
-import type { Network as BitcoinJsNetwork } from 'bitcoinjs-lib-zcash';
+import { networks } from '@trezor/utxo-lib';
+import type { Network as BitcoinJsNetwork } from '@trezor/utxo-lib';
 
 import { Emitter, Stream } from './utils/stream';
 import { Socket } from './socketio-worker/outside';
@@ -29,7 +27,7 @@ export type TransactionWithHeight = {
     rawTx?: BcDetailedTransaction,
 }
 
-export type TxFees = {[blocks: number]: number};
+export type TxFees = {[blocks: number]: string};
 
 export type Blockchain = {
     errors: Stream<Error>,
@@ -376,10 +374,10 @@ export class BitcoreBlockchain {
                 res = res.then((previous: TxFees): TxFees => {
                     const feePromise = this.hasSmartTxFees
                         ? estimateSmartTxFee(socket, block, conservative)
-                        : Promise.resolve(-1);
+                        : Promise.resolve('-1');
                     return feePromise.then((fee) => {
                         const previousCopy = previous;
-                        previousCopy[block] = fee;
+                        previousCopy[block] = fee.toString();
                         return previousCopy;
                     });
                 });
@@ -396,7 +394,7 @@ export class BitcoreBlockchain {
                     const previousCopy = p;
                     const add = skipMissing ? fee !== -1 : true;
                     if (add) {
-                        previousCopy[block] = fee;
+                        previousCopy[block] = fee.toString();
                     }
                     return previousCopy;
                 }));
@@ -565,13 +563,13 @@ function estimateSmartTxFee(
     socket: Socket,
     blocks: number,
     conservative: boolean,
-): Promise<number> {
+): Promise<string> {
     const method = 'estimateSmartFee';
     const params = [blocks, conservative];
     return socket.send({ method, params });
 }
 
-function estimateTxFee(socket: Socket, blocks: number): Promise<number> {
+function estimateTxFee(socket: Socket, blocks: number): Promise<string> {
     const method = 'estimateFee';
     const params = [blocks];
     return socket.send({ method, params });

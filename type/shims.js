@@ -5,12 +5,9 @@
 declare module 'whatwg-fetch' {
 }
 
-declare module 'socket.io-client' {
-  declare var exports: any;
-}
-
 declare module 'queue' {
-  declare var exports: Function;
+  declare type Queue = (options: any) => any;
+  declare export default Queue
 }
 
 declare module 'bchaddrjs' {

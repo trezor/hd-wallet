@@ -1,3 +1,4 @@
+import BigNumber from 'bignumber.js';
 import * as utils from '../utils';
 
 // add inputs until we reach or surpass the target value (or deplete)
@@ -5,35 +6,44 @@ import * as utils from '../utils';
 export default function accumulative(utxos, outputs, feeRate, options) {
     const { changeOutputLength, dustThreshold: explicitDustThreshold, inputLength } = options;
 
-    if (!Number.isFinite(utils.uintOrNaN(feeRate))) return {};
+    const feeRateBigInt = utils.bignumberOrNaN(feeRate);
+    if (feeRateBigInt.isNaN() || !feeRateBigInt.isInteger()) return {};
+    const feeRateNumber = feeRateBigInt.toNumber();
     let bytesAccum = utils.transactionBytes([], outputs);
 
-    let inAccum = 0;
+    let inAccum = new BigNumber(0);
     const inputs = [];
     const outAccum = utils.sumOrNaN(outputs);
 
     for (let i = 0; i < utxos.length; ++i) {
         const utxo = utxos[i];
         const utxoBytes = utils.inputBytes(utxo);
-        const utxoFee = feeRate * utxoBytes;
-        const utxoValue = utils.uintOrNaN(utxo.value);
+        const utxoFee = feeRateNumber * utxoBytes;
+        const utxoValue = utils.bignumberOrNaN(utxo.value);
 
         // skip detrimental input
-        if (utxoFee > utxo.value) {
-            if (i === utxos.length - 1) return { fee: feeRate * (bytesAccum + utxoBytes) };
+        if (utxoValue.isNaN()
+            || utxoValue.comparedTo(new BigNumber(utxoFee)) < 0) {
+            if (i === utxos.length - 1) {
+                return {
+                    fee: (feeRateNumber * (bytesAccum + utxoBytes)).toString(),
+                };
+            }
         } else {
             bytesAccum += utxoBytes;
-            inAccum += utxoValue;
+            inAccum = inAccum.plus(utxoValue);
             inputs.push(utxo);
 
-            const fee = feeRate * bytesAccum;
+            const fee = feeRateNumber * bytesAccum;
+            const outAccumWithFee = outAccum.isNaN()
+                ? new BigNumber(0) : outAccum.plus(new BigNumber(fee));
 
             // go again?
-            if (!(inAccum < outAccum + fee)) {
+            if (inAccum.comparedTo(outAccumWithFee) >= 0) {
                 return utils.finalize(
                     inputs,
                     outputs,
-                    feeRate,
+                    feeRateNumber,
                     inputLength,
                     changeOutputLength,
                     explicitDustThreshold,
@@ -42,5 +52,5 @@ export default function accumulative(utxos, outputs, feeRate, options) {
         }
     }
 
-    return { fee: feeRate * bytesAccum };
+    return { fee: (feeRateNumber * bytesAccum).toString() };
 }
