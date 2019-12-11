@@ -1,6 +1,6 @@
 {
   "name": "hd-wallet",
-  "version": "8.2.3",
+  "version": "9.0.0",
   "description": "Data structures and algorithms for Bitcoin HD wallet.",
   "main": "lib/index.js",
   "scripts": {
@@ -50,7 +50,7 @@
   },
   "browserslist": "> 5%, IE > 9, last 10 versions",
   "dependencies": {
-    "@trezor/utxo-lib": "^0.0.2",
+    "@trezor/utxo-lib": "0.1.0",
     "bchaddrjs": "^0.3.2",
     "bignumber.js": "^9.0.0",
     "queue": "^6.0.1",
