@@ -834,10 +834,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@trezor/utxo-lib@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@trezor/utxo-lib/-/utxo-lib-0.1.0.tgz#f7a60d514ab75bef2f2206200cf0317d2d8523b2"
-  integrity sha512-jkqFRKL++xTga3xUgu5pWw1ArzTfraK0unXuj31V9g6wu+MKPbvcXW1+tMOVh+WNZZ3QUSGSQNNflSyh+qD0Vw==
+"@trezor/utxo-lib@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@trezor/utxo-lib/-/utxo-lib-0.1.1.tgz#63cb4b3accc90352a42a1c866fce8bfbb1c94b26"
+  integrity sha512-Wonj9ldKCeoajCV6lSE6+hJ2hdPxmVaysWRO9GxhnKyiOdRhiOIQcdKOiXYqpcxwkIbbL9eLGDg73tfn3MUa6w==
   dependencies:
     bech32 "0.0.3"
     bigi "^1.4.0"
