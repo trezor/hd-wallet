@@ -12,11 +12,6 @@ function filterCoinbase(utxos, minConfCoinbase) {
 
 // split utxos between each output, ignores outputs with .value defined
 export default function split(utxosOrig, outputs, feeRate, options) {
-    const {
-        inputLength,
-        changeOutputLength,
-        dustThreshold: explicitDustThreshold,
-    } = options;
     const coinbase = options.coinbase || 100;
 
     const feeRateBigInt = utils.bignumberOrNaN(feeRate);
@@ -42,7 +37,7 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     );
 
     if (remaining.toString() === '0' && unspecified === 0) {
-        return utils.finalize(utxos, outputs, feeRateNumber, inputLength, changeOutputLength);
+        return utils.finalize(utxos, outputs, feeRateNumber, options);
     }
 
     // this is the same as "unspecified"
@@ -50,9 +45,9 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     const splitValue = remaining.div(new BigNumber(unspecified));
     const dustThreshold = utils.dustThreshold(
         feeRateNumber,
-        inputLength,
-        changeOutputLength,
-        explicitDustThreshold,
+        options.inputLength,
+        options.changeOutputLength,
+        options.dustThreshold,
     );
 
     // ensure every output is either user defined, or over the threshold
@@ -74,8 +69,6 @@ export default function split(utxosOrig, outputs, feeRate, options) {
         utxos,
         outputsSplit,
         feeRateNumber,
-        inputLength,
-        changeOutputLength,
-        explicitDustThreshold,
+        options,
     );
 }

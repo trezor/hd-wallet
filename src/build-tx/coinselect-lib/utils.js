@@ -82,10 +82,13 @@ export function finalize(
     inputs,
     outputsO,
     feeRate,
-    inputLength,
-    changeOutputLength,
-    explicitDustThreshold,
+    options,
 ) {
+    const {
+        inputLength,
+        changeOutputLength,
+        dustThreshold: explicitDustThreshold,
+    } = options;
     let outputs = outputsO;
     const bytesAccum = transactionBytes(inputs, outputs);
     const blankOutputBytes = outputBytes({ script: { length: changeOutputLength } });

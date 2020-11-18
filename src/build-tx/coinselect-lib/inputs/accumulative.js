@@ -4,8 +4,6 @@ import * as utils from '../utils';
 // add inputs until we reach or surpass the target value (or deplete)
 // worst-case: O(n)
 export default function accumulative(utxos, outputs, feeRate, options) {
-    const { changeOutputLength, dustThreshold: explicitDustThreshold, inputLength } = options;
-
     const feeRateBigInt = utils.bignumberOrNaN(feeRate);
     if (feeRateBigInt.isNaN() || !feeRateBigInt.isInteger()) return {};
     const feeRateNumber = feeRateBigInt.toNumber();
@@ -44,9 +42,7 @@ export default function accumulative(utxos, outputs, feeRate, options) {
                     inputs,
                     outputs,
                     feeRateNumber,
-                    inputLength,
-                    changeOutputLength,
-                    explicitDustThreshold,
+                    options,
                 );
             }
         }

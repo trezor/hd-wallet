@@ -24,7 +24,7 @@ function calculateEffectiveValues(utxos, feeRate) {
 
 export default function branchAndBound(factor) {
     return (utxos, outputs, feeRate, options) => {
-        const { inputLength, changeOutputLength, dustThreshold: explicitDustThreshold } = options;
+        const { inputLength, changeOutputLength } = options;
 
         const feeRateBigInt = utils.bignumberOrNaN(feeRate);
         if (feeRateBigInt.isNaN() || !feeRateBigInt.isInteger()) return {};
@@ -78,9 +78,7 @@ export default function branchAndBound(factor) {
                 inputs,
                 outputs,
                 feeRateNumber,
-                inputLength,
-                changeOutputLength,
-                explicitDustThreshold,
+                options,
             );
         }
 
