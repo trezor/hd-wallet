@@ -3,7 +3,7 @@
 import assert from 'assert';
 
 import coinAccum from '../../src/build-tx/coinselect-lib/index';
-import fixtures from './fixtures/index';
+import fixtures from './fixtures/index.json';
 import * as utils from './_utils';
 
 describe('coinselect index', () => {
