@@ -9,19 +9,27 @@ import * as utils from './_utils';
 describe('coinselect bnb', () => {
     fixtures.forEach((f) => {
         it(f.description, () => {
-            const { inputLength, outputLength, dustThreshold } = f;
-            const inputs = utils.expand(f.inputs, true, inputLength);
-            const outputs = utils.expand(f.outputs, false, outputLength);
+            const inputs = utils.expand(f.inputs, true, f.inputLength);
+            const outputs = utils.expand(f.outputs, false, f.outputLength);
             const expected = utils.addScriptLengthToExpected(
-                f.expected, inputLength, outputLength, dustThreshold,
+                f.expected, f.inputLength, f.outputLength, f.dustThreshold,
             );
+            const options = {
+                inputLength: f.inputLength,
+                changeOutputLength: f.outputLength,
+                dustThreshold: f.dustThreshold,
+                baseFee: f.baseFee,
+                floorBaseFee: f.floorBaseFee,
+                dustOutputFee: f.dustOutputFee,
+            };
 
             const actual = coinAccum(
                 f.factor,
             )(
                 inputs,
                 outputs,
-                f.feeRate, { inputLength, changeOutputLength: outputLength, dustThreshold },
+                f.feeRate,
+                options,
             );
 
             assert.deepStrictEqual(actual, expected);
@@ -32,7 +40,7 @@ describe('coinselect bnb', () => {
                     actual.inputs,
                     actual.outputs,
                     f.feeRate,
-                    { inputLength, changeOutputLength: outputLength, dustThreshold },
+                    options,
                 );
                 assert.deepStrictEqual(feedback, expected);
             }
