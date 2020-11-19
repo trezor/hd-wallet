@@ -23,8 +23,9 @@ export default function accumulative(utxos, outputs, feeRate, options) {
         if (utxoValue.isNaN()
             || utxoValue.comparedTo(new BigNumber(utxoFee)) < 0) {
             if (i === utxos.length - 1) {
+                const fee = utils.getFee(feeRateNumber, bytesAccum + utxoBytes, options, outputs);
                 return {
-                    fee: (feeRateNumber * (bytesAccum + utxoBytes)).toString(),
+                    fee: fee.toString(),
                 };
             }
         } else {
@@ -32,9 +33,9 @@ export default function accumulative(utxos, outputs, feeRate, options) {
             inAccum = inAccum.plus(utxoValue);
             inputs.push(utxo);
 
-            const fee = feeRateNumber * bytesAccum;
+            const fee = utils.getFee(feeRateNumber, bytesAccum, options, outputs);
             const outAccumWithFee = outAccum.isNaN()
-                ? new BigNumber(0) : outAccum.plus(new BigNumber(fee));
+                ? new BigNumber(0) : outAccum.plus(fee);
 
             // go again?
             if (inAccum.comparedTo(outAccumWithFee) >= 0) {
@@ -48,5 +49,6 @@ export default function accumulative(utxos, outputs, feeRate, options) {
         }
     }
 
-    return { fee: (feeRateNumber * bytesAccum).toString() };
+    const fee = utils.getFee(feeRateNumber, bytesAccum, options, outputs);
+    return { fee: fee.toString() };
 }

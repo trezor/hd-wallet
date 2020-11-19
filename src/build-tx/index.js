@@ -23,6 +23,9 @@ export function buildTx(
         changeId,
         changeAddress,
         dustThreshold,
+        baseFee,
+        floorBaseFee,
+        dustOutputFee,
     }: request.Request,
 ): result.Result {
     if (outputs.length === 0) {
@@ -52,6 +55,9 @@ export function buildTx(
             countMax.id,
             dustThreshold,
             network,
+            baseFee,
+            floorBaseFee,
+            dustOutputFee,
         );
     } catch (e) {
         return { type: 'error', error: e.message };

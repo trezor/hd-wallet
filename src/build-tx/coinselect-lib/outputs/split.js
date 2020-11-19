@@ -21,7 +21,7 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     const utxos = filterCoinbase(utxosOrig, coinbase);
 
     const bytesAccum = utils.transactionBytes(utxos, outputs);
-    const fee = feeRateNumber * bytesAccum;
+    const fee = utils.getFee(feeRateNumber, bytesAccum, options, outputs);
     const FEE_RESPONSE = { fee: fee.toString() };
     if (outputs.length === 0) return FEE_RESPONSE;
 
@@ -51,8 +51,7 @@ export default function split(utxosOrig, outputs, feeRate, options) {
     );
 
     // ensure every output is either user defined, or over the threshold
-    if (!outputs.every(x => x.value !== undefined
-        || (splitValue.comparedTo(new BigNumber(dustThreshold)) > 0))) return FEE_RESPONSE;
+    if (unspecified && splitValue.lte(dustThreshold)) return FEE_RESPONSE;
 
     // assign splitValue to outputs not user defined
     const outputsSplit = outputs.map((x) => {

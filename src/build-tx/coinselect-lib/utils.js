@@ -78,6 +78,32 @@ export function sumOrNaN(range, forgiving = false): BigNumber {
     }, new BigNumber(0));
 }
 
+// DOGE fee policy https://github.com/dogecoin/dogecoin/issues/1650#issuecomment-722229742
+// 1 DOGE base fee + 1 DOGE per every started kb + 1 DOGE for every output below 1 DOGE (dust limit)
+export function getFee(feeRate, bytes = 0, options = {}, outputs = []) {
+    const defaultFee = feeRate * bytes;
+    let baseFee = options.baseFee || 0;
+    if (baseFee && bytes) {
+        if (options.floorBaseFee) {
+            // increase baseFee for every started kb
+            baseFee *= parseInt((baseFee + defaultFee) / baseFee, 10);
+        } else {
+            // simple increase baseFee
+            baseFee += defaultFee;
+        }
+    }
+    if (options.dustOutputFee) {
+        // find all outputs below dust limit
+        for (let i = 0; i < outputs.length; i++) {
+            if (outputs[i].value && outputs[i].value - options.dustThreshold <= 0) {
+                // increase for every output below dustThreshold
+                baseFee += options.dustOutputFee;
+            }
+        }
+    }
+    return baseFee || defaultFee;
+}
+
 export function finalize(
     inputs,
     outputsO,
@@ -92,12 +118,12 @@ export function finalize(
     let outputs = outputsO;
     const bytesAccum = transactionBytes(inputs, outputs);
     const blankOutputBytes = outputBytes({ script: { length: changeOutputLength } });
-    const feeAfterExtraOutput = new BigNumber(feeRate * (bytesAccum + blankOutputBytes));
+    const feeAfterExtraOutput = getFee(feeRate, bytesAccum + blankOutputBytes, options, outputs);
     const sumInputs = sumOrNaN(inputs);
     const sumOutputs = sumOrNaN(outputs);
     const sumIsNotNaN = (!sumInputs.isNaN() && !sumOutputs.isNaN());
     const remainderAfterExtraOutput = sumIsNotNaN
-        ? sumOrNaN(inputs).minus(sumOrNaN(outputs).plus(feeAfterExtraOutput)) : new BigNumber(0);
+        ? sumInputs.minus(sumOutputs.plus(feeAfterExtraOutput)) : new BigNumber(0);
     const dust = dustThreshold(
         feeRate,
         inputLength,
@@ -115,7 +141,7 @@ export function finalize(
         });
     }
 
-    if (!sumIsNotNaN) return { fee: (feeRate * bytesAccum).toString() };
+    if (!sumIsNotNaN) return { fee: getFee(feeRate, bytesAccum, options, outputs).toString() };
     const fee = sumOrNaN(inputs).minus(sumOrNaN(outputs)).toString();
     return {
         inputs,
