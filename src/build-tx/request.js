@@ -41,6 +41,9 @@ export type Request = {
     changeId: number,
     changeAddress: string,
     dustThreshold: number, // explicit dust threshold, in satoshis
+    baseFee?: number; // DOGE base fee
+    floorBaseFee?: boolean; // DOGE floor base fee to the nearest integer
+    dustOutputFee?: number; // DOGE fee for every output below dust limit
 };
 
 export function splitByCompleteness(

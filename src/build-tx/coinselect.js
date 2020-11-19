@@ -80,6 +80,9 @@ export function coinselect(
     countMaxId: number,
     dustThreshold: number,
     network: BitcoinJsNetwork,
+    baseFee?: number,
+    floorBaseFee?: boolean,
+    dustOutputFee?: number,
 ): Result {
     const inputs = convertInputs(utxos, height, segwit);
     const outputs = convertOutputs(rOutputs, network);
@@ -87,6 +90,9 @@ export function coinselect(
         inputLength: segwit ? SEGWIT_INPUT_SCRIPT_LENGTH : INPUT_SCRIPT_LENGTH,
         changeOutputLength: segwit ? P2SH_OUTPUT_SCRIPT_LENGTH : P2PKH_OUTPUT_SCRIPT_LENGTH,
         dustThreshold,
+        baseFee,
+        floorBaseFee,
+        dustOutputFee,
     };
 
     const algorithm = countMax ? bitcoinJsSplit : bitcoinJsCoinselect;
