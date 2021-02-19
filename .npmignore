@@ -41,3 +41,7 @@ yarn.lock
 logs
 *.log
 .yarnclean
+
+# NixOS
+shell.nix
+.bash_history_nix
