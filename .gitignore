@@ -26,3 +26,6 @@ lib
 *.swp
 
 coverage
+
+# NixOS project history
+.bash_history_nix
