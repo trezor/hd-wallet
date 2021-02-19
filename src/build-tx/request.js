@@ -44,6 +44,7 @@ export type Request = {
     baseFee?: number; // DOGE base fee
     floorBaseFee?: boolean; // DOGE floor base fee to the nearest integer
     dustOutputFee?: number; // DOGE fee for every output below dust limit
+    skipUtxoSelection?: boolean; // use custom utxo selection, without algorithm
 };
 
 export function splitByCompleteness(

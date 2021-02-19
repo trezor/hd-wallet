@@ -1572,5 +1572,205 @@
       },
       "type": "final"
     }
+  },
+  {
+    "description": "skipUtxoSelection: tx with multiple inputs and change",
+    "request": {
+      "basePath": [44, 1, 0],
+      "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
+      "changeId": 1,
+      "dustThreshold": 546,
+      "feeRate": "10",
+      "height": 100,
+      "inputAmounts": true,
+      "outputs": [
+        {
+          "address": "1BitcoinEaterAddressDontSendf59kuE",
+          "amount": "100000",
+          "type": "complete"
+        }
+      ],
+      "segwit": false,
+      "skipUtxoSelection": true,
+      "utxos": [
+        {
+          "addressPath": [1, 0],
+          "fee": "0",
+          "height": 100,
+          "index": 0,
+          "transactionHash": "b4dc0ffeee",
+          "tsize": 0,
+          "value": "105291",
+          "vsize": 0
+        },
+        {
+          "addressPath": [0, 1],
+          "fee": "0",
+          "height": 100,
+          "index": 0,
+          "transactionHash": "c4dc0ffeee",
+          "tsize": 0,
+          "value": "202001",
+          "vsize": 0
+        },
+        {
+          "addressPath": [0, 2],
+          "fee": "0",
+          "height": 100,
+          "index": 0,
+          "transactionHash": "d4dc0ffeee",
+          "tsize": 0,
+          "value": "200000",
+          "vsize": 0
+        }
+      ]
+    },
+    "result": {
+      "bytes": 529,
+      "fee": "5290",
+      "feePerByte": "10",
+      "max": -1,
+      "totalSpent": "105290",
+      "transaction": {
+        "PERM_outputs": {
+          "permutation": [0, 1],
+          "sorted": [
+            {
+              "address": "1BitcoinEaterAddressDontSendf59kuE",
+              "value": "100000"
+            },
+            {
+              "value": "402002",
+              "path": [44, 1, 0, 1, 1],
+              "segwit": false
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "REV_hash": "b4dc0ffeee",
+            "index": 0,
+            "amount": "105291",
+            "path": [44, 1, 0, 1, 0],
+            "segwit": false
+          },
+          {
+            "REV_hash": "c4dc0ffeee",
+            "index": 0,
+            "amount": "202001",
+            "path": [44, 1, 0, 0, 1],
+            "segwit": false
+          },
+          {
+            "REV_hash": "d4dc0ffeee",
+            "index": 0,
+            "amount": "200000",
+            "path": [44, 1, 0, 0, 2],
+            "segwit": false
+          }
+        ]
+      },
+      "type": "final"
+    }
+  },
+  {
+    "description": "skipUtxoSelection: tx with multiple inputs and change (segwit)",
+    "request": {
+      "basePath": [49, 1, 0],
+      "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
+      "changeId": 1,
+      "dustThreshold": 546,
+      "feeRate": "10",
+      "height": 100,
+      "inputAmounts": true,
+      "outputs": [
+        {
+          "address": "1BitcoinEaterAddressDontSendf59kuE",
+          "amount": "100000",
+          "type": "complete"
+        }
+      ],
+      "segwit": true,
+      "skipUtxoSelection": true,
+      "utxos": [
+        {
+          "addressPath": [1, 0],
+          "fee": "0",
+          "height": 100,
+          "index": 0,
+          "transactionHash": "b4dc0ffeee",
+          "tsize": 0,
+          "value": "103531",
+          "vsize": 0
+        },
+        {
+          "addressPath": [0, 1],
+          "fee": "0",
+          "height": 100,
+          "index": 0,
+          "transactionHash": "c4dc0ffeee",
+          "tsize": 0,
+          "value": "202001",
+          "vsize": 0
+        },
+        {
+          "addressPath": [0, 2],
+          "fee": "0",
+          "height": 100,
+          "index": 0,
+          "transactionHash": "d4dc0ffeee",
+          "tsize": 0,
+          "value": "200000",
+          "vsize": 0
+        }
+      ]
+    },
+    "result": {
+      "bytes": 353,
+      "fee": "3530",
+      "feePerByte": "10",
+      "max": -1,
+      "totalSpent": "103530",
+      "transaction": {
+        "PERM_outputs": {
+          "permutation": [0, 1],
+          "sorted": [
+            {
+              "address": "1BitcoinEaterAddressDontSendf59kuE",
+              "value": "100000"
+            },
+            {
+              "value": "402002",
+              "path": [49, 1, 0, 1, 1],
+              "segwit": true
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "REV_hash": "b4dc0ffeee",
+            "index": 0,
+            "amount": "103531",
+            "path": [49, 1, 0, 1, 0],
+            "segwit": true
+          },
+          {
+            "REV_hash": "c4dc0ffeee",
+            "index": 0,
+            "amount": "202001",
+            "path": [49, 1, 0, 0, 1],
+            "segwit": true
+          },
+          {
+            "REV_hash": "d4dc0ffeee",
+            "index": 0,
+            "amount": "200000",
+            "path": [49, 1, 0, 0, 2],
+            "segwit": true
+          }
+        ]
+      },
+      "type": "final"
+    }
   }
 ]

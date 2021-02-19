@@ -13,7 +13,7 @@ import {
 import BigNumber from 'bignumber.js';
 import bitcoinJsSplit from './coinselect-lib/outputs/split';
 import bitcoinJsCoinselect from './coinselect-lib';
-import { transactionBytes } from './coinselect-lib/utils';
+import { transactionBytes, finalize } from './coinselect-lib/utils';
 
 
 import type { UtxoInfo } from '../discovery';
@@ -83,6 +83,7 @@ export function coinselect(
     baseFee?: number,
     floorBaseFee?: boolean,
     dustOutputFee?: number,
+    skipUtxoSelection?: boolean,
 ): Result {
     const inputs = convertInputs(utxos, height, segwit);
     const outputs = convertOutputs(rOutputs, network);
@@ -96,7 +97,10 @@ export function coinselect(
     };
 
     const algorithm = countMax ? bitcoinJsSplit : bitcoinJsCoinselect;
-    const result = algorithm(inputs, outputs, feeRate, options);
+    // finalize using requested custom inputs or use coin select algorith
+    const result = skipUtxoSelection != null && !countMax
+        ? finalize(inputs, outputs, parseInt(feeRate, 10), options)
+        : algorithm(inputs, outputs, feeRate, options);
     if (!result.inputs) {
         return {
             type: 'false',

@@ -26,6 +26,7 @@ export function buildTx(
         baseFee,
         floorBaseFee,
         dustOutputFee,
+        skipUtxoSelection,
     }: request.Request,
 ): result.Result {
     if (outputs.length === 0) {
@@ -58,6 +59,7 @@ export function buildTx(
             baseFee,
             floorBaseFee,
             dustOutputFee,
+            skipUtxoSelection,
         );
     } catch (e) {
         return { type: 'error', error: e.message };
