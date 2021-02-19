@@ -50,8 +50,8 @@
   },
   "browserslist": "> 5%, IE > 9, last 10 versions",
   "dependencies": {
-    "@trezor/utxo-lib": "0.1.1",
-    "bchaddrjs": "^0.3.2",
+    "@trezor/utxo-lib": "0.1.2",
+    "bchaddrjs": "^0.5.2",
     "bignumber.js": "^9.0.1",
     "queue": "^6.0.1",
     "socket.io-client": "^2.2.0"

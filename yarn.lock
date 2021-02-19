@@ -1077,10 +1077,10 @@
   dependencies:
     chokidar "2.1.8"
 
-"@trezor/utxo-lib@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@trezor/utxo-lib/-/utxo-lib-0.1.1.tgz#63cb4b3accc90352a42a1c866fce8bfbb1c94b26"
-  integrity sha512-Wonj9ldKCeoajCV6lSE6+hJ2hdPxmVaysWRO9GxhnKyiOdRhiOIQcdKOiXYqpcxwkIbbL9eLGDg73tfn3MUa6w==
+"@trezor/utxo-lib@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@trezor/utxo-lib/-/utxo-lib-0.1.2.tgz#19319a424b0d0c648b0df456f1849eb08697fb44"
+  integrity sha512-ONAsg8LAyZY9g6X/qgqloUHwWsqtRmrx2Wt3wkz+7LO2VdE69HktAHWUjJLK9drskNwly3Fp0GKK6ZbbtX+Ghw==
   dependencies:
     bech32 "0.0.3"
     bigi "^1.4.0"
@@ -1092,6 +1092,7 @@
     create-hmac "^1.1.3"
     debug "~3.1.0"
     ecurve "^1.0.0"
+    int64-buffer "0.99.1007"
     merkle-lib "^2.0.10"
     pushdata-bitcoin "^1.0.1"
     randombytes "^2.0.1"
@@ -1707,6 +1708,11 @@ base64-js@^1.0.2:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
   integrity sha512-ccav/yGvoa80BQDljCxsmmQ3Xvx60/UpBIij5QN21W3wBi/hhIC9OoO+KLpu9IJTS9j4DRVJ3aDDF9cMSoa2lw==
 
+base64-js@^1.3.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
+  integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
+
 base64id@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/base64id/-/base64id-1.0.0.tgz#47688cb99bb6804f0e06d3e763b1c32e57d8e6b6"
@@ -1725,13 +1731,15 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
-bchaddrjs@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/bchaddrjs/-/bchaddrjs-0.3.2.tgz#62d4915f8f69012b7a16ae9fd0c99eca3a8ccf91"
-  integrity sha512-jpoq2GX6PphcCpuvvrQG4oQmEzn4nGQSm5dT208W72r9GDdbmNPi0hG9TY/dFF3r9sNtdl0qKwNsh8dNL3Q62g==
+bchaddrjs@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/bchaddrjs/-/bchaddrjs-0.5.2.tgz#1f52b5077329774e7c82d4882964628106bb11a0"
+  integrity sha512-OO7gIn3m7ea4FVx4cT8gdlWQR2+++EquhdpWQJH9BQjK63tJJ6ngB3QMZDO6DiBoXiIGUsTPHjlrHVxPGcGxLQ==
   dependencies:
-    bs58check "^2.1.2"
-    cashaddrjs "^0.3.3"
+    bs58check "2.1.2"
+    buffer "^6.0.3"
+    cashaddrjs "0.4.4"
+    stream-browserify "^3.0.0"
 
 bcrypt-pbkdf@^1.0.0:
   version "1.0.2"
@@ -1802,9 +1810,9 @@ bitcoin-ops@^1.3.0:
   dependencies:
     nanoassert "^1.0.0"
 
-"blake2b@https://github.com/BitGo/blake2b#6268e6dd678661e0acc4359e9171b97eb1ebf8ac":
+"blake2b@git+https://github.com/BitGo/blake2b.git#6268e6dd678661e0acc4359e9171b97eb1ebf8ac":
   version "2.1.3"
-  resolved "https://github.com/BitGo/blake2b#6268e6dd678661e0acc4359e9171b97eb1ebf8ac"
+  resolved "git+https://github.com/BitGo/blake2b.git#6268e6dd678661e0acc4359e9171b97eb1ebf8ac"
   dependencies:
     blake2b-wasm "https://github.com/BitGo/blake2b-wasm#193cdb71656c1a6c7f89b05d0327bb9b758d071b"
     nanoassert "^1.0.0"
@@ -2187,7 +2195,7 @@ bs58@^4.0.0:
   dependencies:
     base-x "^3.0.2"
 
-bs58check@<3.0.0, bs58check@^2.0.0, bs58check@^2.1.2:
+bs58check@2.1.2, bs58check@<3.0.0, bs58check@^2.0.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/bs58check/-/bs58check-2.1.2.tgz#53b018291228d82a5aa08e7d796fdafda54aebfc"
   integrity sha512-0TS1jicxdU09dwJMNZtVAfzPi6Q6QeN0pM1Fkzrjn+XYHvzMKPU3pHVpva+769iNVSfIYWf7LJ6WR+BuuMf8cA==
@@ -2238,6 +2246,14 @@ buffer@^5.0.2, buffer@~5.2.1:
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
+
+buffer@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-6.0.3.tgz#2ace578459cc8fbe2a70aaa8f52ee63b6a74c6c6"
+  integrity sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==
+  dependencies:
+    base64-js "^1.3.1"
+    ieee754 "^1.2.1"
 
 builtin-status-codes@^3.0.0:
   version "3.0.0"
@@ -2334,10 +2350,10 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
-cashaddrjs@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/cashaddrjs/-/cashaddrjs-0.3.3.tgz#e4368892034422468ec2a1404ab6dba0a3c96728"
-  integrity sha512-k/DbomBJKd0Myb4qjKKRhzs4ab3lXClOJTEQqToCc3g3WmoQ5fvuc8VX27B6x+vG7ODwxYDsRoepE3iYm7emKg==
+cashaddrjs@0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/cashaddrjs/-/cashaddrjs-0.4.4.tgz#169f1ae620d325db77700273d972282adeeee331"
+  integrity sha512-xZkuWdNOh0uq/mxJIng6vYWfTowZLd9F4GMAlp2DwFHlcCqCm91NtuAc47RuV4L7r4PYcY5p6Cr2OKNb4hnkWA==
   dependencies:
     big-integer "1.6.36"
 
@@ -4436,6 +4452,11 @@ ieee754@^1.1.4:
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.13.tgz#ec168558e95aa181fd87d37f55c32bbcb6708b84"
   integrity sha512-4vf7I2LYV/HaWerSo3XmlMkp5eZ83i+/CDluXi/IGTs/O1sejBNhTtnxzmRZfvOUqj7lZjqHkeTvpgSFDlWZTg==
 
+ieee754@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
+  integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
+
 ignore-walk@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/ignore-walk/-/ignore-walk-3.0.1.tgz#a83e62e7d272ac0e3b551aaa82831a19b69f82f8"
@@ -4497,7 +4518,7 @@ inherits@2.0.1:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.1.tgz#b17d08d326b4423e568eff719f91b0b1cbdf69f1"
   integrity sha1-sX0I0ya0Qj5Wjv9xn5GwscvfafE=
 
-inherits@^2.0.4:
+inherits@^2.0.4, inherits@~2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -4548,6 +4569,11 @@ insert-module-globals@^7.0.0:
     through2 "^2.0.0"
     undeclared-identifiers "^1.1.2"
     xtend "^4.0.0"
+
+int64-buffer@0.99.1007:
+  version "0.99.1007"
+  resolved "https://registry.yarnpkg.com/int64-buffer/-/int64-buffer-0.99.1007.tgz#211ea089a2fdb960070a2e77cd6d17dc456a5220"
+  integrity sha512-XDBEu44oSTqlvCSiOZ/0FoUkpWu/vwjJLGSKDabNISPQNZ5wub1FodGHBljRsrR0IXRPq7SslshZYMuA55CgTQ==
 
 invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
@@ -7184,7 +7210,7 @@ readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.6, readable
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
-readable-stream@^3.6.0:
+readable-stream@^3.5.0, readable-stream@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.6.0.tgz#337bbda3adc0706bd3e024426a286d4b4b2c9198"
   integrity sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==
@@ -7996,6 +8022,14 @@ stream-browserify@^2.0.0:
   dependencies:
     inherits "~2.0.1"
     readable-stream "^2.0.2"
+
+stream-browserify@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-3.0.0.tgz#22b0a2850cdf6503e73085da1fc7b7d0c2122f2f"
+  integrity sha512-H73RAHsVBapbim0tU2JwwOiXUj+fikfiaoYAKHF3VJfA0pe2BCzkhAHBlLG6REzE+2WNZcxOXjK7lkso+9euLA==
+  dependencies:
+    inherits "~2.0.4"
+    readable-stream "^3.5.0"
 
 stream-combiner2@^1.1.1:
   version "1.1.1"
