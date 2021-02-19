@@ -1,10 +1,13 @@
 # Dev directories
 src
 .babelrc
-.eslintc
+.eslintrc
+.eslintignore
 .gitignore
 .gitmodules
 .travis.yml
+jest.config.js
+karma.conf.js
 karma.conf.js-bitcore
 karma.conf.js-buildtx
 karma.conf.js-discovery
@@ -14,6 +17,8 @@ example
 test
 test_helpers
 type
+.nyc_output
+coverage
 
 # Example directories
 examples
