@@ -5,7 +5,6 @@ src
 .eslintignore
 .gitignore
 .gitmodules
-.travis.yml
 jest.config.js
 karma.conf.js
 karma.conf.js-bitcore
@@ -19,6 +18,9 @@ test_helpers
 type
 .nyc_output
 coverage
+
+# CI
+.github
 
 # Example directories
 examples

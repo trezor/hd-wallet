@@ -1,6 +1,7 @@
 # High-performance Bitcoin HD Wallet
 
-[![Build Status](https://travis-ci.org/trezor/hd-wallet.svg?branch=master)](https://travis-ci.org/trezor/hd-wallet) [![gitter](https://badges.gitter.im/trezor/community.svg)](https://gitter.im/trezor/community)
+[![Build Status](https://github.com/trezor/hd-wallet/actions/workflows/tests.yml/badge.svg)](https://github.com/trezor/hd-wallet/actions/workflows/tests.yml)
+[![NPM](https://img.shields.io/npm/v/hd-wallet.svg)](https://www.npmjs.org/package/hd-wallet)
 
 For now, mostly a PoC.  Uses
 [bitcore-node](https://github.com/bitpay/bitcore-node)
