@@ -1,5 +1,84 @@
 [
   {
+    "description": "1 required input, 1 output, no change",
+    "feeRate": "10",
+    "inputs": [
+      {
+        "value": "102001",
+        "required": true
+      },
+      {
+        "value": "202001"
+      }
+    ],
+    "outputs": [
+      "100000"
+    ],
+    "expected": {
+      "inputs": [
+        {
+          "i": 0,
+          "value": "102001",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "value": "100000"
+        }
+      ],
+      "fee": "2001"
+    },
+    "inputLength": 107,
+    "outputLength": 25,
+    "dustThreshold": 546
+  },
+  {
+    "description": "with baseFee: 1 required input, 1 optional input, 1 output, 1 change",
+    "feeRate": "10",
+    "baseFee": 2001,
+    "inputs": [
+      {
+        "value": "102001",
+        "required": true
+      },
+      {
+        "value": "10000"
+      },
+      {
+        "value": "1000000"
+      }
+    ],
+    "outputs": [
+      "100000"
+    ],
+    "expected": {
+      "inputs": [
+        {
+          "i": 0,
+          "value": "102001",
+          "required": true
+        },
+        {
+          "i": 1,
+          "value": "10000"
+        }
+      ],
+      "outputs": [
+        {
+          "value": "100000"
+        },
+        {
+          "value": "6250"
+        }
+      ],
+      "fee": "5751"
+    },
+    "inputLength": 107,
+    "outputLength": 25,
+    "dustThreshold": 546
+  },
+  {
     "description": "1 output, no change",
     "feeRate": "10",
     "inputs": [

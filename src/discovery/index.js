@@ -34,6 +34,7 @@ export type UtxoInfo = {
     tsize: number, // total size - in case of segwit, total, with segwit data
     vsize: number, // virtual size - segwit concept - same as size in non-segwit
     own: boolean, // is the ORIGIN me (the same account)
+    required?: boolean, // must be included into transaction
 }
 
 // Some info about output
