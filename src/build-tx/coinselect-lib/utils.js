@@ -118,12 +118,18 @@ export function finalize(
     let outputs = outputsO;
     const bytesAccum = transactionBytes(inputs, outputs);
     const blankOutputBytes = outputBytes({ script: { length: changeOutputLength } });
+    const fee = getFee(feeRate, bytesAccum, options, outputs);
     const feeAfterExtraOutput = getFee(feeRate, bytesAccum + blankOutputBytes, options, outputs);
     const sumInputs = sumOrNaN(inputs);
     const sumOutputs = sumOrNaN(outputs);
-    const sumIsNotNaN = (!sumInputs.isNaN() && !sumOutputs.isNaN());
-    const remainderAfterExtraOutput = sumIsNotNaN
-        ? sumInputs.minus(sumOutputs.plus(feeAfterExtraOutput)) : new BigNumber(0);
+    // if sum inputs/outputs is NaN
+    // or `fee` is greater than sum of inputs reduced by sum of outputs (use case: baseFee)
+    // no further calculation required (not enough funds)
+    if (sumInputs.isNaN() || sumOutputs.isNaN() || sumInputs.minus(sumOutputs).lt(fee)) {
+        return { fee: fee.toString() };
+    }
+
+    const remainderAfterExtraOutput = sumInputs.minus(sumOutputs.plus(feeAfterExtraOutput));
     const dust = dustThreshold(
         feeRate,
         inputLength,
@@ -132,7 +138,7 @@ export function finalize(
     );
 
     // is it worth a change output?
-    if (remainderAfterExtraOutput.comparedTo(new BigNumber(dust)) > 0) {
+    if (remainderAfterExtraOutput.gt(dust)) {
         outputs = outputs.concat({
             value: remainderAfterExtraOutput.toString(),
             script: {
@@ -141,12 +147,10 @@ export function finalize(
         });
     }
 
-    if (!sumIsNotNaN) return { fee: getFee(feeRate, bytesAccum, options, outputs).toString() };
-    const fee = sumOrNaN(inputs).minus(sumOrNaN(outputs)).toString();
     return {
         inputs,
         outputs,
-        fee,
+        fee: sumInputs.minus(sumOrNaN(outputs)).toString(),
     };
 }
 

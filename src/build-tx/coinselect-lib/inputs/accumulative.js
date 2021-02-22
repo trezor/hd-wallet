@@ -3,7 +3,7 @@ import * as utils from '../utils';
 
 // add inputs until we reach or surpass the target value (or deplete)
 // worst-case: O(n)
-export default function accumulative(utxos, outputs, feeRate, options) {
+export default function accumulative(utxos0, outputs, feeRate, options) {
     const feeRateBigInt = utils.bignumberOrNaN(feeRate);
     if (feeRateBigInt.isNaN() || !feeRateBigInt.isInteger()) return {};
     const feeRateNumber = feeRateBigInt.toNumber();
@@ -13,6 +13,36 @@ export default function accumulative(utxos, outputs, feeRate, options) {
     const inputs = [];
     const outAccum = utils.sumOrNaN(outputs);
 
+    // split utxos into required and the rest
+    const requiredUtxos = [];
+    const utxos = [];
+    utxos0.forEach((u) => {
+        if (u.required) {
+            requiredUtxos.push(u);
+            const utxoBytes = utils.inputBytes(u);
+            const utxoValue = utils.bignumberOrNaN(u.value);
+            bytesAccum += utxoBytes;
+            inAccum = inAccum.plus(utxoValue);
+            inputs.push(u);
+        } else {
+            utxos.push(u);
+        }
+    });
+
+    // check if required utxo is enough
+    if (requiredUtxos.length > 0) {
+        const requiredIsEnough = utils.finalize(
+            requiredUtxos,
+            outputs,
+            feeRateNumber,
+            options,
+        );
+        if (requiredIsEnough.inputs) {
+            return requiredIsEnough;
+        }
+    }
+
+    // continue with the rest
     for (let i = 0; i < utxos.length; ++i) {
         const utxo = utxos[i];
         const utxoBytes = utils.inputBytes(utxo);
