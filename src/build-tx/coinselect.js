@@ -150,6 +150,7 @@ function convertInputs(
         confirmations: input.height == null
             ? 0
             : (1 + height - input.height),
+        required: input.required,
     }));
 }
 
