@@ -1,6 +1,6 @@
 function filterCoinbase(utxos, minConfCoinbase) {
     return utxos.filter((utxo) => {
-        if (utxo.coinbase) {
+        if (utxo.coinbase && !utxo.required) {
             return utxo.confirmations >= minConfCoinbase;
         }
         return true;
@@ -18,7 +18,7 @@ function filterUtxos(utxos, minConfOwn, minConfOther) {
             ? utxo.confirmations >= minConfOwn
             : utxo.confirmations >= minConfOther;
 
-        if (isUsed) {
+        if (isUsed || utxo.required) {
             usable.push(utxo);
         } else {
             unusable.push(utxo);

@@ -25,7 +25,9 @@ function calculateEffectiveValues(utxos, feeRate) {
 export default function branchAndBound(factor) {
     return (utxos, outputs, feeRate, options) => {
         const { inputLength, changeOutputLength } = options;
-        if (options.baseFee) return {}; // TEMP: disable bnb algorithm for DOGE
+        if (options.baseFee) return {}; // TODO: enable bnb algorithm for DOGE
+        // TODO: enable bnb algorithm if required utxos are defined
+        if (utxos.find(u => u.required)) return {};
 
         const feeRateBigInt = utils.bignumberOrNaN(feeRate);
         if (feeRateBigInt.isNaN() || !feeRateBigInt.isInteger()) return {};
