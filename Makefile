@@ -36,26 +36,26 @@ lib:
 	cd ./src && find . -name '*.js' | xargs -I {} cp {} ../lib/{}.flow
 
 unit:
-	`npm bin`/mocha --compilers js:@babel/register
+	`npm bin`/mocha --require @babel/register --exit
 
 unit-build-tx:
-	`npm bin`/mocha --compilers js:@babel/register test/build-tx.js
+	`npm bin`/mocha --require @babel/register --exit test/build-tx.js
 
 unit-discovery:
-	`npm bin`/mocha --compilers js:@babel/register test/discover-account.js
+	`npm bin`/mocha --require @babel/register --exit test/discover-account.js
 
 unit-bitcore:
-	`npm bin`/mocha --compilers js:@babel/register test/bitcore.js
+	`npm bin`/mocha --require @babel/register --exit test/bitcore.js
 
 unit-utils:
-	`npm bin`/mocha --compilers js:@babel/register test/utils.js
+	`npm bin`/mocha --require @babel/register --exit test/utils.js
 
 
 coverage-html:
-	NODE_ENV=test `npm bin`/nyc --cache --babel-cache=true --reporter=html --check-coverage --lines 97 --branches 93 `npm bin`/mocha --compilers js:@babel/register
+	NODE_ENV=test `npm bin`/nyc --cache --babel-cache=true --reporter=html --check-coverage --lines 97 --branches 93 `npm bin`/mocha --require @babel/register --exit
 
 run-coverage:
-	NODE_ENV=test `npm bin`/nyc --check-coverage --lines 97 --branches 93 --babel-cache=true `npm bin`/mocha --compilers js:@babel/register
+	NODE_ENV=test `npm bin`/nyc --check-coverage --lines 97 --branches 93 --babel-cache=true `npm bin`/mocha --require @babel/register --exit
 
 flow:
 	`npm bin`/flow check src
