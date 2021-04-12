@@ -34,7 +34,6 @@ tests/benchmark-browserify.js: node_modules build/fastxpub.js tests/benchmark.js
 
 node_modules:
 	npm install
-	npm install browserify
 
 benchmark: node_modules build/fastxpub.js tests/benchmark.js
 	cd tests && node benchmark.js
