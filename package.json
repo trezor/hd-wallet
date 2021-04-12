@@ -53,8 +53,8 @@
     "@trezor/utxo-lib": "0.1.2",
     "bchaddrjs": "^0.5.2",
     "bignumber.js": "^9.0.1",
-    "queue": "^6.0.1",
-    "socket.io-client": "^2.2.0"
+    "queue": "^6.0.2",
+    "socket.io-client": "^4.0.1"
   },
   "devDependencies": {
     "@babel/cli": "7.13.14",
@@ -80,9 +80,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
-    "exorcist": "0.4.0",
     "flow-bin": "0.59.0",
-    "isomorphic-fetch": "^2.2.1",
     "jest": "^26.6.3",
     "karma": "^6.3.2",
     "karma-browserify": "^8.0.0",
@@ -96,7 +94,6 @@
     "tiny-worker": "^2.3.0",
     "uglifyify": "^5.0.2",
     "virtual-dom": "2.1.1",
-    "watchify": "3.11.1",
     "workerify": "1.1.0"
   }
 }
