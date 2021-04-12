@@ -1,5 +1,3 @@
-/* global it:false, describe:false */
-
 import assert from 'assert';
 
 import coinAccum from '../../src/build-tx/coinselect-lib/index';

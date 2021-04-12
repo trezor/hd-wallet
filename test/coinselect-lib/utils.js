@@ -1,5 +1,3 @@
-/* global it:false, describe:false */
-
 import assert from 'assert';
 
 import BigNumber from 'bignumber.js';

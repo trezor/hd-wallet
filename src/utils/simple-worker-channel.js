@@ -1,7 +1,4 @@
-/* @flow
- */
-
-/* global Worker:false,Event:false */
+/* @flow */
 
 // Super simple webworker interface.
 

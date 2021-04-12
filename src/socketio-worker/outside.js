@@ -1,7 +1,5 @@
 /* @flow */
 
-/* global Worker:false */
-
 import { Stream, Emitter } from '../utils/stream';
 
 import type {

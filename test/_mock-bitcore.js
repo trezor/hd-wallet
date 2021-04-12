@@ -312,6 +312,6 @@ function arrayEqSet<X>(array: Array<X>, set: Set<X>) {
     return is;
 }
 
-// eslint-disable-next-line  no-unused-vars
 let flowTest: ?Blockchain = new MockBitcore([], () => {});
+// eslint-disable-next-line no-unused-vars
 flowTest = null;

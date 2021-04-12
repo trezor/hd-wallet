@@ -1,34 +1,31 @@
 {
-  "env": {
-      "jest": true,
-      "node": true
-  },
-  "plugins": [
-      "node",
-      "import",
-      "jest"
-  ],
-  "extends": [
-      "airbnb-base"
-  ],
-  "rules": {
-      "no-underscore-dangle": 0,
-      "no-plusplus": 0,
-      "no-use-before-define": 0,
-      "indent": [2, 4, { "SwitchCase": 1 }],
-      "no-console": 0,
-      "node/exports-style": ["error", "exports"],
-      "import/prefer-default-export": 0,
-      "new-cap": 0
-  },
-  "settings": {
-      "import/resolver": {
-          "babel-module": {}
-      }
-  },
-  "parser": "babel-eslint",
-  "parserOptions": {
-      "ecmaVersion": 7,
-      "sourceType": "module"
-  }
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "ecmaFeatures": {
+            "modules": true
+        },
+        "sourceType": "module"
+    },
+    "parser": "babel-eslint",
+    "plugins": ["node", "prettier", "import", "jest"],
+    "extends": [
+        "airbnb-base",
+        "eslint:recommended",
+        "prettier"
+    ],
+    "env": {
+        "es6": true,
+        "node": true,
+        "browser": true,
+        "webextensions": true,
+        "jest": true
+    },
+    "rules": {
+        "no-underscore-dangle": "off",
+        "no-use-before-define": "off",
+        "no-console": "off",
+        "max-classes-per-file": "off",
+        "no-plusplus": "off", // airbnb-base: irrelevant
+        "import/prefer-default-export": "off" // irrelevant
+    }
 }

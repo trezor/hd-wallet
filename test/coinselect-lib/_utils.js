@@ -9,11 +9,11 @@ function addScriptLength(values, scriptLength) {
 }
 
 export function addScriptLengthToExpected(expected, inputLength, outputLength) {
-    const newExpected = Object.assign({}, expected);
+    const newExpected = { ...expected };
 
     if (expected.inputs != null) {
         newExpected.inputs = expected.inputs.map((input) => {
-            const newInput = Object.assign({}, input);
+            const newInput = { ...input };
             if (newInput.script == null) {
                 newInput.script = { length: inputLength };
             }
@@ -23,7 +23,7 @@ export function addScriptLengthToExpected(expected, inputLength, outputLength) {
 
     if (expected.outputs != null) {
         newExpected.outputs = expected.outputs.map((output) => {
-            const newOutput = Object.assign({}, output);
+            const newOutput = { ...output };
             if (newOutput.script == null) {
                 newOutput.script = { length: outputLength };
             }
