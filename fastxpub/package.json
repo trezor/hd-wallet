@@ -2,8 +2,9 @@
   "name": "fastxpub",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {
-    "bitcoinjs-lib": "^2.1.1",
-    "browserify": "^14.5.0"
+  "dependencies": {},
+  "devDependencies": {
+    "bitcoinjs-lib": "^5.2.0",
+    "browserify": "^17.0.0"
   }
 }
