@@ -1,5 +1,4 @@
-/* global it:false, describe:false, WebAssembly:true */
-
+/* eslint-disable no-global-assign */
 import assert from 'assert';
 import { MockBitcore } from './_mock-bitcore';
 import { WorkerDiscovery } from '../src/discovery/worker-discovery';

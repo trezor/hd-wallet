@@ -1,7 +1,3 @@
-// require('./test_bitcore/bitcore.js');
-
-/* global it:false, describe:false */
-
 import assert from 'assert';
 import { networks } from '@trezor/utxo-lib';
 

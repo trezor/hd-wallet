@@ -7,7 +7,7 @@ import * as sorts from './sorts';
 import * as utils from './utils';
 import tryConfirmed from './tryconfirmed';
 
-export default function (inputs, outputs, feeRate, options) {
+export default function coinSelect(inputs, outputs, feeRate, options) {
     const sortedInputs = inputs.sort(sorts.score(feeRate));
 
     const algorithm = tryConfirmed(

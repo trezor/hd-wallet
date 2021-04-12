@@ -1,5 +1,3 @@
-/* global Worker:false, fetch:false, window:false, document:false */
-
 // eslint-disable-next-line import/no-extraneous-dependencies
 import h from 'virtual-dom/h';
 // eslint-disable-next-line import/no-extraneous-dependencies

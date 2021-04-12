@@ -1,5 +1,3 @@
-/* global it:false, describe:false, navigator:false, window:false */
-
 import assert from 'assert';
 import { Emitter, Stream, StreamWithEnding } from '../src/utils/stream';
 import { uniqueRandom } from '../src/utils/unique-random';
