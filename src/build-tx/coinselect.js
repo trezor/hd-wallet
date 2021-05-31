@@ -84,6 +84,7 @@ export function coinselect(
     floorBaseFee?: boolean,
     dustOutputFee?: number,
     skipUtxoSelection?: boolean,
+    skipPermutation?: boolean,
 ): Result {
     const inputs = convertInputs(utxos, height, segwit);
     const outputs = convertOutputs(rOutputs, network);
@@ -94,6 +95,7 @@ export function coinselect(
         baseFee,
         floorBaseFee,
         dustOutputFee,
+        skipPermutation,
     };
 
     const algorithm = countMax ? bitcoinJsSplit : bitcoinJsCoinselect;

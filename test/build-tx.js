@@ -39,6 +39,7 @@ describe('build tx', () => {
                     }
                 });
                 result.transaction.outputs = new Permutation(sorted, o.permutation);
+
                 delete result.transaction.PERM_outputs;
             }
             assert.deepStrictEqual(buildTx(request), result);

@@ -1883,5 +1883,92 @@
       },
       "type": "final"
     }
+  },
+  {
+    "description": "skip inputs/outputs permutation",
+    "request": {
+      "basePath": [44, 1, 0],
+      "changeAddress": "1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT",
+      "changeId": 1,
+      "dustThreshold": 546,
+      "feeRate": "10",
+      "height": 100,
+      "inputAmounts": true,
+      "skipPermutation": true,
+      "outputs": [
+        {
+          "address": "1BitcoinEaterAddressDontSendf59kuE",
+          "amount": "70000",
+          "type": "complete"
+        }
+      ],
+      "segwit": false,
+      "utxos": [
+        {
+          "addressPath": [1, 0],
+          "fee": "0",
+          "height": 60,
+          "index": 0,
+          "transactionHash": "a4dc0ffeee",
+          "tsize": 0,
+          "value": "65291",
+          "vsize": 0,
+          "coinbase": false,
+          "own": false
+        },
+        {
+          "addressPath": [1, 1],
+          "fee": "0",
+          "height": 50,
+          "index": 1,
+          "transactionHash": "b4dc0ffeee",
+          "tsize": 0,
+          "value": "55291",
+          "vsize": 0,
+          "coinbase": false,
+          "own": false
+        }
+      ]
+    },
+    "result": {
+      "bytes": 379,
+      "fee": "3790",
+      "feePerByte": "10",
+      "max": -1,
+      "totalSpent": "73790",
+      "transaction": {
+        "PERM_outputs": {
+          "permutation": [0, 1],
+          "sorted": [
+            {
+              "address": "1BitcoinEaterAddressDontSendf59kuE",
+              "value": "70000"
+            },
+            {
+              "value": "46792",
+              "path": [44, 1, 0, 1, 1],
+              "segwit": false
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "REV_hash": "a4dc0ffeee",
+            "index": 0,
+            "amount": "65291",
+            "path": [44, 1, 0, 1, 0],
+            "segwit": false
+          },
+          {
+            "REV_hash": "b4dc0ffeee",
+            "index": 1,
+            "amount": "55291",
+            "path": [44, 1, 0, 1, 1],
+            "segwit": false
+          }
+        ]
+      },
+      "type": "final"
+    }
   }
 ]
