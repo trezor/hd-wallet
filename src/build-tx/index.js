@@ -27,6 +27,7 @@ export function buildTx(
         floorBaseFee,
         dustOutputFee,
         skipUtxoSelection,
+        skipPermutation,
     }: request.Request,
 ): result.Result {
     if (outputs.length === 0) {
@@ -60,6 +61,7 @@ export function buildTx(
             floorBaseFee,
             dustOutputFee,
             skipUtxoSelection,
+            skipPermutation,
         );
     } catch (e) {
         return { type: 'error', error: e.message };
@@ -83,6 +85,7 @@ export function buildTx(
         changeId,
         changeAddress,
         network,
+        skipPermutation,
     );
     return result.getFinalResult(csResult, resTransaction);
 }

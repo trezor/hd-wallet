@@ -8,7 +8,7 @@ import * as utils from './utils';
 import tryConfirmed from './tryconfirmed';
 
 export default function coinSelect(inputs, outputs, feeRate, options) {
-    const sortedInputs = inputs.sort(sorts.score(feeRate));
+    const sortedInputs = options.skipPermutation ? inputs : inputs.sort(sorts.score(feeRate));
 
     const algorithm = tryConfirmed(
         utils.anyOf([bnb(0.5), accumulative]),

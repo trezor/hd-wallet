@@ -59,6 +59,7 @@ export function createTransaction(
     changeId: number,
     changeAddress: string,
     network: BitcoinJsNetwork,
+    skipPermutation?: boolean,
 ): Transaction {
     const convertedInputs = selectedInputs.map((input) => {
         const { id } = input;
@@ -94,6 +95,15 @@ export function createTransaction(
             segwit,
         );
     });
+
+    // this syntax is forced by flow: sketchy-null-bool
+    // i don't like it but needs to be refactored anyway...
+    if (skipPermutation === true) {
+        return {
+            inputs: convertedInputs,
+            outputs: new Permutation(convertedOutputs.map(o => o.output), convertedOutputs.map((_o, i) => i))
+        }
+    }
     convertedInputs.sort((a, b) => inputComparator(a.hash, a.index, b.hash, b.index));
     const permutedOutputs = Permutation.fromFunction(convertedOutputs, (a, b) => {
         const aValue: string = typeof a.output.value === 'string' ? a.output.value : '0';
