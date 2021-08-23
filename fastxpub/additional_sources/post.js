@@ -1,11 +1,11 @@
     /*
     typedef struct {
     uint32_t depth;
-    uint32_t fingerprint;
     uint32_t child_num;
     uint8_t chain_code[32];
     uint8_t private_key[32];
     uint8_t public_key[33];
+    const curve_info *curve;
     } HDNode;
     */
 
@@ -32,7 +32,7 @@
         var CHAINCODE_SIZE = 32;
         var _chaincode = _malloc(CHAINCODE_SIZE);
 
-        var HDNODE_SIZE = 3 * 4 + 32 + 32 + 33;
+        var HDNODE_SIZE = 2 * 4 + 32 + 32 + 33 + 4;
         var _hdnode = _malloc(HDNODE_SIZE);
 
         // address string global
